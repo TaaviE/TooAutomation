@@ -18,6 +18,6 @@
 #pragma once
 
 #include <Arduino.h>
-#include "modules/TooSensors.h"
-#include "modules/TooNetworking.h"
+#include "modules/TooSensors/TooSensors.h"
+#include "modules/TooNetworking/TooNetworking.h"
 

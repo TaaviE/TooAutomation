@@ -15,6 +15,13 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+#define TOONETWORKING_SIGNING // Enable signing
+#define TOORADIO_RF24 // Select nRF24L01+ as the radio
+#define TOO_RF24_CE 9 // Define needed pins
+#define TOO_RF24_CS 10
+
+#include "TooAutomation.h"
+
 void setup(void){
   
 }

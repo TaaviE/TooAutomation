@@ -1,7 +1,7 @@
 /*
     TooSensors - Sensor abstraction layer for TooAutomation
     Copyright (C) 2017 Taavi E
-    
+
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, version 3 of the License.
@@ -16,3 +16,41 @@
 */
 
 #pragma once
+
+#ifndef __TooSensors_H__
+#define __TooSensors_H__
+
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+/*
+TODO:
+* Listen for input change (Analog and digital)
+* Monitor for function output change (func *)
+* Report every PREDEFINED_INTERVAL (Analog and digital)
+* Report every PREDEFINED_INTERVAL (func *)
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+#ifdef __cplusplus
+}
+#endif 
+
+//#ifdef __cplusplus
+//#include "cpp_wrapper.h" 
+//#endif
+
+#endif // __TooSensors_H__
