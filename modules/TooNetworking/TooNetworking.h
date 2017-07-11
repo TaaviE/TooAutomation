@@ -105,9 +105,18 @@ BufferItem * buffer_first = 0;
 #include "RF24Mesh.h"
 #include "RF24Network.h"
 
+
 RF24 radio(TOO_RF24_CE, TOO_RF24_CS);
 RF24Network network(radio);
 RF24Mesh mesh(radio, network);
+
+/**
+ * @file TooNetworking.h
+ *
+ * This class implements the necessary functionality
+ * that allow nodes in the network to communicate
+ */
+
 
   /**
    * Automatically set up the networking, implementation depends on the radio

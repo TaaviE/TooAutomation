@@ -15,6 +15,11 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+/**
+ * @file TooAutomation.h
+ * 
+ */
+
 #pragma once
 
 #include <Arduino.h>
