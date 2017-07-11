@@ -15,6 +15,13 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+/**
+ * @file TooSensors.h
+ *
+ * This file implements the necessary functionality
+ * that allow nodes to capture and send data
+ */
+
 #pragma once
 
 #ifndef __TooSensors_H__

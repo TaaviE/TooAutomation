@@ -15,6 +15,13 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+/**
+ * @file TooNetworking.h
+ *
+ * This file implements the necessary functionality
+ * that allow nodes in the network to communicate
+ */
+
 #pragma once
 
 #ifndef __TooNetworking_H__
@@ -109,13 +116,6 @@ BufferItem * buffer_first = 0;
 RF24 radio(TOO_RF24_CE, TOO_RF24_CS);
 RF24Network network(radio);
 RF24Mesh mesh(radio, network);
-
-/**
- * @file TooNetworking.h
- *
- * This class implements the necessary functionality
- * that allow nodes in the network to communicate
- */
 
 
   /**

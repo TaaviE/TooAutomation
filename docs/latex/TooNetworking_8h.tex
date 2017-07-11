@@ -1,0 +1,80 @@
+\hypertarget{TooNetworking_8h}{}\section{Too\+Networking.\+h File Reference}
+\label{TooNetworking_8h}\index{Too\+Networking.\+h@{Too\+Networking.\+h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+Include dependency graph for Too\+Networking.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{TooNetworking_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=171pt]{TooNetworking_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structPayload__Metadata}{Payload\+\_\+\+Metadata}
+\item 
+struct \hyperlink{structBufferItem}{Buffer\+Item}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{TooNetworking_8h_a39d12e6909a882bdfa30c28aea20f1ad}{\+\_\+\+\_\+\+Too\+Networking\+\_\+\+H\+\_\+\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{TooNetworking_8h_a2676204dee95da1ef337de95eb0e9bcb}{Too\+Networking\+\_\+begin} (uint8\+\_\+t passed\+\_\+node\+\_\+id)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structBufferItem}{Buffer\+Item} $\ast$ \hyperlink{TooNetworking_8h_a11d4f129f71dc36defd23ed9785c3c64}{buffer\+\_\+first} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file implements the necessary functionality that allow nodes in the network to communicate 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{TooNetworking_8h_a39d12e6909a882bdfa30c28aea20f1ad}\label{TooNetworking_8h_a39d12e6909a882bdfa30c28aea20f1ad}} 
+\index{Too\+Networking.\+h@{Too\+Networking.\+h}!\+\_\+\+\_\+\+Too\+Networking\+\_\+\+H\+\_\+\+\_\+@{\+\_\+\+\_\+\+Too\+Networking\+\_\+\+H\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+\+Too\+Networking\+\_\+\+H\+\_\+\+\_\+@{\+\_\+\+\_\+\+Too\+Networking\+\_\+\+H\+\_\+\+\_\+}!Too\+Networking.\+h@{Too\+Networking.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+\+Too\+Networking\+\_\+\+H\+\_\+\+\_\+}{\_\_TooNetworking\_H\_\_}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+Too\+Networking\+\_\+\+H\+\_\+\+\_\+}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{TooNetworking_8h_a2676204dee95da1ef337de95eb0e9bcb}\label{TooNetworking_8h_a2676204dee95da1ef337de95eb0e9bcb}} 
+\index{Too\+Networking.\+h@{Too\+Networking.\+h}!Too\+Networking\+\_\+begin@{Too\+Networking\+\_\+begin}}
+\index{Too\+Networking\+\_\+begin@{Too\+Networking\+\_\+begin}!Too\+Networking.\+h@{Too\+Networking.\+h}}
+\subsubsection{\texorpdfstring{Too\+Networking\+\_\+begin()}{TooNetworking\_begin()}}
+{\footnotesize\ttfamily bool Too\+Networking\+\_\+begin (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{passed\+\_\+node\+\_\+id }\end{DoxyParamCaption})}
+
+Automatically set up the networking Every radio should provide Too\+Networking\+\_\+connection\+\_\+begin(uint8\+\_\+t node\+I\+D) for easy initialization of the network
+
+
+\begin{DoxyParams}{Parameters}
+{\em passed\+\_\+node\+\_\+id} & Current node\textquotesingle{}s ID. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if successful, false otherwise 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{TooNetworking_8h_a11d4f129f71dc36defd23ed9785c3c64}\label{TooNetworking_8h_a11d4f129f71dc36defd23ed9785c3c64}} 
+\index{Too\+Networking.\+h@{Too\+Networking.\+h}!buffer\+\_\+first@{buffer\+\_\+first}}
+\index{buffer\+\_\+first@{buffer\+\_\+first}!Too\+Networking.\+h@{Too\+Networking.\+h}}
+\subsubsection{\texorpdfstring{buffer\+\_\+first}{buffer\_first}}
+{\footnotesize\ttfamily \hyperlink{structBufferItem}{Buffer\+Item}$\ast$ buffer\+\_\+first = 0}
+
