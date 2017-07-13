@@ -65,82 +65,180 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">TooNetworking.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
-<code>#include &lt;Arduino.h&gt;</code><br />
-</div><div class="textblock"><div class="dynheader">
-Include dependency graph for TooNetworking.h:</div>
-<div class="dyncontent">
-<div class="center"><img src="TooNetworking_8h__incl.png" border="0" usemap="#TooNetworking_8h" alt=""/></div>
-</div>
-</div><div class="textblock"><div class="dynheader">
-This graph shows which files directly or indirectly include this file:</div>
-<div class="dyncontent">
-<div class="center"><img src="TooNetworking_8h__dep__incl.png" border="0" usemap="#TooNetworking_8hdep" alt=""/></div>
-<map name="TooNetworking_8hdep" id="TooNetworking_8hdep">
-<area shape="rect" id="node2" href="TooAutomation_8h.html" title="TooAutomation.h" alt="" coords="5,80,127,107"/>
-</map>
-</div>
-</div>
+
 <p><a href="TooNetworking_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPayloadMetadataSigned.html">PayloadMetadataSigned</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPayload__Metadata.html">Payload_Metadata</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structBufferItem.html">BufferItem</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structNonceSent.html">NonceSent</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structNonceReceived.html">NonceReceived</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structNoncePayload.html">NoncePayload</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structNonceRequested.html">NonceRequested</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPayload__Metadata.html">Payload_Metadata</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structBufferItem.html">BufferItem</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a39d12e6909a882bdfa30c28aea20f1ad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a39d12e6909a882bdfa30c28aea20f1ad">__TooNetworking_H__</a></td></tr>
-<tr class="separator:a39d12e6909a882bdfa30c28aea20f1ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4f8f008bc94d8780af5082af5ac0bd22"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__RESERVED__TYPES.html#ga4f8f008bc94d8780af5082af5ac0bd22">TOONETWORKING_NONCE</a>&#160;&#160;&#160;'A'</td></tr>
-<tr class="separator:ga4f8f008bc94d8780af5082af5ac0bd22"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga156314082f4b84ae59aef0fc86508323"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__RESERVED__TYPES.html#ga156314082f4b84ae59aef0fc86508323">TOONETWORKING_SIGNED_MSG</a>&#160;&#160;&#160;'B'</td></tr>
-<tr class="separator:ga156314082f4b84ae59aef0fc86508323"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaaa10b54b7ba518caefbd61fa6914cb2b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__RESERVED__TYPES.html#gaaa10b54b7ba518caefbd61fa6914cb2b">TOONETWORKING_NONCE_REQUEST</a>&#160;&#160;&#160;'C'</td></tr>
-<tr class="separator:gaaa10b54b7ba518caefbd61fa6914cb2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga209a4ce63d81c941f7eae10f490091ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__RESERVED__TYPES.html#ga209a4ce63d81c941f7eae10f490091ab">TOONETWORKING_UNUSED_2</a>&#160;&#160;&#160;'D'</td></tr>
-<tr class="separator:ga209a4ce63d81c941f7eae10f490091ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0957fc284700186f98b69dca21389f26"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__RESERVED__TYPES.html#ga0957fc284700186f98b69dca21389f26">TOONETWORKING_ENCRYPTED_MSG</a>&#160;&#160;&#160;'E'</td></tr>
-<tr class="separator:ga0957fc284700186f98b69dca21389f26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a173f695381b08642c89a68cdcd76a5d4"><td class="memItemLeft" align="right" valign="top">RF24&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a173f695381b08642c89a68cdcd76a5d4">radio</a> (TOO_RF24_CE, TOO_RF24_CS)</td></tr>
+<tr class="separator:a173f695381b08642c89a68cdcd76a5d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7924d94ea32c8d33a81ff41f8678320"><td class="memItemLeft" align="right" valign="top">RF24Network&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#aa7924d94ea32c8d33a81ff41f8678320">network</a> (<a class="el" href="TooNetworking_8h.html#a173f695381b08642c89a68cdcd76a5d4">radio</a>)</td></tr>
+<tr class="separator:aa7924d94ea32c8d33a81ff41f8678320"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdda8f09b9d475ed2c23a2376e2e0151"><td class="memItemLeft" align="right" valign="top">RF24Mesh&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#abdda8f09b9d475ed2c23a2376e2e0151">mesh</a> (<a class="el" href="TooNetworking_8h.html#a173f695381b08642c89a68cdcd76a5d4">radio</a>, <a class="el" href="TooNetworking_8h.html#aa7924d94ea32c8d33a81ff41f8678320">network</a>)</td></tr>
+<tr class="separator:abdda8f09b9d475ed2c23a2376e2e0151"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec97902cf0d3ec10fd86927f3d1df0c6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#aec97902cf0d3ec10fd86927f3d1df0c6">TooNetworking_connection_begin</a> (uint8_t passed_node_id)</td></tr>
+<tr class="separator:aec97902cf0d3ec10fd86927f3d1df0c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a723608b997230cc461d06454b2cdb8c3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a723608b997230cc461d06454b2cdb8c3">TooNetworking_send</a> (uint8_t for_node, void *payload, uint8_t size, uint8_t type)</td></tr>
+<tr class="separator:a723608b997230cc461d06454b2cdb8c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9209f3e1a2fdf0b3b88d49105b8fc359"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a9209f3e1a2fdf0b3b88d49105b8fc359">TooNetworking_send_signed</a> (uint8_t for_node, void *payload, uint8_t size)</td></tr>
+<tr class="separator:a9209f3e1a2fdf0b3b88d49105b8fc359"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86fb32acfc42a498be62a3236c778454"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a86fb32acfc42a498be62a3236c778454">TooNetworking_send_encrypted</a> (uint8_t for_node, void *payload, uint8_t size)</td></tr>
+<tr class="separator:a86fb32acfc42a498be62a3236c778454"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5861e5d6df60aa6701af1b9ec7e942a8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a5861e5d6df60aa6701af1b9ec7e942a8">TooNetworking_send_signed_encrypted</a> (uint8_t for_node, void *payload, uint8_t size)</td></tr>
+<tr class="separator:a5861e5d6df60aa6701af1b9ec7e942a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b2b7fde063d7268ae7deabffeba6152"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a8b2b7fde063d7268ae7deabffeba6152">TooNetworking_peek</a> (RF24NetworkHeader &amp;header, void *message, uint16_t maxlen)</td></tr>
+<tr class="separator:a8b2b7fde063d7268ae7deabffeba6152"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cd17becc197be8de7befa25116c3a67"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a9cd17becc197be8de7befa25116c3a67">TooNetworking_read</a> (RF24NetworkHeader &amp;header, void *message, uint16_t maxlen)</td></tr>
+<tr class="separator:a9cd17becc197be8de7befa25116c3a67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac352268e177fa2ddf91c8afa5cd04bbf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#ac352268e177fa2ddf91c8afa5cd04bbf">TooNetworking_connection_available</a> ()</td></tr>
+<tr class="separator:ac352268e177fa2ddf91c8afa5cd04bbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48504aef69d9ac92e34269a64f7b518b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a48504aef69d9ac92e34269a64f7b518b">TooNetworking_connection_check</a> ()</td></tr>
+<tr class="separator:a48504aef69d9ac92e34269a64f7b518b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefc5dad88b637efb11a3a7b2f76a19b9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#aefc5dad88b637efb11a3a7b2f76a19b9">TooNetworking_connection_fix</a> ()</td></tr>
+<tr class="separator:aefc5dad88b637efb11a3a7b2f76a19b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7382ba1aed5405c3adc02011ea6c45dd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a7382ba1aed5405c3adc02011ea6c45dd">TooNetworking_connection_maintenance</a> ()</td></tr>
+<tr class="separator:a7382ba1aed5405c3adc02011ea6c45dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9ec1ce0a58a96d0452a5ec51bb0bfca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#aa9ec1ce0a58a96d0452a5ec51bb0bfca">TooNeteorking_connection_fix</a> ()</td></tr>
+<tr class="separator:aa9ec1ce0a58a96d0452a5ec51bb0bfca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2676204dee95da1ef337de95eb0e9bcb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a2676204dee95da1ef337de95eb0e9bcb">TooNetworking_begin</a> (uint8_t passed_node_id)</td></tr>
 <tr class="separator:a2676204dee95da1ef337de95eb0e9bcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a11d4f129f71dc36defd23ed9785c3c64"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structBufferItem.html">BufferItem</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a11d4f129f71dc36defd23ed9785c3c64">buffer_first</a> = 0</td></tr>
-<tr class="separator:a11d4f129f71dc36defd23ed9785c3c64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cde2cc921aef77784b8d5b3129b5803"><td class="memItemLeft" align="right" valign="top">Sha256Class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a2cde2cc921aef77784b8d5b3129b5803">Sha256</a></td></tr>
+<tr class="separator:a2cde2cc921aef77784b8d5b3129b5803"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae75ffa3e0a98255f366188a6223156bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structNonceSent.html">NonceSent</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#ae75ffa3e0a98255f366188a6223156bc">nonce_sent_start</a> = 0</td></tr>
+<tr class="separator:ae75ffa3e0a98255f366188a6223156bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad145f92b978c39b1728ffd91e896277a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structNonceReceived.html">NonceReceived</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#ad145f92b978c39b1728ffd91e896277a">nonce_received_start</a> = 0</td></tr>
+<tr class="separator:ad145f92b978c39b1728ffd91e896277a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac43930ae93d50eea7e1ae8aee603524"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structNonceRequested.html">NonceRequested</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#aac43930ae93d50eea7e1ae8aee603524">nonce_requested_first</a> = 0</td></tr>
+<tr class="separator:aac43930ae93d50eea7e1ae8aee603524"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c24840cd9eb766eb04c1db0d2363cd5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structBufferItem.html">BufferItem</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a7c24840cd9eb766eb04c1db0d2363cd5">buffer_first</a> = 0</td></tr>
+<tr class="separator:a7c24840cd9eb766eb04c1db0d2363cd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file implements the necessary functionality that allow nodes in the network to communicate </p>
-</div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a39d12e6909a882bdfa30c28aea20f1ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39d12e6909a882bdfa30c28aea20f1ad">&#9670;&nbsp;</a></span>__TooNetworking_H__</h2>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="abdda8f09b9d475ed2c23a2376e2e0151"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdda8f09b9d475ed2c23a2376e2e0151">&#9670;&nbsp;</a></span>mesh()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define __TooNetworking_H__</td>
+          <td class="memname">RF24Mesh mesh </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="TooNetworking_8h.html#a173f695381b08642c89a68cdcd76a5d4">radio</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="TooNetworking_8h.html#aa7924d94ea32c8d33a81ff41f8678320">network</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Header guard </p>
 
 </div>
 </div>
-<h2 class="groupheader">Function Documentation</h2>
+<a id="aa7924d94ea32c8d33a81ff41f8678320"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7924d94ea32c8d33a81ff41f8678320">&#9670;&nbsp;</a></span>network()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RF24Network network </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="TooNetworking_8h.html#a173f695381b08642c89a68cdcd76a5d4">radio</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a173f695381b08642c89a68cdcd76a5d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a173f695381b08642c89a68cdcd76a5d4">&#9670;&nbsp;</a></span>radio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RF24 radio </td>
+          <td>(</td>
+          <td class="paramtype">TOO_RF24_CE&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TOO_RF24_CS&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa9ec1ce0a58a96d0452a5ec51bb0bfca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9ec1ce0a58a96d0452a5ec51bb0bfca">&#9670;&nbsp;</a></span>TooNeteorking_connection_fix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TooNeteorking_connection_fix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Tries to reestablish connection to the network</p>
+<dl class="section return"><dt>Returns</dt><dd>True if successful, false otherwise </dd></dl>
+
+</div>
+</div>
 <a id="a2676204dee95da1ef337de95eb0e9bcb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2676204dee95da1ef337de95eb0e9bcb">&#9670;&nbsp;</a></span>TooNetworking_begin()</h2>
 
@@ -156,7 +254,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Automatically set up the networking Every radio should provide TooNetworking_connection_begin(uint8_t nodeID) for easy initialization of the network</p>
+<p>Automatically set up the networking Every radio should provide <a class="el" href="TooNetworking_8h.html#aec97902cf0d3ec10fd86927f3d1df0c6">TooNetworking_connection_begin(uint8_t nodeID)</a> for easy initialization of the network</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">passed_node_id</td><td>Current node's ID. </td></tr>
@@ -167,19 +265,434 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="a11d4f129f71dc36defd23ed9785c3c64"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11d4f129f71dc36defd23ed9785c3c64">&#9670;&nbsp;</a></span>buffer_first</h2>
+<a id="ac352268e177fa2ddf91c8afa5cd04bbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac352268e177fa2ddf91c8afa5cd04bbf">&#9670;&nbsp;</a></span>TooNetworking_connection_available()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structBufferItem.html">BufferItem</a>* buffer_first = 0</td>
+          <td class="memname">bool TooNetworking_connection_available </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Checks if there's something ready to be processed</p>
+<dl class="section return"><dt>Returns</dt><dd>True if successful, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="aec97902cf0d3ec10fd86927f3d1df0c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec97902cf0d3ec10fd86927f3d1df0c6">&#9670;&nbsp;</a></span>TooNetworking_connection_begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TooNetworking_connection_begin </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>passed_node_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Automatically set up the networking, implementation depends on the radio</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">passed_node_id</td><td>Current node's ID. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successful, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a48504aef69d9ac92e34269a64f7b518b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48504aef69d9ac92e34269a64f7b518b">&#9670;&nbsp;</a></span>TooNetworking_connection_check()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TooNetworking_connection_check </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Checks if the master node is reachable</p>
+<dl class="section return"><dt>Returns</dt><dd>true if successful, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="aefc5dad88b637efb11a3a7b2f76a19b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefc5dad88b637efb11a3a7b2f76a19b9">&#9670;&nbsp;</a></span>TooNetworking_connection_fix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TooNetworking_connection_fix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Tries to reestablish connection to the network</p>
+<dl class="section return"><dt>Returns</dt><dd>True if successful, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a7382ba1aed5405c3adc02011ea6c45dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7382ba1aed5405c3adc02011ea6c45dd">&#9670;&nbsp;</a></span>TooNetworking_connection_maintenance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TooNetworking_connection_maintenance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Does the necessary maintenance and DHCP(-like) actions on the network</p>
+<dl class="section return"><dt>Returns</dt><dd>True if successful, false otherwise</dd></dl>
+<p>Does the necessary maintenance on the network</p>
+<dl class="section return"><dt>Returns</dt><dd>True if successful, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a8b2b7fde063d7268ae7deabffeba6152"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b2b7fde063d7268ae7deabffeba6152">&#9670;&nbsp;</a></span>TooNetworking_peek()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TooNetworking_peek </td>
+          <td>(</td>
+          <td class="paramtype">RF24NetworkHeader &amp;&#160;</td>
+          <td class="paramname"><em>header</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>maxlen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Allows reading a message from buffer and it's NOT cleared after being read</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9cd17becc197be8de7befa25116c3a67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cd17becc197be8de7befa25116c3a67">&#9670;&nbsp;</a></span>TooNetworking_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TooNetworking_read </td>
+          <td>(</td>
+          <td class="paramtype">RF24NetworkHeader &amp;&#160;</td>
+          <td class="paramname"><em>header</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>maxlen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Allows reading a message from buffer and it's cleared after being read</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a723608b997230cc461d06454b2cdb8c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a723608b997230cc461d06454b2cdb8c3">&#9670;&nbsp;</a></span>TooNetworking_send()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TooNetworking_send </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>for_node</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>payload</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Allows sending a encrypted message</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a86fb32acfc42a498be62a3236c778454"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86fb32acfc42a498be62a3236c778454">&#9670;&nbsp;</a></span>TooNetworking_send_encrypted()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TooNetworking_send_encrypted </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>for_node</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>payload</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Allows sending an encrypted message</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9209f3e1a2fdf0b3b88d49105b8fc359"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9209f3e1a2fdf0b3b88d49105b8fc359">&#9670;&nbsp;</a></span>TooNetworking_send_signed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TooNetworking_send_signed </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>for_node</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>payload</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Allows sending a signed message, type must be embedded inside the payload the receiver must know what to do with the message once it's been verified, messages that fail the checks are DISCARDED!</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5861e5d6df60aa6701af1b9ec7e942a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5861e5d6df60aa6701af1b9ec7e942a8">&#9670;&nbsp;</a></span>TooNetworking_send_signed_encrypted()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TooNetworking_send_signed_encrypted </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>for_node</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>payload</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Allows sending a signed and encrypted message</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a7c24840cd9eb766eb04c1db0d2363cd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c24840cd9eb766eb04c1db0d2363cd5">&#9670;&nbsp;</a></span>buffer_first</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structBufferItem.html">BufferItem</a> * buffer_first = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Pointer to the payload list start </p>
+
+</div>
+</div>
+<a id="ad145f92b978c39b1728ffd91e896277a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad145f92b978c39b1728ffd91e896277a">&#9670;&nbsp;</a></span>nonce_received_start</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structNonceReceived.html">NonceReceived</a>* nonce_received_start = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Pointer to the received nonce list start </p>
+
+</div>
+</div>
+<a id="aac43930ae93d50eea7e1ae8aee603524"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac43930ae93d50eea7e1ae8aee603524">&#9670;&nbsp;</a></span>nonce_requested_first</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structNonceRequested.html">NonceRequested</a>* nonce_requested_first = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Pointer to the requested nonce list start </p>
+
+</div>
+</div>
+<a id="ae75ffa3e0a98255f366188a6223156bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae75ffa3e0a98255f366188a6223156bc">&#9670;&nbsp;</a></span>nonce_sent_start</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structNonceSent.html">NonceSent</a>* nonce_sent_start = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Pointer to the sent nonce list start </p>
+
+</div>
+</div>
+<a id="a2cde2cc921aef77784b8d5b3129b5803"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cde2cc921aef77784b8d5b3129b5803">&#9670;&nbsp;</a></span>Sha256</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Sha256Class Sha256</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

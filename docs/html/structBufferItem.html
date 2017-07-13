@@ -78,25 +78,30 @@ Collaboration diagram for BufferItem:</div>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a5c3187c383ceec1825964d5e512273de"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structBufferItem.html#a5c3187c383ceec1825964d5e512273de">payload_size</a> = 0</td></tr>
 <tr class="separator:a5c3187c383ceec1825964d5e512273de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02298581e8d8eca4589f387ebaeeb14c"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structBufferItem.html#a02298581e8d8eca4589f387ebaeeb14c">payload_hash</a> [32] = {0}</td></tr>
+<tr class="separator:a02298581e8d8eca4589f387ebaeeb14c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e475a18a6671f1f0c4bf3010d7a6e89"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structBufferItem.html#a2e475a18a6671f1f0c4bf3010d7a6e89">payload_destination</a> = 0</td></tr>
 <tr class="separator:a2e475a18a6671f1f0c4bf3010d7a6e89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab20f3ae7cc41c118265557f2c7e2c4f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structBufferItem.html">BufferItem</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structBufferItem.html#ab20f3ae7cc41c118265557f2c7e2c4f0">payload_next</a> = 0</td></tr>
-<tr class="separator:ab20f3ae7cc41c118265557f2c7e2c4f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ec6d94d7df8c1e9db526fa0200267bb"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structBufferItem.html#a0ec6d94d7df8c1e9db526fa0200267bb">payload</a> = 0</td></tr>
-<tr class="separator:a0ec6d94d7df8c1e9db526fa0200267bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae69937bde6391eabc86ea7ec0dffe9cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structBufferItem.html">BufferItem</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structBufferItem.html#ae69937bde6391eabc86ea7ec0dffe9cc">payload_next</a> = 0</td></tr>
+<tr class="separator:ae69937bde6391eabc86ea7ec0dffe9cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a970332733892ec7bc7ab10a6430fd5e0"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structBufferItem.html#a970332733892ec7bc7ab10a6430fd5e0">payload</a> = 0</td></tr>
+<tr class="separator:a970332733892ec7bc7ab10a6430fd5e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a0ec6d94d7df8c1e9db526fa0200267bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ec6d94d7df8c1e9db526fa0200267bb">&#9670;&nbsp;</a></span>payload</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Used for storing metadata about the payload until the payload is sent </p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="a970332733892ec7bc7ab10a6430fd5e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a970332733892ec7bc7ab10a6430fd5e0">&#9670;&nbsp;</a></span>payload</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void* BufferItem::payload = 0</td>
+          <td class="memname">void * BufferItem::payload = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Pointer to the payload </p>
 
 </div>
 </div>
@@ -111,20 +116,37 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Destination of the payload </p>
 
 </div>
 </div>
-<a id="ab20f3ae7cc41c118265557f2c7e2c4f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab20f3ae7cc41c118265557f2c7e2c4f0">&#9670;&nbsp;</a></span>payload_next</h2>
+<a id="a02298581e8d8eca4589f387ebaeeb14c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02298581e8d8eca4589f387ebaeeb14c">&#9670;&nbsp;</a></span>payload_hash</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structBufferItem.html">BufferItem</a>* BufferItem::payload_next = 0</td>
+          <td class="memname">uint8_t BufferItem::payload_hash[32] = {0}</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Storage of the hash generated </p>
+
+</div>
+</div>
+<a id="ae69937bde6391eabc86ea7ec0dffe9cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae69937bde6391eabc86ea7ec0dffe9cc">&#9670;&nbsp;</a></span>payload_next</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structBufferItem.html">BufferItem</a> * BufferItem::payload_next = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Next item in the list </p>
 
 </div>
 </div>
@@ -139,6 +161,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Size of the payload pointed to by void * payload </p>
 
 </div>
 </div>

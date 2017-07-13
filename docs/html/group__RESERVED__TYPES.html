@@ -59,107 +59,14 @@ $(function() {
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
 <div class="title">Reserved message header types by TooNetworking</div>  </div>
 </div><!--header-->
 <div class="contents">
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:ga4f8f008bc94d8780af5082af5ac0bd22"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__RESERVED__TYPES.html#ga4f8f008bc94d8780af5082af5ac0bd22">TOONETWORKING_NONCE</a>&#160;&#160;&#160;'A'</td></tr>
-<tr class="separator:ga4f8f008bc94d8780af5082af5ac0bd22"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga156314082f4b84ae59aef0fc86508323"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__RESERVED__TYPES.html#ga156314082f4b84ae59aef0fc86508323">TOONETWORKING_SIGNED_MSG</a>&#160;&#160;&#160;'B'</td></tr>
-<tr class="separator:ga156314082f4b84ae59aef0fc86508323"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaaa10b54b7ba518caefbd61fa6914cb2b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__RESERVED__TYPES.html#gaaa10b54b7ba518caefbd61fa6914cb2b">TOONETWORKING_NONCE_REQUEST</a>&#160;&#160;&#160;'C'</td></tr>
-<tr class="separator:gaaa10b54b7ba518caefbd61fa6914cb2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga209a4ce63d81c941f7eae10f490091ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__RESERVED__TYPES.html#ga209a4ce63d81c941f7eae10f490091ab">TOONETWORKING_UNUSED_2</a>&#160;&#160;&#160;'D'</td></tr>
-<tr class="separator:ga209a4ce63d81c941f7eae10f490091ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0957fc284700186f98b69dca21389f26"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__RESERVED__TYPES.html#ga0957fc284700186f98b69dca21389f26">TOONETWORKING_ENCRYPTED_MSG</a>&#160;&#160;&#160;'E'</td></tr>
-<tr class="separator:ga0957fc284700186f98b69dca21389f26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p><b>Reserved message header types</b></p>
 <p><b>System types</b> are 33-90 ('!'-A'-'Z'), they must not be used outside the library<br />
  <b>User types</b> are 91-127 ('['-'a'-'z'-'DEL') and 1-32 ('^@'-' '), 1-32 are not acknowledged<br />
  </p>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="ga0957fc284700186f98b69dca21389f26"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0957fc284700186f98b69dca21389f26">&#9670;&nbsp;</a></span>TOONETWORKING_ENCRYPTED_MSG</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define TOONETWORKING_ENCRYPTED_MSG&#160;&#160;&#160;'E'</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Messages of this type are signed and encrypted </p>
-
-</div>
-</div>
-<a id="ga4f8f008bc94d8780af5082af5ac0bd22"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga4f8f008bc94d8780af5082af5ac0bd22">&#9670;&nbsp;</a></span>TOONETWORKING_NONCE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define TOONETWORKING_NONCE&#160;&#160;&#160;'A'</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Messages of this type contain nonces </p>
-
-</div>
-</div>
-<a id="gaaa10b54b7ba518caefbd61fa6914cb2b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaaa10b54b7ba518caefbd61fa6914cb2b">&#9670;&nbsp;</a></span>TOONETWORKING_NONCE_REQUEST</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define TOONETWORKING_NONCE_REQUEST&#160;&#160;&#160;'C'</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Messages of this type request nonces </p>
-
-</div>
-</div>
-<a id="ga156314082f4b84ae59aef0fc86508323"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga156314082f4b84ae59aef0fc86508323">&#9670;&nbsp;</a></span>TOONETWORKING_SIGNED_MSG</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define TOONETWORKING_SIGNED_MSG&#160;&#160;&#160;'B'</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Messages of this type are signed </p>
-
-</div>
-</div>
-<a id="ga209a4ce63d81c941f7eae10f490091ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga209a4ce63d81c941f7eae10f490091ab">&#9670;&nbsp;</a></span>TOONETWORKING_UNUSED_2</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define TOONETWORKING_UNUSED_2&#160;&#160;&#160;'D'</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Messages of this type are unused but reserved </p>
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -1,75 +1,116 @@
 \hypertarget{TooNetworking_8h}{}\section{Too\+Networking.\+h File Reference}
 \label{TooNetworking_8h}\index{Too\+Networking.\+h@{Too\+Networking.\+h}}
-{\ttfamily \#include $<$stdint.\+h$>$}\newline
-{\ttfamily \#include $<$Arduino.\+h$>$}\newline
-Include dependency graph for Too\+Networking.\+h\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=206pt]{TooNetworking_8h__incl}
-\end{center}
-\end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=171pt]{TooNetworking_8h__dep__incl}
-\end{center}
-\end{figure}
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structPayloadMetadataSigned}{Payload\+Metadata\+Signed}
+\item 
+struct \hyperlink{structPayload__Metadata}{Payload\+\_\+\+Metadata}
+\item 
+struct \hyperlink{structBufferItem}{Buffer\+Item}
+\item 
+struct \hyperlink{structNonceSent}{Nonce\+Sent}
+\item 
+struct \hyperlink{structNonceReceived}{Nonce\+Received}
+\item 
+struct \hyperlink{structNoncePayload}{Nonce\+Payload}
+\item 
+struct \hyperlink{structNonceRequested}{Nonce\+Requested}
 \item 
 struct \hyperlink{structPayload__Metadata}{Payload\+\_\+\+Metadata}
 \item 
 struct \hyperlink{structBufferItem}{Buffer\+Item}
 \end{DoxyCompactItemize}
-\subsection*{Macros}
-\begin{DoxyCompactItemize}
-\item 
-\#define \hyperlink{TooNetworking_8h_a39d12e6909a882bdfa30c28aea20f1ad}{\+\_\+\+\_\+\+Too\+Networking\+\_\+\+H\+\_\+\+\_\+}
-\item 
-\#define \hyperlink{group__RESERVED__TYPES_ga4f8f008bc94d8780af5082af5ac0bd22}{T\+O\+O\+N\+E\+T\+W\+O\+R\+K\+I\+N\+G\+\_\+\+N\+O\+N\+CE}~\textquotesingle{}A\textquotesingle{}
-\item 
-\#define \hyperlink{group__RESERVED__TYPES_ga156314082f4b84ae59aef0fc86508323}{T\+O\+O\+N\+E\+T\+W\+O\+R\+K\+I\+N\+G\+\_\+\+S\+I\+G\+N\+E\+D\+\_\+\+M\+SG}~\textquotesingle{}B\textquotesingle{}
-\item 
-\#define \hyperlink{group__RESERVED__TYPES_gaaa10b54b7ba518caefbd61fa6914cb2b}{T\+O\+O\+N\+E\+T\+W\+O\+R\+K\+I\+N\+G\+\_\+\+N\+O\+N\+C\+E\+\_\+\+R\+E\+Q\+U\+E\+ST}~\textquotesingle{}C\textquotesingle{}
-\item 
-\#define \hyperlink{group__RESERVED__TYPES_ga209a4ce63d81c941f7eae10f490091ab}{T\+O\+O\+N\+E\+T\+W\+O\+R\+K\+I\+N\+G\+\_\+\+U\+N\+U\+S\+E\+D\+\_\+2}~\textquotesingle{}D\textquotesingle{}
-\item 
-\#define \hyperlink{group__RESERVED__TYPES_ga0957fc284700186f98b69dca21389f26}{T\+O\+O\+N\+E\+T\+W\+O\+R\+K\+I\+N\+G\+\_\+\+E\+N\+C\+R\+Y\+P\+T\+E\+D\+\_\+\+M\+SG}~\textquotesingle{}E\textquotesingle{}
-\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
+\item 
+R\+F24 \hyperlink{TooNetworking_8h_a173f695381b08642c89a68cdcd76a5d4}{radio} (T\+O\+O\+\_\+\+R\+F24\+\_\+\+CE, T\+O\+O\+\_\+\+R\+F24\+\_\+\+CS)
+\item 
+R\+F24\+Network \hyperlink{TooNetworking_8h_aa7924d94ea32c8d33a81ff41f8678320}{network} (\hyperlink{TooNetworking_8h_a173f695381b08642c89a68cdcd76a5d4}{radio})
+\item 
+R\+F24\+Mesh \hyperlink{TooNetworking_8h_abdda8f09b9d475ed2c23a2376e2e0151}{mesh} (\hyperlink{TooNetworking_8h_a173f695381b08642c89a68cdcd76a5d4}{radio}, \hyperlink{TooNetworking_8h_aa7924d94ea32c8d33a81ff41f8678320}{network})
+\item 
+bool \hyperlink{TooNetworking_8h_aec97902cf0d3ec10fd86927f3d1df0c6}{Too\+Networking\+\_\+connection\+\_\+begin} (uint8\+\_\+t passed\+\_\+node\+\_\+id)
+\item 
+bool \hyperlink{TooNetworking_8h_a723608b997230cc461d06454b2cdb8c3}{Too\+Networking\+\_\+send} (uint8\+\_\+t for\+\_\+node, void $\ast$payload, uint8\+\_\+t size, uint8\+\_\+t type)
+\item 
+bool \hyperlink{TooNetworking_8h_a9209f3e1a2fdf0b3b88d49105b8fc359}{Too\+Networking\+\_\+send\+\_\+signed} (uint8\+\_\+t for\+\_\+node, void $\ast$payload, uint8\+\_\+t size)
+\item 
+bool \hyperlink{TooNetworking_8h_a86fb32acfc42a498be62a3236c778454}{Too\+Networking\+\_\+send\+\_\+encrypted} (uint8\+\_\+t for\+\_\+node, void $\ast$payload, uint8\+\_\+t size)
+\item 
+bool \hyperlink{TooNetworking_8h_a5861e5d6df60aa6701af1b9ec7e942a8}{Too\+Networking\+\_\+send\+\_\+signed\+\_\+encrypted} (uint8\+\_\+t for\+\_\+node, void $\ast$payload, uint8\+\_\+t size)
+\item 
+bool \hyperlink{TooNetworking_8h_a8b2b7fde063d7268ae7deabffeba6152}{Too\+Networking\+\_\+peek} (R\+F24\+Network\+Header \&header, void $\ast$message, uint16\+\_\+t maxlen)
+\item 
+bool \hyperlink{TooNetworking_8h_a9cd17becc197be8de7befa25116c3a67}{Too\+Networking\+\_\+read} (R\+F24\+Network\+Header \&header, void $\ast$message, uint16\+\_\+t maxlen)
+\item 
+bool \hyperlink{TooNetworking_8h_ac352268e177fa2ddf91c8afa5cd04bbf}{Too\+Networking\+\_\+connection\+\_\+available} ()
+\item 
+bool \hyperlink{TooNetworking_8h_a48504aef69d9ac92e34269a64f7b518b}{Too\+Networking\+\_\+connection\+\_\+check} ()
+\item 
+bool \hyperlink{TooNetworking_8h_aefc5dad88b637efb11a3a7b2f76a19b9}{Too\+Networking\+\_\+connection\+\_\+fix} ()
+\item 
+bool \hyperlink{TooNetworking_8h_a7382ba1aed5405c3adc02011ea6c45dd}{Too\+Networking\+\_\+connection\+\_\+maintenance} ()
+\item 
+bool \hyperlink{TooNetworking_8h_aa9ec1ce0a58a96d0452a5ec51bb0bfca}{Too\+Neteorking\+\_\+connection\+\_\+fix} ()
 \item 
 bool \hyperlink{TooNetworking_8h_a2676204dee95da1ef337de95eb0e9bcb}{Too\+Networking\+\_\+begin} (uint8\+\_\+t passed\+\_\+node\+\_\+id)
 \end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{structBufferItem}{Buffer\+Item} $\ast$ \hyperlink{TooNetworking_8h_a11d4f129f71dc36defd23ed9785c3c64}{buffer\+\_\+first} = 0
+Sha256\+Class \hyperlink{TooNetworking_8h_a2cde2cc921aef77784b8d5b3129b5803}{Sha256}
+\item 
+\hyperlink{structNonceSent}{Nonce\+Sent} $\ast$ \hyperlink{TooNetworking_8h_ae75ffa3e0a98255f366188a6223156bc}{nonce\+\_\+sent\+\_\+start} = 0
+\item 
+\hyperlink{structNonceReceived}{Nonce\+Received} $\ast$ \hyperlink{TooNetworking_8h_ad145f92b978c39b1728ffd91e896277a}{nonce\+\_\+received\+\_\+start} = 0
+\item 
+\hyperlink{structNonceRequested}{Nonce\+Requested} $\ast$ \hyperlink{TooNetworking_8h_aac43930ae93d50eea7e1ae8aee603524}{nonce\+\_\+requested\+\_\+first} = 0
+\item 
+\hyperlink{structBufferItem}{Buffer\+Item} $\ast$ \hyperlink{TooNetworking_8h_a7c24840cd9eb766eb04c1db0d2363cd5}{buffer\+\_\+first} = 0
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 This file implements the necessary functionality that allow nodes in the network to communicate 
 
-\subsection{Macro Definition Documentation}
-\mbox{\Hypertarget{TooNetworking_8h_a39d12e6909a882bdfa30c28aea20f1ad}\label{TooNetworking_8h_a39d12e6909a882bdfa30c28aea20f1ad}} 
-\index{Too\+Networking.\+h@{Too\+Networking.\+h}!\+\_\+\+\_\+\+Too\+Networking\+\_\+\+H\+\_\+\+\_\+@{\+\_\+\+\_\+\+Too\+Networking\+\_\+\+H\+\_\+\+\_\+}}
-\index{\+\_\+\+\_\+\+Too\+Networking\+\_\+\+H\+\_\+\+\_\+@{\+\_\+\+\_\+\+Too\+Networking\+\_\+\+H\+\_\+\+\_\+}!Too\+Networking.\+h@{Too\+Networking.\+h}}
-\subsubsection{\texorpdfstring{\+\_\+\+\_\+\+Too\+Networking\+\_\+\+H\+\_\+\+\_\+}{\_\_TooNetworking\_H\_\_}}
-{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+Too\+Networking\+\_\+\+H\+\_\+\+\_\+}
-
-Header guard 
-
 \subsection{Function Documentation}
+\mbox{\Hypertarget{TooNetworking_8h_abdda8f09b9d475ed2c23a2376e2e0151}\label{TooNetworking_8h_abdda8f09b9d475ed2c23a2376e2e0151}} 
+\index{Too\+Networking.\+h@{Too\+Networking.\+h}!mesh@{mesh}}
+\index{mesh@{mesh}!Too\+Networking.\+h@{Too\+Networking.\+h}}
+\subsubsection{\texorpdfstring{mesh()}{mesh()}}
+{\footnotesize\ttfamily R\+F24\+Mesh mesh (\begin{DoxyParamCaption}\item[{\hyperlink{TooNetworking_8h_a173f695381b08642c89a68cdcd76a5d4}{radio}}]{,  }\item[{\hyperlink{TooNetworking_8h_aa7924d94ea32c8d33a81ff41f8678320}{network}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{TooNetworking_8h_aa7924d94ea32c8d33a81ff41f8678320}\label{TooNetworking_8h_aa7924d94ea32c8d33a81ff41f8678320}} 
+\index{Too\+Networking.\+h@{Too\+Networking.\+h}!network@{network}}
+\index{network@{network}!Too\+Networking.\+h@{Too\+Networking.\+h}}
+\subsubsection{\texorpdfstring{network()}{network()}}
+{\footnotesize\ttfamily R\+F24\+Network network (\begin{DoxyParamCaption}\item[{\hyperlink{TooNetworking_8h_a173f695381b08642c89a68cdcd76a5d4}{radio}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{TooNetworking_8h_a173f695381b08642c89a68cdcd76a5d4}\label{TooNetworking_8h_a173f695381b08642c89a68cdcd76a5d4}} 
+\index{Too\+Networking.\+h@{Too\+Networking.\+h}!radio@{radio}}
+\index{radio@{radio}!Too\+Networking.\+h@{Too\+Networking.\+h}}
+\subsubsection{\texorpdfstring{radio()}{radio()}}
+{\footnotesize\ttfamily R\+F24 radio (\begin{DoxyParamCaption}\item[{T\+O\+O\+\_\+\+R\+F24\+\_\+\+CE}]{,  }\item[{T\+O\+O\+\_\+\+R\+F24\+\_\+\+CS}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{TooNetworking_8h_aa9ec1ce0a58a96d0452a5ec51bb0bfca}\label{TooNetworking_8h_aa9ec1ce0a58a96d0452a5ec51bb0bfca}} 
+\index{Too\+Networking.\+h@{Too\+Networking.\+h}!Too\+Neteorking\+\_\+connection\+\_\+fix@{Too\+Neteorking\+\_\+connection\+\_\+fix}}
+\index{Too\+Neteorking\+\_\+connection\+\_\+fix@{Too\+Neteorking\+\_\+connection\+\_\+fix}!Too\+Networking.\+h@{Too\+Networking.\+h}}
+\subsubsection{\texorpdfstring{Too\+Neteorking\+\_\+connection\+\_\+fix()}{TooNeteorking\_connection\_fix()}}
+{\footnotesize\ttfamily bool Too\+Neteorking\+\_\+connection\+\_\+fix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tries to reestablish connection to the network
+
+\begin{DoxyReturn}{Returns}
+True if successful, false otherwise 
+\end{DoxyReturn}
 \mbox{\Hypertarget{TooNetworking_8h_a2676204dee95da1ef337de95eb0e9bcb}\label{TooNetworking_8h_a2676204dee95da1ef337de95eb0e9bcb}} 
 \index{Too\+Networking.\+h@{Too\+Networking.\+h}!Too\+Networking\+\_\+begin@{Too\+Networking\+\_\+begin}}
 \index{Too\+Networking\+\_\+begin@{Too\+Networking\+\_\+begin}!Too\+Networking.\+h@{Too\+Networking.\+h}}
 \subsubsection{\texorpdfstring{Too\+Networking\+\_\+begin()}{TooNetworking\_begin()}}
 {\footnotesize\ttfamily bool Too\+Networking\+\_\+begin (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{passed\+\_\+node\+\_\+id }\end{DoxyParamCaption})}
 
-Automatically set up the networking Every radio should provide Too\+Networking\+\_\+connection\+\_\+begin(uint8\+\_\+t node\+I\+D) for easy initialization of the network
+Automatically set up the networking Every radio should provide \hyperlink{TooNetworking_8h_aec97902cf0d3ec10fd86927f3d1df0c6}{Too\+Networking\+\_\+connection\+\_\+begin(uint8\+\_\+t node\+I\+D)} for easy initialization of the network
 
 
 \begin{DoxyParams}{Parameters}
@@ -79,13 +120,179 @@ Automatically set up the networking Every radio should provide Too\+Networking\+
 \begin{DoxyReturn}{Returns}
 true if successful, false otherwise 
 \end{DoxyReturn}
+\mbox{\Hypertarget{TooNetworking_8h_ac352268e177fa2ddf91c8afa5cd04bbf}\label{TooNetworking_8h_ac352268e177fa2ddf91c8afa5cd04bbf}} 
+\index{Too\+Networking.\+h@{Too\+Networking.\+h}!Too\+Networking\+\_\+connection\+\_\+available@{Too\+Networking\+\_\+connection\+\_\+available}}
+\index{Too\+Networking\+\_\+connection\+\_\+available@{Too\+Networking\+\_\+connection\+\_\+available}!Too\+Networking.\+h@{Too\+Networking.\+h}}
+\subsubsection{\texorpdfstring{Too\+Networking\+\_\+connection\+\_\+available()}{TooNetworking\_connection\_available()}}
+{\footnotesize\ttfamily bool Too\+Networking\+\_\+connection\+\_\+available (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Checks if there\textquotesingle{}s something ready to be processed
+
+\begin{DoxyReturn}{Returns}
+True if successful, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{TooNetworking_8h_aec97902cf0d3ec10fd86927f3d1df0c6}\label{TooNetworking_8h_aec97902cf0d3ec10fd86927f3d1df0c6}} 
+\index{Too\+Networking.\+h@{Too\+Networking.\+h}!Too\+Networking\+\_\+connection\+\_\+begin@{Too\+Networking\+\_\+connection\+\_\+begin}}
+\index{Too\+Networking\+\_\+connection\+\_\+begin@{Too\+Networking\+\_\+connection\+\_\+begin}!Too\+Networking.\+h@{Too\+Networking.\+h}}
+\subsubsection{\texorpdfstring{Too\+Networking\+\_\+connection\+\_\+begin()}{TooNetworking\_connection\_begin()}}
+{\footnotesize\ttfamily bool Too\+Networking\+\_\+connection\+\_\+begin (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{passed\+\_\+node\+\_\+id }\end{DoxyParamCaption})}
+
+Automatically set up the networking, implementation depends on the radio
+
+
+\begin{DoxyParams}{Parameters}
+{\em passed\+\_\+node\+\_\+id} & Current node\textquotesingle{}s ID. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if successful, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{TooNetworking_8h_a48504aef69d9ac92e34269a64f7b518b}\label{TooNetworking_8h_a48504aef69d9ac92e34269a64f7b518b}} 
+\index{Too\+Networking.\+h@{Too\+Networking.\+h}!Too\+Networking\+\_\+connection\+\_\+check@{Too\+Networking\+\_\+connection\+\_\+check}}
+\index{Too\+Networking\+\_\+connection\+\_\+check@{Too\+Networking\+\_\+connection\+\_\+check}!Too\+Networking.\+h@{Too\+Networking.\+h}}
+\subsubsection{\texorpdfstring{Too\+Networking\+\_\+connection\+\_\+check()}{TooNetworking\_connection\_check()}}
+{\footnotesize\ttfamily bool Too\+Networking\+\_\+connection\+\_\+check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Checks if the master node is reachable
+
+\begin{DoxyReturn}{Returns}
+true if successful, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{TooNetworking_8h_aefc5dad88b637efb11a3a7b2f76a19b9}\label{TooNetworking_8h_aefc5dad88b637efb11a3a7b2f76a19b9}} 
+\index{Too\+Networking.\+h@{Too\+Networking.\+h}!Too\+Networking\+\_\+connection\+\_\+fix@{Too\+Networking\+\_\+connection\+\_\+fix}}
+\index{Too\+Networking\+\_\+connection\+\_\+fix@{Too\+Networking\+\_\+connection\+\_\+fix}!Too\+Networking.\+h@{Too\+Networking.\+h}}
+\subsubsection{\texorpdfstring{Too\+Networking\+\_\+connection\+\_\+fix()}{TooNetworking\_connection\_fix()}}
+{\footnotesize\ttfamily bool Too\+Networking\+\_\+connection\+\_\+fix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tries to reestablish connection to the network
+
+\begin{DoxyReturn}{Returns}
+True if successful, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{TooNetworking_8h_a7382ba1aed5405c3adc02011ea6c45dd}\label{TooNetworking_8h_a7382ba1aed5405c3adc02011ea6c45dd}} 
+\index{Too\+Networking.\+h@{Too\+Networking.\+h}!Too\+Networking\+\_\+connection\+\_\+maintenance@{Too\+Networking\+\_\+connection\+\_\+maintenance}}
+\index{Too\+Networking\+\_\+connection\+\_\+maintenance@{Too\+Networking\+\_\+connection\+\_\+maintenance}!Too\+Networking.\+h@{Too\+Networking.\+h}}
+\subsubsection{\texorpdfstring{Too\+Networking\+\_\+connection\+\_\+maintenance()}{TooNetworking\_connection\_maintenance()}}
+{\footnotesize\ttfamily bool Too\+Networking\+\_\+connection\+\_\+maintenance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Does the necessary maintenance and D\+H\+CP(-\/like) actions on the network
+
+\begin{DoxyReturn}{Returns}
+True if successful, false otherwise
+\end{DoxyReturn}
+Does the necessary maintenance on the network
+
+\begin{DoxyReturn}{Returns}
+True if successful, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{TooNetworking_8h_a8b2b7fde063d7268ae7deabffeba6152}\label{TooNetworking_8h_a8b2b7fde063d7268ae7deabffeba6152}} 
+\index{Too\+Networking.\+h@{Too\+Networking.\+h}!Too\+Networking\+\_\+peek@{Too\+Networking\+\_\+peek}}
+\index{Too\+Networking\+\_\+peek@{Too\+Networking\+\_\+peek}!Too\+Networking.\+h@{Too\+Networking.\+h}}
+\subsubsection{\texorpdfstring{Too\+Networking\+\_\+peek()}{TooNetworking\_peek()}}
+{\footnotesize\ttfamily bool Too\+Networking\+\_\+peek (\begin{DoxyParamCaption}\item[{R\+F24\+Network\+Header \&}]{header,  }\item[{void $\ast$}]{message,  }\item[{uint16\+\_\+t}]{maxlen }\end{DoxyParamCaption})}
+
+Allows reading a message from buffer and it\textquotesingle{}s N\+OT cleared after being read
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{TooNetworking_8h_a9cd17becc197be8de7befa25116c3a67}\label{TooNetworking_8h_a9cd17becc197be8de7befa25116c3a67}} 
+\index{Too\+Networking.\+h@{Too\+Networking.\+h}!Too\+Networking\+\_\+read@{Too\+Networking\+\_\+read}}
+\index{Too\+Networking\+\_\+read@{Too\+Networking\+\_\+read}!Too\+Networking.\+h@{Too\+Networking.\+h}}
+\subsubsection{\texorpdfstring{Too\+Networking\+\_\+read()}{TooNetworking\_read()}}
+{\footnotesize\ttfamily bool Too\+Networking\+\_\+read (\begin{DoxyParamCaption}\item[{R\+F24\+Network\+Header \&}]{header,  }\item[{void $\ast$}]{message,  }\item[{uint16\+\_\+t}]{maxlen }\end{DoxyParamCaption})}
+
+Allows reading a message from buffer and it\textquotesingle{}s cleared after being read
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{TooNetworking_8h_a723608b997230cc461d06454b2cdb8c3}\label{TooNetworking_8h_a723608b997230cc461d06454b2cdb8c3}} 
+\index{Too\+Networking.\+h@{Too\+Networking.\+h}!Too\+Networking\+\_\+send@{Too\+Networking\+\_\+send}}
+\index{Too\+Networking\+\_\+send@{Too\+Networking\+\_\+send}!Too\+Networking.\+h@{Too\+Networking.\+h}}
+\subsubsection{\texorpdfstring{Too\+Networking\+\_\+send()}{TooNetworking\_send()}}
+{\footnotesize\ttfamily bool Too\+Networking\+\_\+send (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{for\+\_\+node,  }\item[{void $\ast$}]{payload,  }\item[{uint8\+\_\+t}]{size,  }\item[{uint8\+\_\+t}]{type }\end{DoxyParamCaption})}
+
+Allows sending a encrypted message
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{TooNetworking_8h_a86fb32acfc42a498be62a3236c778454}\label{TooNetworking_8h_a86fb32acfc42a498be62a3236c778454}} 
+\index{Too\+Networking.\+h@{Too\+Networking.\+h}!Too\+Networking\+\_\+send\+\_\+encrypted@{Too\+Networking\+\_\+send\+\_\+encrypted}}
+\index{Too\+Networking\+\_\+send\+\_\+encrypted@{Too\+Networking\+\_\+send\+\_\+encrypted}!Too\+Networking.\+h@{Too\+Networking.\+h}}
+\subsubsection{\texorpdfstring{Too\+Networking\+\_\+send\+\_\+encrypted()}{TooNetworking\_send\_encrypted()}}
+{\footnotesize\ttfamily bool Too\+Networking\+\_\+send\+\_\+encrypted (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{for\+\_\+node,  }\item[{void $\ast$}]{payload,  }\item[{uint8\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+Allows sending an encrypted message
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{TooNetworking_8h_a9209f3e1a2fdf0b3b88d49105b8fc359}\label{TooNetworking_8h_a9209f3e1a2fdf0b3b88d49105b8fc359}} 
+\index{Too\+Networking.\+h@{Too\+Networking.\+h}!Too\+Networking\+\_\+send\+\_\+signed@{Too\+Networking\+\_\+send\+\_\+signed}}
+\index{Too\+Networking\+\_\+send\+\_\+signed@{Too\+Networking\+\_\+send\+\_\+signed}!Too\+Networking.\+h@{Too\+Networking.\+h}}
+\subsubsection{\texorpdfstring{Too\+Networking\+\_\+send\+\_\+signed()}{TooNetworking\_send\_signed()}}
+{\footnotesize\ttfamily bool Too\+Networking\+\_\+send\+\_\+signed (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{for\+\_\+node,  }\item[{void $\ast$}]{payload,  }\item[{uint8\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+Allows sending a signed message, type must be embedded inside the payload the receiver must know what to do with the message once it\textquotesingle{}s been verified, messages that fail the checks are D\+I\+S\+C\+A\+R\+D\+E\+D!
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{TooNetworking_8h_a5861e5d6df60aa6701af1b9ec7e942a8}\label{TooNetworking_8h_a5861e5d6df60aa6701af1b9ec7e942a8}} 
+\index{Too\+Networking.\+h@{Too\+Networking.\+h}!Too\+Networking\+\_\+send\+\_\+signed\+\_\+encrypted@{Too\+Networking\+\_\+send\+\_\+signed\+\_\+encrypted}}
+\index{Too\+Networking\+\_\+send\+\_\+signed\+\_\+encrypted@{Too\+Networking\+\_\+send\+\_\+signed\+\_\+encrypted}!Too\+Networking.\+h@{Too\+Networking.\+h}}
+\subsubsection{\texorpdfstring{Too\+Networking\+\_\+send\+\_\+signed\+\_\+encrypted()}{TooNetworking\_send\_signed\_encrypted()}}
+{\footnotesize\ttfamily bool Too\+Networking\+\_\+send\+\_\+signed\+\_\+encrypted (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{for\+\_\+node,  }\item[{void $\ast$}]{payload,  }\item[{uint8\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+Allows sending a signed and encrypted message
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
 
 
 \subsection{Variable Documentation}
-\mbox{\Hypertarget{TooNetworking_8h_a11d4f129f71dc36defd23ed9785c3c64}\label{TooNetworking_8h_a11d4f129f71dc36defd23ed9785c3c64}} 
+\mbox{\Hypertarget{TooNetworking_8h_a7c24840cd9eb766eb04c1db0d2363cd5}\label{TooNetworking_8h_a7c24840cd9eb766eb04c1db0d2363cd5}} 
 \index{Too\+Networking.\+h@{Too\+Networking.\+h}!buffer\+\_\+first@{buffer\+\_\+first}}
 \index{buffer\+\_\+first@{buffer\+\_\+first}!Too\+Networking.\+h@{Too\+Networking.\+h}}
 \subsubsection{\texorpdfstring{buffer\+\_\+first}{buffer\_first}}
-{\footnotesize\ttfamily \hyperlink{structBufferItem}{Buffer\+Item}$\ast$ buffer\+\_\+first = 0}
+{\footnotesize\ttfamily \hyperlink{structBufferItem}{Buffer\+Item} $\ast$ buffer\+\_\+first = 0}
 
-Pointer to the payload list start 
+Pointer to the payload list start \mbox{\Hypertarget{TooNetworking_8h_ad145f92b978c39b1728ffd91e896277a}\label{TooNetworking_8h_ad145f92b978c39b1728ffd91e896277a}} 
+\index{Too\+Networking.\+h@{Too\+Networking.\+h}!nonce\+\_\+received\+\_\+start@{nonce\+\_\+received\+\_\+start}}
+\index{nonce\+\_\+received\+\_\+start@{nonce\+\_\+received\+\_\+start}!Too\+Networking.\+h@{Too\+Networking.\+h}}
+\subsubsection{\texorpdfstring{nonce\+\_\+received\+\_\+start}{nonce\_received\_start}}
+{\footnotesize\ttfamily \hyperlink{structNonceReceived}{Nonce\+Received}$\ast$ nonce\+\_\+received\+\_\+start = 0}
+
+Pointer to the received nonce list start \mbox{\Hypertarget{TooNetworking_8h_aac43930ae93d50eea7e1ae8aee603524}\label{TooNetworking_8h_aac43930ae93d50eea7e1ae8aee603524}} 
+\index{Too\+Networking.\+h@{Too\+Networking.\+h}!nonce\+\_\+requested\+\_\+first@{nonce\+\_\+requested\+\_\+first}}
+\index{nonce\+\_\+requested\+\_\+first@{nonce\+\_\+requested\+\_\+first}!Too\+Networking.\+h@{Too\+Networking.\+h}}
+\subsubsection{\texorpdfstring{nonce\+\_\+requested\+\_\+first}{nonce\_requested\_first}}
+{\footnotesize\ttfamily \hyperlink{structNonceRequested}{Nonce\+Requested}$\ast$ nonce\+\_\+requested\+\_\+first = 0}
+
+Pointer to the requested nonce list start \mbox{\Hypertarget{TooNetworking_8h_ae75ffa3e0a98255f366188a6223156bc}\label{TooNetworking_8h_ae75ffa3e0a98255f366188a6223156bc}} 
+\index{Too\+Networking.\+h@{Too\+Networking.\+h}!nonce\+\_\+sent\+\_\+start@{nonce\+\_\+sent\+\_\+start}}
+\index{nonce\+\_\+sent\+\_\+start@{nonce\+\_\+sent\+\_\+start}!Too\+Networking.\+h@{Too\+Networking.\+h}}
+\subsubsection{\texorpdfstring{nonce\+\_\+sent\+\_\+start}{nonce\_sent\_start}}
+{\footnotesize\ttfamily \hyperlink{structNonceSent}{Nonce\+Sent}$\ast$ nonce\+\_\+sent\+\_\+start = 0}
+
+Pointer to the sent nonce list start \mbox{\Hypertarget{TooNetworking_8h_a2cde2cc921aef77784b8d5b3129b5803}\label{TooNetworking_8h_a2cde2cc921aef77784b8d5b3129b5803}} 
+\index{Too\+Networking.\+h@{Too\+Networking.\+h}!Sha256@{Sha256}}
+\index{Sha256@{Sha256}!Too\+Networking.\+h@{Too\+Networking.\+h}}
+\subsubsection{\texorpdfstring{Sha256}{Sha256}}
+{\footnotesize\ttfamily Sha256\+Class Sha256}
+
