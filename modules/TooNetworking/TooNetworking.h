@@ -31,6 +31,8 @@
 #define __TooNetworking_H__
 #include <stdint.h>
 #include <Arduino.h>
+#include "TooAutomation.h"
+#include "TooSigning.h"
 
 /**
  * **Reserved message header types**

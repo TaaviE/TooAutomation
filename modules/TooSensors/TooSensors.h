@@ -27,6 +27,7 @@
 #ifndef __TooSensors_H__
 #define __TooSensors_H__
 
+#include "TooAutomation.h"
 
 #ifdef __cplusplus
 extern "C" {
