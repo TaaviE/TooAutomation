@@ -1,0 +1,3 @@
+[submodule "modules/TooSigning"]
+	path = modules/TooSigning
+	url = https://github.com/TaaviE/TooSigning.git
