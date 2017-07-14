@@ -165,18 +165,18 @@ BufferItem * buffer_first = 0; /**< Pointer to the payload list start */
 #endif // TOONETWORKING_SIGNING
 
 
+
 #ifdef TOORADIO_RF24
 
 /*
 * TODO:
-* Send
 * Send signed
 * Send encrypted
 * Send signed and encrypted
 * Packets received
 * Peek header but do not clear
 * Read packet
-* Connection available
+* Connection available 50%
 */
 
 #include "RF24.h"
@@ -187,7 +187,6 @@ BufferItem * buffer_first = 0; /**< Pointer to the payload list start */
 RF24 radio(TOO_RF24_CE, TOO_RF24_CS);
 RF24Network network(radio);
 RF24Mesh mesh(radio, network);
-
 
   /**
    * Automatically set up the networking, implementation depends on the radio
@@ -213,6 +212,7 @@ bool TooNetworking_send(uint8_t for_node, void * payload, uint8_t size, uint8_t 
 }
 
 #ifdef TOONETWORKING_SIGNING
+
   /**
    * Allows sending a signed message, type must be embedded inside the payload
    * the receiver must know what to do with the message once it's been 
@@ -223,13 +223,14 @@ bool TooNetworking_send(uint8_t for_node, void * payload, uint8_t size, uint8_t 
    */
 bool TooNetworking_send_signed(uint8_t for_node, void * payload, uint8_t size){
   //Check if there's a nonce for that node
-  //If there is send 
-
-  //
+  //If there is, sign it, send it
+  //Else send nonce request
+  //Store in buffer
 }
 #endif // TOONETWORKING_SIGNING
 
 #ifdef TOONETWORKING_ENCRYPTION
+
   /**
    * Allows sending an encrypted message
    * 
@@ -242,6 +243,7 @@ bool TooNetworking_send_encrypted(uint8_t for_node, void * payload, uint8_t size
 #endif // TOONETWORKING_ENCRYPTION
 
 #ifdef TOONETWORKING_ENCRYPTION && TOONETWORKING_SIGNING
+
   /**
    * Allows sending a signed and encrypted message
    * 
@@ -320,9 +322,222 @@ bool TooNetworking_connection_maintenance(){
 bool TooNetworking_connection_maintenance(){
    
 }
-
 #endif
 
+void TooSigning_bufferlist_remove(BufferListItem * previous, BufferListItem * current) {
+  Serial.println(F("Removing from buffer list"));
+  if (current = rfsigned.bufferlist_first) { // Start of buffer list
+    free(current->payload);
+    free(current);
+    rfsigned.bufferlist_first = 0;
+  } else if (current->next == 0) { // First in the buffer list
+    free(current->payload);
+    free(current);
+    previous->next = 0;
+  } else if (previous != 0) { // Somehwere in the middle of the list
+    previous->next = current->next;
+    free(current->payload);
+    free(current);
+  } else {
+    Serial.print(F("Error case not matched, dumping pointers: "));
+    Serial.print((uint8_t) rfsigned.bufferlist_first);
+    Serial.print(F(" "));
+    Serial.print((uint8_t) previous);
+    Serial.print(F(" "));
+    Serial.print((uint8_t) previous->next);
+    Serial.print(F(" "));
+    Serial.print((uint8_t) current);
+    Serial.print(F(" "));
+    Serial.println((uint8_t) current->next);
+  }
+}
+
+/*
+  Sending buffer related functions
+*/
+bool TooSigning_bufferlist_initialize() {
+  rfsigned.bufferlist_first = malloc(sizeof(BufferListItem));
+  Serial.println((uint8_t) rfsigned.bufferlist_first);
+  if (rfsigned.bufferlist_first == 0) {
+    Serial.println(F("Buffer init failed"));
+    return false;
+  }
+
+  rfsigned.bufferlist_first->next = 0;
+  return true;
+}
+
+BufferListItem * TooSigning_bufferlist_find_for_id(uint8_t nodeID) {
+  BufferListItem * current = rfsigned.bufferlist_first;
+  while (current != 0) {
+    if (current->BufferListItemForNode == nodeID) {
+      return current;
+    }
+    current = current->next;
+    if (current == 0) {
+      return NULL;
+    }
+  }
+
+  return NULL;
+}
+
+bool TooSigning_bufferlist_send(BufferListItem * item, ReceivedNonce * nonce, BufferListItem * previousitem) {
+  Serial.println(F("Sending buffer item"));
+  size_t sizeof_buffer = sizeof(PayloadMetadata) + item->payload_size; //Calculate the size of the message
+  void * buf = malloc(sizeof_buffer); //Allocate enough memory for the buffer
+  Serial.print(F("Metadata size: "));
+  Serial.println((uint8_t) sizeof(PayloadMetadata));
+  Serial.print(F("Payload size: "));
+  Serial.println((uint8_t) item->payload_size);
+  Serial.print(F("Buffer size: "));
+  Serial.println((uint8_t) sizeof_buffer);
+  Serial.print(F("Buffer address: "));
+  Serial.println((uint8_t) buf);
+
+  Serial.print(F("From: "));
+  Serial.println(rfsigned.current_node_ID);
+  Serial.print(F("To: "));
+  Serial.println(item->BufferListItemForNode);
+
+  uint8_t hmac[20] = {0};
+  TooSigning_read_hmac_from_progmem(rfsigned.current_node_ID, &hmac);
+  if (hmac[0] == hmacs[0][0]) {
+    Serial.println(F("Equal"));
+  }
+
+  Serial.print(F("HMAC: "));
+  Serial.println(hmac[0], DEC);
+  Serial.println(hmacs[0][0], DEC);
+  Serial.println(hmacs[1][0], DEC);
+
+  for (int i; i > 20; i++) {
+    Serial.print(hmac[i]);
+  }
+  Serial.println();
+
+  rfsigned.Sha256.initHmac(hmac, 20); //Initialize the hmac
+  Serial.print(F("Size of full payload: "));
+  Serial.println(item->payload_size);
+
+  TooSigning_hash_data(item->payload, item->payload_size); //Hash the data itself
+  Serial.print(F("Nonce: "));
+  Serial.println(nonce->nonce);
+
+  TooSigning_hash_data(&(nonce->nonce), sizeof(uint32_t));
+  TooSigning_hash_store(rfsigned.Sha256.resultHmac(), item->hash); //Store hash in payload hash
+
+  //Serial.print(F("Memmove 1: "));
+  //Serial.println((uint8_t)
+  memmove(buf, item, sizeof(PayloadMetadata)); //Copy metadata to the start of the buffer
+
+  Serial.print(F("Metadata: "));
+  TooSigning_random_data_print(buf, sizeof(PayloadMetadata));
+
+  //Serial.print(F("Memmove 2: "));
+  //Serial.println((uint8_t)
+  memmove(buf + sizeof(PayloadMetadata), item->payload, item->payload_size); //Copy the payload to the end of the buffer
+
+  Serial.print(F("Full buffer: "));
+  TooSigning_random_data_print(buf, sizeof(PayloadMetadata) + item->payload_size);
+
+  Serial.print(F("Generated hash: "));
+  TooSigning_hash_print(item->hash);
+
+  bool state = mesh.write(buf, 'S', sizeof_buffer, item->BufferListItemForNode); //Send the message
+  Serial.print(F("I guess it's "));
+  Serial.println(state ? F("sent") : F("not sent"));
+  if (state) { //Remove if sent
+    Serial.println(F("Removing sent message"));
+    TooSigning_bufferlist_remove(previousitem, item);
+  }
+  Serial.println(F("Buffer list"));
+  TooSigning_bufferlist_print();
+  Serial.println(F("Buffer list printed"));
+  delay(1000);
+}
+
+
+bool TooSigning_bufferlist_add(uint8_t BufferListItemForNode, void * payload, uint8_t size) {
+  Serial.println(F("Add item to buffer list"));
+  Serial.println(size);
+  BufferListItem * current = rfsigned.bufferlist_first;
+  BufferListItem * previous = 0;
+  if (rfsigned.bufferlist_first == 0) {
+    if (!TooSigning_bufferlist_initialize()) {
+      return false;
+    } else {
+      current = rfsigned.bufferlist_first;
+    }
+  } else {
+    while (current->next != 0) {  //Take the last item in the list
+      Serial.println(F("Finding the last item"));
+      current = current->next;
+    }
+
+    current->next = malloc(sizeof(ReceivedNonce));
+    if (current->next == 0) {
+      Serial.println(F("Failed to malloc"));
+      return false;
+    }
+    previous = current;
+    current = current->next;
+  }
+
+  current->BufferListItemForNode = BufferListItemForNode;
+  current->payload = payload;
+  current->payload_size = size;
+
+  Serial.println(F("Finding nonce for nodeID"));
+  ReceivedNonce * nonce = TooSigning_received_noncelist_find_from_ID(BufferListItemForNode);
+  if (nonce != 0) {
+    TooSigning_bufferlist_send(current, nonce, previous);
+    return true;
+  } else {
+    Serial.println(F("Requested nonce"));
+    TooSigning_requested_noncelist_add(BufferListItemForNode);
+    Serial.println(F("Requested"));
+  }
+  Serial.println(F("Added item to buffer list"));
+  return true;
+}
+
+void TooSigning_bufferlist_send_all() {
+  BufferListItem * current = rfsigned.bufferlist_first;
+  BufferListItem * previous = 0;
+  TooSigning_bufferlist_print();
+  Serial.println(F("Sending all: "));
+  Serial.println((uint8_t) rfsigned.bufferlist_first);
+  Serial.println((uint8_t) rfsigned.bufferlist_first->next);
+  while (current != 0) {
+    Serial.println(F("There's something in the buffer to send"));
+    uint32_t nonce = TooSigning_received_noncelist_find_from_ID(current->BufferListItemForNode);
+
+    if (nonce != 0) {
+      Serial.println(F(" ..one nonce for node is not 0!"));
+      TooSigning_bufferlist_send(current, nonce, previous);
+    }
+    previous = current;
+    current = current->next;
+  }
+}
+
+void TooSigning_bufferlist_print() {
+  Serial.println(F("___ BUFFER DUMP ___"));
+
+  BufferListItem * current = rfsigned.bufferlist_first;
+  while (current != 0) {
+    Serial.print(F("For: "));
+    Serial.println(current->BufferListItemForNode);
+    Serial.print(F("Pointer to next: "));
+    Serial.println((uint16_t) current->next);
+    Serial.print(F("Hash: "));
+    TooSigning_hash_print(current->hash);
+    Serial.print(F("Payload size: "));
+    Serial.println(current->payload_size);
+    current = current->next;
+  }
+}
   /**
    * Tries to reestablish connection to the network
    * 
