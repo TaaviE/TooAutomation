@@ -1,0 +1,80 @@
+\hypertarget{group__TOOSIGNING__HASHING}{}\section{T\+O\+O\+S\+I\+G\+N\+I\+N\+G\+\_\+\+H\+A\+S\+H\+I\+NG}
+\label{group__TOOSIGNING__HASHING}\index{T\+O\+O\+S\+I\+G\+N\+I\+N\+G\+\_\+\+H\+A\+S\+H\+I\+NG@{T\+O\+O\+S\+I\+G\+N\+I\+N\+G\+\_\+\+H\+A\+S\+H\+I\+NG}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__TOOSIGNING__HASHING_gafb2935303b05255e80a7a6fa4be7cf57}{Too\+Signing\+\_\+hash\+\_\+data} (void $\ast$payload, size\+\_\+t payload\+\_\+size)
+\item 
+void \hyperlink{group__TOOSIGNING__HASHING_ga7696a20bc1d03d129afbdc8d6e446aa2}{Too\+Signing\+\_\+hash\+\_\+print} (uint8\+\_\+t $\ast$hash)
+\item 
+void \hyperlink{group__TOOSIGNING__HASHING_gae743dd1289d92f915352e40b047b4cc8}{Too\+Signing\+\_\+hash\+\_\+store} (void $\ast$hash, void $\ast$result\+\_\+hash)
+\item 
+bool \hyperlink{group__TOOSIGNING__HASHING_ga3a6687a23b6971e4053bef8328e347dd}{Too\+Signing\+\_\+hash\+\_\+compare} (void $\ast$hash1, void $\ast$hash2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+{\bfseries Functions that simplify hashing operations and hash management} 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__TOOSIGNING__HASHING_ga3a6687a23b6971e4053bef8328e347dd}\label{group__TOOSIGNING__HASHING_ga3a6687a23b6971e4053bef8328e347dd}} 
+\index{T\+O\+O\+S\+I\+G\+N\+I\+N\+G\+\_\+\+H\+A\+S\+H\+I\+NG@{T\+O\+O\+S\+I\+G\+N\+I\+N\+G\+\_\+\+H\+A\+S\+H\+I\+NG}!Too\+Signing\+\_\+hash\+\_\+compare@{Too\+Signing\+\_\+hash\+\_\+compare}}
+\index{Too\+Signing\+\_\+hash\+\_\+compare@{Too\+Signing\+\_\+hash\+\_\+compare}!T\+O\+O\+S\+I\+G\+N\+I\+N\+G\+\_\+\+H\+A\+S\+H\+I\+NG@{T\+O\+O\+S\+I\+G\+N\+I\+N\+G\+\_\+\+H\+A\+S\+H\+I\+NG}}
+\subsubsection{\texorpdfstring{Too\+Signing\+\_\+hash\+\_\+compare()}{TooSigning\_hash\_compare()}}
+{\footnotesize\ttfamily bool Too\+Signing\+\_\+hash\+\_\+compare (\begin{DoxyParamCaption}\item[{void $\ast$}]{hash1,  }\item[{void $\ast$}]{hash2 }\end{DoxyParamCaption})}
+
+Compares two hashes with each other
+
+
+\begin{DoxyParams}{Parameters}
+{\em hash1} & first hash \\
+\hline
+{\em hash2} & second hash \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool equality 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__TOOSIGNING__HASHING_gafb2935303b05255e80a7a6fa4be7cf57}\label{group__TOOSIGNING__HASHING_gafb2935303b05255e80a7a6fa4be7cf57}} 
+\index{T\+O\+O\+S\+I\+G\+N\+I\+N\+G\+\_\+\+H\+A\+S\+H\+I\+NG@{T\+O\+O\+S\+I\+G\+N\+I\+N\+G\+\_\+\+H\+A\+S\+H\+I\+NG}!Too\+Signing\+\_\+hash\+\_\+data@{Too\+Signing\+\_\+hash\+\_\+data}}
+\index{Too\+Signing\+\_\+hash\+\_\+data@{Too\+Signing\+\_\+hash\+\_\+data}!T\+O\+O\+S\+I\+G\+N\+I\+N\+G\+\_\+\+H\+A\+S\+H\+I\+NG@{T\+O\+O\+S\+I\+G\+N\+I\+N\+G\+\_\+\+H\+A\+S\+H\+I\+NG}}
+\subsubsection{\texorpdfstring{Too\+Signing\+\_\+hash\+\_\+data()}{TooSigning\_hash\_data()}}
+{\footnotesize\ttfamily void Too\+Signing\+\_\+hash\+\_\+data (\begin{DoxyParamCaption}\item[{void $\ast$}]{payload,  }\item[{size\+\_\+t}]{payload\+\_\+size }\end{DoxyParamCaption})}
+
+Hashes large(ish) amounts of data
+
+
+\begin{DoxyParams}{Parameters}
+{\em payload} & data that has to be hashed \\
+\hline
+{\em payload\+\_\+size} & size of the data that has to be hashed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__TOOSIGNING__HASHING_ga7696a20bc1d03d129afbdc8d6e446aa2}\label{group__TOOSIGNING__HASHING_ga7696a20bc1d03d129afbdc8d6e446aa2}} 
+\index{T\+O\+O\+S\+I\+G\+N\+I\+N\+G\+\_\+\+H\+A\+S\+H\+I\+NG@{T\+O\+O\+S\+I\+G\+N\+I\+N\+G\+\_\+\+H\+A\+S\+H\+I\+NG}!Too\+Signing\+\_\+hash\+\_\+print@{Too\+Signing\+\_\+hash\+\_\+print}}
+\index{Too\+Signing\+\_\+hash\+\_\+print@{Too\+Signing\+\_\+hash\+\_\+print}!T\+O\+O\+S\+I\+G\+N\+I\+N\+G\+\_\+\+H\+A\+S\+H\+I\+NG@{T\+O\+O\+S\+I\+G\+N\+I\+N\+G\+\_\+\+H\+A\+S\+H\+I\+NG}}
+\subsubsection{\texorpdfstring{Too\+Signing\+\_\+hash\+\_\+print()}{TooSigning\_hash\_print()}}
+{\footnotesize\ttfamily void Too\+Signing\+\_\+hash\+\_\+print (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{hash }\end{DoxyParamCaption})}
+
+Dumps hash to serial
+
+
+\begin{DoxyParams}{Parameters}
+{\em hash} & pointer to standard hash \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__TOOSIGNING__HASHING_gae743dd1289d92f915352e40b047b4cc8}\label{group__TOOSIGNING__HASHING_gae743dd1289d92f915352e40b047b4cc8}} 
+\index{T\+O\+O\+S\+I\+G\+N\+I\+N\+G\+\_\+\+H\+A\+S\+H\+I\+NG@{T\+O\+O\+S\+I\+G\+N\+I\+N\+G\+\_\+\+H\+A\+S\+H\+I\+NG}!Too\+Signing\+\_\+hash\+\_\+store@{Too\+Signing\+\_\+hash\+\_\+store}}
+\index{Too\+Signing\+\_\+hash\+\_\+store@{Too\+Signing\+\_\+hash\+\_\+store}!T\+O\+O\+S\+I\+G\+N\+I\+N\+G\+\_\+\+H\+A\+S\+H\+I\+NG@{T\+O\+O\+S\+I\+G\+N\+I\+N\+G\+\_\+\+H\+A\+S\+H\+I\+NG}}
+\subsubsection{\texorpdfstring{Too\+Signing\+\_\+hash\+\_\+store()}{TooSigning\_hash\_store()}}
+{\footnotesize\ttfamily void Too\+Signing\+\_\+hash\+\_\+store (\begin{DoxyParamCaption}\item[{void $\ast$}]{hash,  }\item[{void $\ast$}]{result\+\_\+hash }\end{DoxyParamCaption})}
+
+Creates a copy of the hash somewhere else
+
+
+\begin{DoxyParams}{Parameters}
+{\em hash} & source \\
+\hline
+{\em result\+\_\+hash} & destination \\
+\hline
+\end{DoxyParams}

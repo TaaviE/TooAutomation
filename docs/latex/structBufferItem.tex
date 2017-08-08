@@ -6,11 +6,12 @@
 
 
 
-Collaboration diagram for Buffer\+Item\+:\nopagebreak
+Collaboration diagram for Buffer\+Item\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=221pt]{structBufferItem__coll__graph}
+\includegraphics[width=182pt]{structBufferItem__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Attributes}
@@ -18,13 +19,13 @@ Collaboration diagram for Buffer\+Item\+:\nopagebreak
 \item 
 uint8\+\_\+t \hyperlink{structBufferItem_a5c3187c383ceec1825964d5e512273de}{payload\+\_\+size} = 0
 \item 
-uint8\+\_\+t \hyperlink{structBufferItem_a02298581e8d8eca4589f387ebaeeb14c}{payload\+\_\+hash} \mbox{[}32\mbox{]} = \{0\}
+uint8\+\_\+t \hyperlink{structBufferItem_a3d7529f54e1e8ffaa3ee3b85ae0ebbbd}{payload\+\_\+type} = 0
 \item 
 uint8\+\_\+t \hyperlink{structBufferItem_a2e475a18a6671f1f0c4bf3010d7a6e89}{payload\+\_\+destination} = 0
 \item 
-\hyperlink{structBufferItem}{Buffer\+Item} $\ast$ \hyperlink{structBufferItem_ae69937bde6391eabc86ea7ec0dffe9cc}{payload\+\_\+next} = 0
+\hyperlink{structBufferItem}{Buffer\+Item} $\ast$ \hyperlink{structBufferItem_a0b7574f1fee48cbb04176af01f9d810f}{next} = 0
 \item 
-void $\ast$ \hyperlink{structBufferItem_a970332733892ec7bc7ab10a6430fd5e0}{payload} = 0
+void $\ast$ \hyperlink{structBufferItem_a0ec6d94d7df8c1e9db526fa0200267bb}{payload} = 0
 \end{DoxyCompactItemize}
 
 
@@ -32,11 +33,17 @@ void $\ast$ \hyperlink{structBufferItem_a970332733892ec7bc7ab10a6430fd5e0}{paylo
 Used for storing metadata about the payload until the payload is sent 
 
 \subsection{Member Data Documentation}
-\mbox{\Hypertarget{structBufferItem_a970332733892ec7bc7ab10a6430fd5e0}\label{structBufferItem_a970332733892ec7bc7ab10a6430fd5e0}} 
+\mbox{\Hypertarget{structBufferItem_a0b7574f1fee48cbb04176af01f9d810f}\label{structBufferItem_a0b7574f1fee48cbb04176af01f9d810f}} 
+\index{Buffer\+Item@{Buffer\+Item}!next@{next}}
+\index{next@{next}!Buffer\+Item@{Buffer\+Item}}
+\subsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily \hyperlink{structBufferItem}{Buffer\+Item}$\ast$ Buffer\+Item\+::next = 0}
+
+Next item in the list \mbox{\Hypertarget{structBufferItem_a0ec6d94d7df8c1e9db526fa0200267bb}\label{structBufferItem_a0ec6d94d7df8c1e9db526fa0200267bb}} 
 \index{Buffer\+Item@{Buffer\+Item}!payload@{payload}}
 \index{payload@{payload}!Buffer\+Item@{Buffer\+Item}}
 \subsubsection{\texorpdfstring{payload}{payload}}
-{\footnotesize\ttfamily void $\ast$ Buffer\+Item\+::payload = 0}
+{\footnotesize\ttfamily void$\ast$ Buffer\+Item\+::payload = 0}
 
 Pointer to the payload \mbox{\Hypertarget{structBufferItem_a2e475a18a6671f1f0c4bf3010d7a6e89}\label{structBufferItem_a2e475a18a6671f1f0c4bf3010d7a6e89}} 
 \index{Buffer\+Item@{Buffer\+Item}!payload\+\_\+destination@{payload\+\_\+destination}}
@@ -44,25 +51,19 @@ Pointer to the payload \mbox{\Hypertarget{structBufferItem_a2e475a18a6671f1f0c4b
 \subsubsection{\texorpdfstring{payload\+\_\+destination}{payload\_destination}}
 {\footnotesize\ttfamily uint8\+\_\+t Buffer\+Item\+::payload\+\_\+destination = 0}
 
-Destination of the payload \mbox{\Hypertarget{structBufferItem_a02298581e8d8eca4589f387ebaeeb14c}\label{structBufferItem_a02298581e8d8eca4589f387ebaeeb14c}} 
-\index{Buffer\+Item@{Buffer\+Item}!payload\+\_\+hash@{payload\+\_\+hash}}
-\index{payload\+\_\+hash@{payload\+\_\+hash}!Buffer\+Item@{Buffer\+Item}}
-\subsubsection{\texorpdfstring{payload\+\_\+hash}{payload\_hash}}
-{\footnotesize\ttfamily uint8\+\_\+t Buffer\+Item\+::payload\+\_\+hash\mbox{[}32\mbox{]} = \{0\}}
-
-Storage of the hash generated \mbox{\Hypertarget{structBufferItem_ae69937bde6391eabc86ea7ec0dffe9cc}\label{structBufferItem_ae69937bde6391eabc86ea7ec0dffe9cc}} 
-\index{Buffer\+Item@{Buffer\+Item}!payload\+\_\+next@{payload\+\_\+next}}
-\index{payload\+\_\+next@{payload\+\_\+next}!Buffer\+Item@{Buffer\+Item}}
-\subsubsection{\texorpdfstring{payload\+\_\+next}{payload\_next}}
-{\footnotesize\ttfamily \hyperlink{structBufferItem}{Buffer\+Item} $\ast$ Buffer\+Item\+::payload\+\_\+next = 0}
-
-Next item in the list \mbox{\Hypertarget{structBufferItem_a5c3187c383ceec1825964d5e512273de}\label{structBufferItem_a5c3187c383ceec1825964d5e512273de}} 
+Destination of the payload \mbox{\Hypertarget{structBufferItem_a5c3187c383ceec1825964d5e512273de}\label{structBufferItem_a5c3187c383ceec1825964d5e512273de}} 
 \index{Buffer\+Item@{Buffer\+Item}!payload\+\_\+size@{payload\+\_\+size}}
 \index{payload\+\_\+size@{payload\+\_\+size}!Buffer\+Item@{Buffer\+Item}}
 \subsubsection{\texorpdfstring{payload\+\_\+size}{payload\_size}}
 {\footnotesize\ttfamily uint8\+\_\+t Buffer\+Item\+::payload\+\_\+size = 0}
 
-Size of the payload pointed to by void $\ast$ payload 
+Size of the payload pointed to by void $\ast$ payload \mbox{\Hypertarget{structBufferItem_a3d7529f54e1e8ffaa3ee3b85ae0ebbbd}\label{structBufferItem_a3d7529f54e1e8ffaa3ee3b85ae0ebbbd}} 
+\index{Buffer\+Item@{Buffer\+Item}!payload\+\_\+type@{payload\+\_\+type}}
+\index{payload\+\_\+type@{payload\+\_\+type}!Buffer\+Item@{Buffer\+Item}}
+\subsubsection{\texorpdfstring{payload\+\_\+type}{payload\_type}}
+{\footnotesize\ttfamily uint8\+\_\+t Buffer\+Item\+::payload\+\_\+type = 0}
+
+Received payload type, to deal with messages signed, encrypted or both 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

@@ -84,12 +84,27 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a9e2f47eec20e01c7cce1acf2d47bbf14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5453d115c1ba4044592921e0127f0c8"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structNonceRequested.html#ae5453d115c1ba4044592921e0127f0c8">nonce_request_last</a> = 0</td></tr>
 <tr class="separator:ae5453d115c1ba4044592921e0127f0c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e3de3bf702eaea6ab86bc4677c9f4c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structNonceRequested.html">NonceRequested</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structNonceRequested.html#a5e3de3bf702eaea6ab86bc4677c9f4c8">nonce_next</a> = 0</td></tr>
-<tr class="separator:a5e3de3bf702eaea6ab86bc4677c9f4c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ef35667b6b2cb12f1c845ddc63f16ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structNonceRequested.html">NonceRequested</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structNonceRequested.html#a2ef35667b6b2cb12f1c845ddc63f16ec">next</a> = 0</td></tr>
+<tr class="separator:a2ef35667b6b2cb12f1c845ddc63f16ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Used for storing metadata about nonce requests </p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="a2ef35667b6b2cb12f1c845ddc63f16ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ef35667b6b2cb12f1c845ddc63f16ec">&#9670;&nbsp;</a></span>next</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structNonceRequested.html">NonceRequested</a>* NonceRequested::next = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Next in the list </p>
+
+</div>
+</div>
 <a id="a49d5f4e83fa72e51cc37237cc46f3a7e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a49d5f4e83fa72e51cc37237cc46f3a7e">&#9670;&nbsp;</a></span>nonce_from</h2>
 
@@ -101,20 +116,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a id="a5e3de3bf702eaea6ab86bc4677c9f4c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e3de3bf702eaea6ab86bc4677c9f4c8">&#9670;&nbsp;</a></span>nonce_next</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structNonceRequested.html">NonceRequested</a>* NonceRequested::nonce_next = 0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Requested from </p>
 
 </div>
 </div>
@@ -129,6 +131,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>First request time </p>
 
 </div>
 </div>
@@ -143,6 +146,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Last request time </p>
 
 </div>
 </div>

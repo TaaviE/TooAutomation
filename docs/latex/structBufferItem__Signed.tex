@@ -1,0 +1,78 @@
+\hypertarget{structBufferItem__Signed}{}\section{Buffer\+Item\+\_\+\+Signed Struct Reference}
+\label{structBufferItem__Signed}\index{Buffer\+Item\+\_\+\+Signed@{Buffer\+Item\+\_\+\+Signed}}
+
+
+{\ttfamily \#include $<$Too\+Networking.\+h$>$}
+
+
+
+Collaboration diagram for Buffer\+Item\+\_\+\+Signed\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{structBufferItem__Signed__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \hyperlink{structBufferItem__Signed_a99af0ec40a5d44a11df8592667fe7614}{payload\+\_\+size} = 0
+\item 
+uint8\+\_\+t \hyperlink{structBufferItem__Signed_aea55c4b9fa78da421de8f83df370fb57}{payload\+\_\+hash} \mbox{[}32\mbox{]} = \{0\}
+\item 
+uint8\+\_\+t \hyperlink{structBufferItem__Signed_a75a67331ae70b15b59ba8941313e4fce}{payload\+\_\+type} = 0
+\item 
+uint8\+\_\+t \hyperlink{structBufferItem__Signed_ad71dae240fb681bedb0c0332fff403fe}{payload\+\_\+destination} = 0
+\item 
+\hyperlink{structBufferItem__Signed}{Buffer\+Item\+\_\+\+Signed} $\ast$ \hyperlink{structBufferItem__Signed_a86ea87809ef5786a04f1218ac028fa13}{next} = 0
+\item 
+void $\ast$ \hyperlink{structBufferItem__Signed_a4f268b032fb161b2c73daad2d2659291}{payload} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Used for storing metadata about the signed payload until the payload is sent 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structBufferItem__Signed_a86ea87809ef5786a04f1218ac028fa13}\label{structBufferItem__Signed_a86ea87809ef5786a04f1218ac028fa13}} 
+\index{Buffer\+Item\+\_\+\+Signed@{Buffer\+Item\+\_\+\+Signed}!next@{next}}
+\index{next@{next}!Buffer\+Item\+\_\+\+Signed@{Buffer\+Item\+\_\+\+Signed}}
+\subsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily \hyperlink{structBufferItem__Signed}{Buffer\+Item\+\_\+\+Signed}$\ast$ Buffer\+Item\+\_\+\+Signed\+::next = 0}
+
+Next item in the list \mbox{\Hypertarget{structBufferItem__Signed_a4f268b032fb161b2c73daad2d2659291}\label{structBufferItem__Signed_a4f268b032fb161b2c73daad2d2659291}} 
+\index{Buffer\+Item\+\_\+\+Signed@{Buffer\+Item\+\_\+\+Signed}!payload@{payload}}
+\index{payload@{payload}!Buffer\+Item\+\_\+\+Signed@{Buffer\+Item\+\_\+\+Signed}}
+\subsubsection{\texorpdfstring{payload}{payload}}
+{\footnotesize\ttfamily void$\ast$ Buffer\+Item\+\_\+\+Signed\+::payload = 0}
+
+Pointer to the payload \mbox{\Hypertarget{structBufferItem__Signed_ad71dae240fb681bedb0c0332fff403fe}\label{structBufferItem__Signed_ad71dae240fb681bedb0c0332fff403fe}} 
+\index{Buffer\+Item\+\_\+\+Signed@{Buffer\+Item\+\_\+\+Signed}!payload\+\_\+destination@{payload\+\_\+destination}}
+\index{payload\+\_\+destination@{payload\+\_\+destination}!Buffer\+Item\+\_\+\+Signed@{Buffer\+Item\+\_\+\+Signed}}
+\subsubsection{\texorpdfstring{payload\+\_\+destination}{payload\_destination}}
+{\footnotesize\ttfamily uint8\+\_\+t Buffer\+Item\+\_\+\+Signed\+::payload\+\_\+destination = 0}
+
+Destination of the payload \mbox{\Hypertarget{structBufferItem__Signed_aea55c4b9fa78da421de8f83df370fb57}\label{structBufferItem__Signed_aea55c4b9fa78da421de8f83df370fb57}} 
+\index{Buffer\+Item\+\_\+\+Signed@{Buffer\+Item\+\_\+\+Signed}!payload\+\_\+hash@{payload\+\_\+hash}}
+\index{payload\+\_\+hash@{payload\+\_\+hash}!Buffer\+Item\+\_\+\+Signed@{Buffer\+Item\+\_\+\+Signed}}
+\subsubsection{\texorpdfstring{payload\+\_\+hash}{payload\_hash}}
+{\footnotesize\ttfamily uint8\+\_\+t Buffer\+Item\+\_\+\+Signed\+::payload\+\_\+hash\mbox{[}32\mbox{]} = \{0\}}
+
+Storage of the hash generated \mbox{\Hypertarget{structBufferItem__Signed_a99af0ec40a5d44a11df8592667fe7614}\label{structBufferItem__Signed_a99af0ec40a5d44a11df8592667fe7614}} 
+\index{Buffer\+Item\+\_\+\+Signed@{Buffer\+Item\+\_\+\+Signed}!payload\+\_\+size@{payload\+\_\+size}}
+\index{payload\+\_\+size@{payload\+\_\+size}!Buffer\+Item\+\_\+\+Signed@{Buffer\+Item\+\_\+\+Signed}}
+\subsubsection{\texorpdfstring{payload\+\_\+size}{payload\_size}}
+{\footnotesize\ttfamily uint8\+\_\+t Buffer\+Item\+\_\+\+Signed\+::payload\+\_\+size = 0}
+
+Size of the payload pointed to by void $\ast$ payload \mbox{\Hypertarget{structBufferItem__Signed_a75a67331ae70b15b59ba8941313e4fce}\label{structBufferItem__Signed_a75a67331ae70b15b59ba8941313e4fce}} 
+\index{Buffer\+Item\+\_\+\+Signed@{Buffer\+Item\+\_\+\+Signed}!payload\+\_\+type@{payload\+\_\+type}}
+\index{payload\+\_\+type@{payload\+\_\+type}!Buffer\+Item\+\_\+\+Signed@{Buffer\+Item\+\_\+\+Signed}}
+\subsubsection{\texorpdfstring{payload\+\_\+type}{payload\_type}}
+{\footnotesize\ttfamily uint8\+\_\+t Buffer\+Item\+\_\+\+Signed\+::payload\+\_\+type = 0}
+
+Received payload type, to deal with messages signed, encrypted or both 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{TooNetworking_8h}{Too\+Networking.\+h}\end{DoxyCompactItemize}

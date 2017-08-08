@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['reserved_20message_20header_20types_20by_20toonetworking',['Reserved message header types by TooNetworking',['../group__RESERVED__TYPES.html',1,'']]]
+  ['buffer_20for_20regular_20payloads_20without_20any_20cryptographic_20functions',['Buffer for regular payloads without any cryptographic functions',['../group__SIMPLE__BUFFER.html',1,'']]]
 ];

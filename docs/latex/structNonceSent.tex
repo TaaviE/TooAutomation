@@ -11,7 +11,7 @@ Collaboration diagram for Nonce\+Sent\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=217pt]{structNonceSent__coll__graph}
+\includegraphics[width=185pt]{structNonceSent__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Attributes}
@@ -19,9 +19,9 @@ Collaboration diagram for Nonce\+Sent\+:
 \item 
 uint8\+\_\+t \hyperlink{structNonceSent_ad5484888a11a0c041610c38b564c5627}{nonce\+\_\+to} = 255
 \item 
-uint32\+\_\+t \hyperlink{structNonceSent_a346064c4a1c6f06a0563f8dec5446d05}{nonce\+\_\+time} = 0
+uint32\+\_\+t \hyperlink{structNonceSent_ae9d167a911c22c9d4490d2fee2093c10}{nonce} = 0
 \item 
-\hyperlink{structNonceSent}{Nonce\+Sent} $\ast$ \hyperlink{structNonceSent_a2c795d3fa01adfe453318bad04f7b00b}{nonce\+\_\+next} = 0
+\hyperlink{structNonceSent}{Nonce\+Sent} $\ast$ \hyperlink{structNonceSent_a1c51c6d93e58ff1d94a0ab691c28fd24}{next} = 0
 \end{DoxyCompactItemize}
 
 
@@ -29,25 +29,25 @@ uint32\+\_\+t \hyperlink{structNonceSent_a346064c4a1c6f06a0563f8dec5446d05}{nonc
 Used for storing metadata and the nonce sent to other nodes in the network 
 
 \subsection{Member Data Documentation}
-\mbox{\Hypertarget{structNonceSent_a2c795d3fa01adfe453318bad04f7b00b}\label{structNonceSent_a2c795d3fa01adfe453318bad04f7b00b}} 
-\index{Nonce\+Sent@{Nonce\+Sent}!nonce\+\_\+next@{nonce\+\_\+next}}
-\index{nonce\+\_\+next@{nonce\+\_\+next}!Nonce\+Sent@{Nonce\+Sent}}
-\subsubsection{\texorpdfstring{nonce\+\_\+next}{nonce\_next}}
-{\footnotesize\ttfamily \hyperlink{structNonceSent}{Nonce\+Sent}$\ast$ Nonce\+Sent\+::nonce\+\_\+next = 0}
+\mbox{\Hypertarget{structNonceSent_a1c51c6d93e58ff1d94a0ab691c28fd24}\label{structNonceSent_a1c51c6d93e58ff1d94a0ab691c28fd24}} 
+\index{Nonce\+Sent@{Nonce\+Sent}!next@{next}}
+\index{next@{next}!Nonce\+Sent@{Nonce\+Sent}}
+\subsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily \hyperlink{structNonceSent}{Nonce\+Sent}$\ast$ Nonce\+Sent\+::next = 0}
 
-\mbox{\Hypertarget{structNonceSent_a346064c4a1c6f06a0563f8dec5446d05}\label{structNonceSent_a346064c4a1c6f06a0563f8dec5446d05}} 
-\index{Nonce\+Sent@{Nonce\+Sent}!nonce\+\_\+time@{nonce\+\_\+time}}
-\index{nonce\+\_\+time@{nonce\+\_\+time}!Nonce\+Sent@{Nonce\+Sent}}
-\subsubsection{\texorpdfstring{nonce\+\_\+time}{nonce\_time}}
-{\footnotesize\ttfamily uint32\+\_\+t Nonce\+Sent\+::nonce\+\_\+time = 0}
+Next item in the list \mbox{\Hypertarget{structNonceSent_ae9d167a911c22c9d4490d2fee2093c10}\label{structNonceSent_ae9d167a911c22c9d4490d2fee2093c10}} 
+\index{Nonce\+Sent@{Nonce\+Sent}!nonce@{nonce}}
+\index{nonce@{nonce}!Nonce\+Sent@{Nonce\+Sent}}
+\subsubsection{\texorpdfstring{nonce}{nonce}}
+{\footnotesize\ttfamily uint32\+\_\+t Nonce\+Sent\+::nonce = 0}
 
-\mbox{\Hypertarget{structNonceSent_ad5484888a11a0c041610c38b564c5627}\label{structNonceSent_ad5484888a11a0c041610c38b564c5627}} 
+Nonce itself \mbox{\Hypertarget{structNonceSent_ad5484888a11a0c041610c38b564c5627}\label{structNonceSent_ad5484888a11a0c041610c38b564c5627}} 
 \index{Nonce\+Sent@{Nonce\+Sent}!nonce\+\_\+to@{nonce\+\_\+to}}
 \index{nonce\+\_\+to@{nonce\+\_\+to}!Nonce\+Sent@{Nonce\+Sent}}
 \subsubsection{\texorpdfstring{nonce\+\_\+to}{nonce\_to}}
 {\footnotesize\ttfamily uint8\+\_\+t Nonce\+Sent\+::nonce\+\_\+to = 255}
 
-
+Destination 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

@@ -80,16 +80,46 @@ Collaboration diagram for NonceReceived:</div>
 Public Attributes</h2></td></tr>
 <tr class="memitem:aa6f2777bb591400ce057bd1fa9b23fca"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structNonceReceived.html#aa6f2777bb591400ce057bd1fa9b23fca">nonce_from</a> = 255</td></tr>
 <tr class="separator:aa6f2777bb591400ce057bd1fa9b23fca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adce029bb8f1d7bb73522ed06efca86c0"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structNonceReceived.html#adce029bb8f1d7bb73522ed06efca86c0">nonce_time</a> = 0</td></tr>
-<tr class="separator:adce029bb8f1d7bb73522ed06efca86c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39c9b5816fb33fe66f80c8bf98eca7d5"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structNonceReceived.html#a39c9b5816fb33fe66f80c8bf98eca7d5">nonce_timestamp</a> = 0</td></tr>
-<tr class="separator:a39c9b5816fb33fe66f80c8bf98eca7d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abfc581a902d83cac731aa843feeea5e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structNonceReceived.html">NonceReceived</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structNonceReceived.html#abfc581a902d83cac731aa843feeea5e2">nonce_next</a> = 0</td></tr>
-<tr class="separator:abfc581a902d83cac731aa843feeea5e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8da2f90de05746f252706f24ec5bc539"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structNonceReceived.html#a8da2f90de05746f252706f24ec5bc539">nonce</a> = 0</td></tr>
+<tr class="separator:a8da2f90de05746f252706f24ec5bc539"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae159a71415a2908807ef1ed39f0b9dfa"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structNonceReceived.html#ae159a71415a2908807ef1ed39f0b9dfa">noncestamp</a> = 0</td></tr>
+<tr class="separator:ae159a71415a2908807ef1ed39f0b9dfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad976d0df8941f1f626de24afd2febca7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structNonceReceived.html">NonceReceived</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structNonceReceived.html#ad976d0df8941f1f626de24afd2febca7">next</a> = 0</td></tr>
+<tr class="separator:ad976d0df8941f1f626de24afd2febca7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Used for storing the nonce and metadata </p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="ad976d0df8941f1f626de24afd2febca7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad976d0df8941f1f626de24afd2febca7">&#9670;&nbsp;</a></span>next</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structNonceReceived.html">NonceReceived</a>* NonceReceived::next = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Next in the list </p>
+
+</div>
+</div>
+<a id="a8da2f90de05746f252706f24ec5bc539"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8da2f90de05746f252706f24ec5bc539">&#9670;&nbsp;</a></span>nonce</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t NonceReceived::nonce = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Nonce itself </p>
+
+</div>
+</div>
 <a id="aa6f2777bb591400ce057bd1fa9b23fca"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa6f2777bb591400ce057bd1fa9b23fca">&#9670;&nbsp;</a></span>nonce_from</h2>
 
@@ -101,48 +131,22 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Sender </p>
 
 </div>
 </div>
-<a id="abfc581a902d83cac731aa843feeea5e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abfc581a902d83cac731aa843feeea5e2">&#9670;&nbsp;</a></span>nonce_next</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structNonceReceived.html">NonceReceived</a>* NonceReceived::nonce_next = 0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="adce029bb8f1d7bb73522ed06efca86c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adce029bb8f1d7bb73522ed06efca86c0">&#9670;&nbsp;</a></span>nonce_time</h2>
+<a id="ae159a71415a2908807ef1ed39f0b9dfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae159a71415a2908807ef1ed39f0b9dfa">&#9670;&nbsp;</a></span>noncestamp</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t NonceReceived::nonce_time = 0</td>
+          <td class="memname">uint32_t NonceReceived::noncestamp = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a id="a39c9b5816fb33fe66f80c8bf98eca7d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39c9b5816fb33fe66f80c8bf98eca7d5">&#9670;&nbsp;</a></span>nonce_timestamp</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t NonceReceived::nonce_timestamp = 0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Destination </p>
 
 </div>
 </div>

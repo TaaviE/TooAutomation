@@ -11,7 +11,7 @@ Collaboration diagram for Nonce\+Received\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=238pt]{structNonceReceived__coll__graph}
+\includegraphics[width=206pt]{structNonceReceived__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Attributes}
@@ -19,11 +19,11 @@ Collaboration diagram for Nonce\+Received\+:
 \item 
 uint8\+\_\+t \hyperlink{structNonceReceived_aa6f2777bb591400ce057bd1fa9b23fca}{nonce\+\_\+from} = 255
 \item 
-uint32\+\_\+t \hyperlink{structNonceReceived_adce029bb8f1d7bb73522ed06efca86c0}{nonce\+\_\+time} = 0
+uint32\+\_\+t \hyperlink{structNonceReceived_a8da2f90de05746f252706f24ec5bc539}{nonce} = 0
 \item 
-uint32\+\_\+t \hyperlink{structNonceReceived_a39c9b5816fb33fe66f80c8bf98eca7d5}{nonce\+\_\+timestamp} = 0
+uint32\+\_\+t \hyperlink{structNonceReceived_ae159a71415a2908807ef1ed39f0b9dfa}{noncestamp} = 0
 \item 
-\hyperlink{structNonceReceived}{Nonce\+Received} $\ast$ \hyperlink{structNonceReceived_abfc581a902d83cac731aa843feeea5e2}{nonce\+\_\+next} = 0
+\hyperlink{structNonceReceived}{Nonce\+Received} $\ast$ \hyperlink{structNonceReceived_ad976d0df8941f1f626de24afd2febca7}{next} = 0
 \end{DoxyCompactItemize}
 
 
@@ -31,31 +31,31 @@ uint32\+\_\+t \hyperlink{structNonceReceived_a39c9b5816fb33fe66f80c8bf98eca7d5}{
 Used for storing the nonce and metadata 
 
 \subsection{Member Data Documentation}
-\mbox{\Hypertarget{structNonceReceived_aa6f2777bb591400ce057bd1fa9b23fca}\label{structNonceReceived_aa6f2777bb591400ce057bd1fa9b23fca}} 
+\mbox{\Hypertarget{structNonceReceived_ad976d0df8941f1f626de24afd2febca7}\label{structNonceReceived_ad976d0df8941f1f626de24afd2febca7}} 
+\index{Nonce\+Received@{Nonce\+Received}!next@{next}}
+\index{next@{next}!Nonce\+Received@{Nonce\+Received}}
+\subsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily \hyperlink{structNonceReceived}{Nonce\+Received}$\ast$ Nonce\+Received\+::next = 0}
+
+Next in the list \mbox{\Hypertarget{structNonceReceived_a8da2f90de05746f252706f24ec5bc539}\label{structNonceReceived_a8da2f90de05746f252706f24ec5bc539}} 
+\index{Nonce\+Received@{Nonce\+Received}!nonce@{nonce}}
+\index{nonce@{nonce}!Nonce\+Received@{Nonce\+Received}}
+\subsubsection{\texorpdfstring{nonce}{nonce}}
+{\footnotesize\ttfamily uint32\+\_\+t Nonce\+Received\+::nonce = 0}
+
+Nonce itself \mbox{\Hypertarget{structNonceReceived_aa6f2777bb591400ce057bd1fa9b23fca}\label{structNonceReceived_aa6f2777bb591400ce057bd1fa9b23fca}} 
 \index{Nonce\+Received@{Nonce\+Received}!nonce\+\_\+from@{nonce\+\_\+from}}
 \index{nonce\+\_\+from@{nonce\+\_\+from}!Nonce\+Received@{Nonce\+Received}}
 \subsubsection{\texorpdfstring{nonce\+\_\+from}{nonce\_from}}
 {\footnotesize\ttfamily uint8\+\_\+t Nonce\+Received\+::nonce\+\_\+from = 255}
 
-\mbox{\Hypertarget{structNonceReceived_abfc581a902d83cac731aa843feeea5e2}\label{structNonceReceived_abfc581a902d83cac731aa843feeea5e2}} 
-\index{Nonce\+Received@{Nonce\+Received}!nonce\+\_\+next@{nonce\+\_\+next}}
-\index{nonce\+\_\+next@{nonce\+\_\+next}!Nonce\+Received@{Nonce\+Received}}
-\subsubsection{\texorpdfstring{nonce\+\_\+next}{nonce\_next}}
-{\footnotesize\ttfamily \hyperlink{structNonceReceived}{Nonce\+Received}$\ast$ Nonce\+Received\+::nonce\+\_\+next = 0}
+Sender \mbox{\Hypertarget{structNonceReceived_ae159a71415a2908807ef1ed39f0b9dfa}\label{structNonceReceived_ae159a71415a2908807ef1ed39f0b9dfa}} 
+\index{Nonce\+Received@{Nonce\+Received}!noncestamp@{noncestamp}}
+\index{noncestamp@{noncestamp}!Nonce\+Received@{Nonce\+Received}}
+\subsubsection{\texorpdfstring{noncestamp}{noncestamp}}
+{\footnotesize\ttfamily uint32\+\_\+t Nonce\+Received\+::noncestamp = 0}
 
-\mbox{\Hypertarget{structNonceReceived_adce029bb8f1d7bb73522ed06efca86c0}\label{structNonceReceived_adce029bb8f1d7bb73522ed06efca86c0}} 
-\index{Nonce\+Received@{Nonce\+Received}!nonce\+\_\+time@{nonce\+\_\+time}}
-\index{nonce\+\_\+time@{nonce\+\_\+time}!Nonce\+Received@{Nonce\+Received}}
-\subsubsection{\texorpdfstring{nonce\+\_\+time}{nonce\_time}}
-{\footnotesize\ttfamily uint32\+\_\+t Nonce\+Received\+::nonce\+\_\+time = 0}
-
-\mbox{\Hypertarget{structNonceReceived_a39c9b5816fb33fe66f80c8bf98eca7d5}\label{structNonceReceived_a39c9b5816fb33fe66f80c8bf98eca7d5}} 
-\index{Nonce\+Received@{Nonce\+Received}!nonce\+\_\+timestamp@{nonce\+\_\+timestamp}}
-\index{nonce\+\_\+timestamp@{nonce\+\_\+timestamp}!Nonce\+Received@{Nonce\+Received}}
-\subsubsection{\texorpdfstring{nonce\+\_\+timestamp}{nonce\_timestamp}}
-{\footnotesize\ttfamily uint32\+\_\+t Nonce\+Received\+::nonce\+\_\+timestamp = 0}
-
-
+Destination 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

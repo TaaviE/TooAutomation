@@ -71,11 +71,14 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a5d517fb1e486f468bef3f42b93b6707d"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPayload__Metadata.html#a5d517fb1e486f468bef3f42b93b6707d">payload_size</a> = 0</td></tr>
+<tr class="memitem:a5d517fb1e486f468bef3f42b93b6707d"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPayload__Metadata.html#a5d517fb1e486f468bef3f42b93b6707d">payload_size</a></td></tr>
 <tr class="separator:a5d517fb1e486f468bef3f42b93b6707d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5009210cc0592eda44bd9fd05b17d2a8"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPayload__Metadata.html#a5009210cc0592eda44bd9fd05b17d2a8">payload_type</a></td></tr>
+<tr class="separator:a5009210cc0592eda44bd9fd05b17d2a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Used for reading the required payload size to properly deal with the payloads </p>
+<div class="textblock"><p>Used for reading the required payload size to properly deal with the payloads</p>
+<p>This is actually inside the sent and received payloads unlike the rest of the data in <a class="el" href="structBufferItem.html">BufferItem</a> </p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="a5d517fb1e486f468bef3f42b93b6707d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5d517fb1e486f468bef3f42b93b6707d">&#9670;&nbsp;</a></span>payload_size</h2>
@@ -84,11 +87,26 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t Payload_Metadata::payload_size = 0</td>
+          <td class="memname">uint8_t Payload_Metadata::payload_size</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Received payload size </p>
+
+</div>
+</div>
+<a id="a5009210cc0592eda44bd9fd05b17d2a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5009210cc0592eda44bd9fd05b17d2a8">&#9670;&nbsp;</a></span>payload_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t Payload_Metadata::payload_type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Received payload type, to deal with messages signed, encrypted or both </p>
 
 </div>
 </div>

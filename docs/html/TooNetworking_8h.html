@@ -76,11 +76,13 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPayloadMetadataSigned.html">PayloadMetadataSigned</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structBufferItem.html">BufferItem</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPayload__Metadata.html">Payload_Metadata</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structBufferItem.html">BufferItem</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPayload__MetadataSigned.html">Payload_MetadataSigned</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structBufferItem__Signed.html">BufferItem_Signed</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structNonceSent.html">NonceSent</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -89,10 +91,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structNoncePayload.html">NoncePayload</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structNonceRequested.html">NonceRequested</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPayload__Metadata.html">Payload_Metadata</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structBufferItem.html">BufferItem</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -109,6 +107,8 @@ Functions</h2></td></tr>
 <tr class="separator:a723608b997230cc461d06454b2cdb8c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9209f3e1a2fdf0b3b88d49105b8fc359"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a9209f3e1a2fdf0b3b88d49105b8fc359">TooNetworking_send_signed</a> (uint8_t for_node, void *payload, uint8_t size)</td></tr>
 <tr class="separator:a9209f3e1a2fdf0b3b88d49105b8fc359"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f893c3218491ee86282fdcd9f376500"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a9f893c3218491ee86282fdcd9f376500">TooNetworking_send_signed_</a> (uint8_t for_node, void *payload, uint8_t size, uint32_t nonce)</td></tr>
+<tr class="separator:a9f893c3218491ee86282fdcd9f376500"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86fb32acfc42a498be62a3236c778454"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a86fb32acfc42a498be62a3236c778454">TooNetworking_send_encrypted</a> (uint8_t for_node, void *payload, uint8_t size)</td></tr>
 <tr class="separator:a86fb32acfc42a498be62a3236c778454"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5861e5d6df60aa6701af1b9ec7e942a8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a5861e5d6df60aa6701af1b9ec7e942a8">TooNetworking_send_signed_encrypted</a> (uint8_t for_node, void *payload, uint8_t size)</td></tr>
@@ -125,6 +125,20 @@ Functions</h2></td></tr>
 <tr class="separator:aefc5dad88b637efb11a3a7b2f76a19b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7382ba1aed5405c3adc02011ea6c45dd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a7382ba1aed5405c3adc02011ea6c45dd">TooNetworking_connection_maintenance</a> ()</td></tr>
 <tr class="separator:a7382ba1aed5405c3adc02011ea6c45dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3c91b7ab2f6500c287ecc7ab4a018ef6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SIMPLE__BUFFER.html#ga3c91b7ab2f6500c287ecc7ab4a018ef6">TooNetworking_bufferlist_remove</a> (<a class="el" href="structBufferItem.html">BufferItem</a> *previous, <a class="el" href="structBufferItem.html">BufferItem</a> *current)</td></tr>
+<tr class="separator:ga3c91b7ab2f6500c287ecc7ab4a018ef6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa8a4e879d4d71fed2a8940cf93b75ae4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SIMPLE__BUFFER.html#gaa8a4e879d4d71fed2a8940cf93b75ae4">TooNetworking_bufferlist_initialize</a> ()</td></tr>
+<tr class="separator:gaa8a4e879d4d71fed2a8940cf93b75ae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0dd5e9de81eea99b99669a607c9b4028"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structBufferItem.html">BufferItem</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SIMPLE__BUFFER.html#ga0dd5e9de81eea99b99669a607c9b4028">TooNetworking_bufferlist_find_for_id</a> (uint8_t nodeID)</td></tr>
+<tr class="separator:ga0dd5e9de81eea99b99669a607c9b4028"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae72372a8084e8486f1306240a9af6474"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SIMPLE__BUFFER.html#gae72372a8084e8486f1306240a9af6474">TooNetworking_bufferlist_send</a> (<a class="el" href="structBufferItem.html">BufferItem</a> *item, <a class="el" href="structNonceReceived.html">NonceReceived</a> *nonce, <a class="el" href="structBufferItem.html">BufferItem</a> *previousitem)</td></tr>
+<tr class="separator:gae72372a8084e8486f1306240a9af6474"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1fca7e85a8a2f91a1b20a8bb23b4e893"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SIMPLE__BUFFER.html#ga1fca7e85a8a2f91a1b20a8bb23b4e893">TooNetworking_bufferlist_add</a> (uint8_t payload_destination, void *payload, uint8_t size)</td></tr>
+<tr class="separator:ga1fca7e85a8a2f91a1b20a8bb23b4e893"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab58e06e0eb6f2f8ecbebeaf3c173fb22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SIMPLE__BUFFER.html#gab58e06e0eb6f2f8ecbebeaf3c173fb22">TooNetworking_bufferlist_send_all</a> ()</td></tr>
+<tr class="separator:gab58e06e0eb6f2f8ecbebeaf3c173fb22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2b5485b317146ce7c14bbad26172d796"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SIMPLE__BUFFER.html#ga2b5485b317146ce7c14bbad26172d796">TooNetworking_bufferlist_print</a> ()</td></tr>
+<tr class="separator:ga2b5485b317146ce7c14bbad26172d796"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9ec1ce0a58a96d0452a5ec51bb0bfca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#aa9ec1ce0a58a96d0452a5ec51bb0bfca">TooNeteorking_connection_fix</a> ()</td></tr>
 <tr class="separator:aa9ec1ce0a58a96d0452a5ec51bb0bfca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2676204dee95da1ef337de95eb0e9bcb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a2676204dee95da1ef337de95eb0e9bcb">TooNetworking_begin</a> (uint8_t passed_node_id)</td></tr>
@@ -132,6 +146,8 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:a4277db94d928ddb590684b5bf9174f73"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a4277db94d928ddb590684b5bf9174f73">current_node_ID</a></td></tr>
+<tr class="separator:a4277db94d928ddb590684b5bf9174f73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cde2cc921aef77784b8d5b3129b5803"><td class="memItemLeft" align="right" valign="top">Sha256Class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a2cde2cc921aef77784b8d5b3129b5803">Sha256</a></td></tr>
 <tr class="separator:a2cde2cc921aef77784b8d5b3129b5803"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae75ffa3e0a98255f366188a6223156bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structNonceSent.html">NonceSent</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#ae75ffa3e0a98255f366188a6223156bc">nonce_sent_start</a> = 0</td></tr>
@@ -573,10 +589,64 @@ Variables</h2></td></tr>
 <p>Allows sending a signed message, type must be embedded inside the payload the receiver must know what to do with the message once it's been verified, messages that fail the checks are DISCARDED!</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname"></td><td></td></tr>
+    <tr><td class="paramname">for_node</td><td>destination </td></tr>
+    <tr><td class="paramname">payload</td><td>payload </td></tr>
+    <tr><td class="paramname">size</td><td>size of payload </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successful, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a9f893c3218491ee86282fdcd9f376500"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f893c3218491ee86282fdcd9f376500">&#9670;&nbsp;</a></span>TooNetworking_send_signed_()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TooNetworking_send_signed_ </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>for_node</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>payload</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>nonce</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Allows sending a signed message, type must be embedded inside the payload the receiver must know what to do with the message once it's been verified, messages that fail the checks are DISCARDED!</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">for_node</td><td>destination </td></tr>
+    <tr><td class="paramname">payload</td><td>payload </td></tr>
+    <tr><td class="paramname">size</td><td>size of payload </td></tr>
+    <tr><td class="paramname">nonce</td><td>nonce </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successful, false otherwise </dd></dl>
 
 </div>
 </div>
@@ -637,6 +707,20 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a4277db94d928ddb590684b5bf9174f73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4277db94d928ddb590684b5bf9174f73">&#9670;&nbsp;</a></span>current_node_ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t current_node_ID</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ad145f92b978c39b1728ffd91e896277a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad145f92b978c39b1728ffd91e896277a">&#9670;&nbsp;</a></span>nonce_received_start</h2>
 
@@ -693,6 +777,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Hashing library object construction </p>
 
 </div>
 </div>
