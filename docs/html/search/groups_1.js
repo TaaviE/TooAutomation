@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['reserved_20message_20header_20types_20by_20toonetworking',['Reserved message header types by TooNetworking',['../group__RESERVED__TYPES.html',1,'']]]
+  ['simple_5fbuffer',['SIMPLE_BUFFER',['../group__SIMPLE__BUFFER.html',1,'']]]
 ];
