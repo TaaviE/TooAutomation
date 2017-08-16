@@ -1,0 +1,191 @@
+\hypertarget{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER}{}\section{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}
+\label{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER}\index{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga221880c55f667111e587482e6c8f5912}{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+remove} (const void $\ast$\hyperlink{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_gaf1966d7084d2373905ae510e8f04a581}{previous}, const void $\ast$\hyperlink{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_gae8b515cceb310a575b6c2677ba93ea7e}{current})
+\item 
+bool \hyperlink{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga1ef66126726fe51d81471d24400cfe65}{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+initialize} ()
+\item 
+void $\ast$ \hyperlink{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga4186735f6ab20fad96d3900e407df207}{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+find\+\_\+for\+\_\+id} (uint8\+\_\+t node\+ID)
+\item 
+bool \hyperlink{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga95e0ad62a44fba61ccec4a5ecc948fce}{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+send} (void $\ast$item, \hyperlink{structNonceReceived}{Nonce\+Received} $\ast$\hyperlink{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga8fc64ce47dc28f47b3317ae1051e4359}{nonce}, void $\ast$previousitem)
+\item 
+bool \hyperlink{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_gad760b4357604fa850b81b138e03ebadb}{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+add} (uint8\+\_\+t \hyperlink{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga76db772dc25d4b2f5eb800e93ca3fd0b}{payload\+\_\+destination}, void $\ast$\hyperlink{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga373c8264cc39aeb3105d87e2b20dd971}{payload}, uint8\+\_\+t size, uint8\+\_\+t type=0)
+\item 
+\hyperlink{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga2f4038fd75613a849c672d716d7bf310}{if} (\hyperlink{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_gae8b515cceb310a575b6c2677ba93ea7e}{current}-\/$>$next==0)
+\item 
+Serial \hyperlink{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_gac21086f77b99f6a32b5f454bae30cd29}{println} (F(\char`\"{}Finding \hyperlink{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga8fc64ce47dc28f47b3317ae1051e4359}{nonce} for node\+ID\char`\"{}))
+\item 
+\hyperlink{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_gaaf318681cf7c6b13563cc7b4c1dea447}{if} (nonce!=0)
+\item 
+\hyperlink{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga20f1ad74f3801f9389cb3315df4bbc18}{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+requested\+\_\+noncelist\+\_\+add} (\hyperlink{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga76db772dc25d4b2f5eb800e93ca3fd0b}{payload\+\_\+destination})
+\item 
+Serial \hyperlink{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga12135b0b718c52a4bc16710717109de8}{println} (F(\char`\"{}Requested\char`\"{}))
+\item 
+Serial \hyperlink{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga00890a1640039d4f6a925b290994a004}{println} (F(\char`\"{}Added item to buffer list\char`\"{}))
+\item 
+void \hyperlink{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_gaa0c4d89eca1353756e8e8b6f06b409d1}{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+send\+\_\+all} ()
+\item 
+void \hyperlink{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_gafadf7dbd1a65971db7df09fb00e68680}{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+print} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga0544c3fe466e421738dae463968b70ba}{else}
+\item 
+\hyperlink{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_gaf1966d7084d2373905ae510e8f04a581}{previous} = \hyperlink{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_gae8b515cceb310a575b6c2677ba93ea7e}{current}
+\item 
+\hyperlink{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_gae8b515cceb310a575b6c2677ba93ea7e}{current} = current-\/$>$next
+\item 
+\hyperlink{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_gae8b515cceb310a575b6c2677ba93ea7e}{current} \hyperlink{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga76db772dc25d4b2f5eb800e93ca3fd0b}{payload\+\_\+destination} = payload\+\_\+destination
+\item 
+\hyperlink{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_gae8b515cceb310a575b6c2677ba93ea7e}{current} \hyperlink{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga373c8264cc39aeb3105d87e2b20dd971}{payload} = payload
+\item 
+\hyperlink{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_gae8b515cceb310a575b6c2677ba93ea7e}{current} \hyperlink{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_gaca16f9091ec66e37bff7fc67b75eba73}{payload\+\_\+size} = size
+\item 
+\hyperlink{structNonceReceived}{Nonce\+Received} $\ast$ \hyperlink{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga8fc64ce47dc28f47b3317ae1051e4359}{nonce} = U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+received\+\_\+noncelist\+\_\+find\+\_\+from\+\_\+\+ID(\hyperlink{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga76db772dc25d4b2f5eb800e93ca3fd0b}{payload\+\_\+destination})
+\item 
+return \hyperlink{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga930920b2bc42824a5c03be681830f4b2}{true}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+{\bfseries Regular message buffer list} 
+
+\subsection{Function Documentation}
+\index{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}!if@{if}}
+\index{if@{if}!U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}}
+\subsubsection[{\texorpdfstring{if(current-\/$>$next==0)}{if(current->next==0)}}]{\setlength{\rightskip}{0pt plus 5cm}if (
+\begin{DoxyParamCaption}
+\item[{{\bf current}-\/$>$}]{next = {\ttfamily =~0}}
+\end{DoxyParamCaption}
+)}\hypertarget{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga2f4038fd75613a849c672d716d7bf310}{}\label{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga2f4038fd75613a849c672d716d7bf310}
+\index{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}!if@{if}}
+\index{if@{if}!U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}}
+\subsubsection[{\texorpdfstring{if(nonce"!=0)}{if(nonce!=0)}}]{\setlength{\rightskip}{0pt plus 5cm}if (
+\begin{DoxyParamCaption}
+\item[{nonce!}]{ = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\hypertarget{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_gaaf318681cf7c6b13563cc7b4c1dea447}{}\label{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_gaaf318681cf7c6b13563cc7b4c1dea447}
+\index{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}!println@{println}}
+\index{println@{println}!U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}}
+\subsubsection[{\texorpdfstring{println(\+F(""Finding nonce for node\+ID""))}{println(F("Finding nonce for nodeID"))}}]{\setlength{\rightskip}{0pt plus 5cm}Serial println (
+\begin{DoxyParamCaption}
+\item[{F(\char`\"{}Finding {\bf nonce} for node\+ID\char`\"{})}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_gac21086f77b99f6a32b5f454bae30cd29}{}\label{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_gac21086f77b99f6a32b5f454bae30cd29}
+\index{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}!println@{println}}
+\index{println@{println}!U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}}
+\subsubsection[{\texorpdfstring{println(\+F(""Requested""))}{println(F("Requested"))}}]{\setlength{\rightskip}{0pt plus 5cm}Serial println (
+\begin{DoxyParamCaption}
+\item[{F(\char`\"{}Requested\char`\"{})}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga12135b0b718c52a4bc16710717109de8}{}\label{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga12135b0b718c52a4bc16710717109de8}
+\index{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}!println@{println}}
+\index{println@{println}!U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}}
+\subsubsection[{\texorpdfstring{println(\+F(""Added item to buffer list""))}{println(F("Added item to buffer list"))}}]{\setlength{\rightskip}{0pt plus 5cm}Serial println (
+\begin{DoxyParamCaption}
+\item[{F(\char`\"{}Added item to buffer list\char`\"{})}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga00890a1640039d4f6a925b290994a004}{}\label{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga00890a1640039d4f6a925b290994a004}
+\index{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}!U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+add@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+add}}
+\index{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+add@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+add}!U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}}
+\subsubsection[{\texorpdfstring{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+add(uint8\+\_\+t payload\+\_\+destination, void $\ast$payload, uint8\+\_\+t size, uint8\+\_\+t type=0)}{UNCHECKED_TooNetworking_bufferlist_add(uint8_t payload_destination, void *payload, uint8_t size, uint8_t type=0)}}]{\setlength{\rightskip}{0pt plus 5cm}bool U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+add (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{payload\+\_\+destination, }
+\item[{void $\ast$}]{payload, }
+\item[{uint8\+\_\+t}]{size, }
+\item[{uint8\+\_\+t}]{type = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\hypertarget{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_gad760b4357604fa850b81b138e03ebadb}{}\label{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_gad760b4357604fa850b81b138e03ebadb}
+\index{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}!U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+find\+\_\+for\+\_\+id@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+find\+\_\+for\+\_\+id}}
+\index{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+find\+\_\+for\+\_\+id@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+find\+\_\+for\+\_\+id}!U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}}
+\subsubsection[{\texorpdfstring{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+find\+\_\+for\+\_\+id(uint8\+\_\+t node\+I\+D)}{UNCHECKED_TooNetworking_bufferlist_find_for_id(uint8_t nodeID)}}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+find\+\_\+for\+\_\+id (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{node\+ID}
+\end{DoxyParamCaption}
+)}\hypertarget{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga4186735f6ab20fad96d3900e407df207}{}\label{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga4186735f6ab20fad96d3900e407df207}
+\index{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}!U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+initialize@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+initialize}}
+\index{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+initialize@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+initialize}!U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}}
+\subsubsection[{\texorpdfstring{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+initialize()}{UNCHECKED_TooNetworking_bufferlist_initialize()}}]{\setlength{\rightskip}{0pt plus 5cm}bool U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga1ef66126726fe51d81471d24400cfe65}{}\label{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga1ef66126726fe51d81471d24400cfe65}
+\index{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}!U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+print@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+print}}
+\index{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+print@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+print}!U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}}
+\subsubsection[{\texorpdfstring{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+print()}{UNCHECKED_TooNetworking_bufferlist_print()}}]{\setlength{\rightskip}{0pt plus 5cm}void U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+print (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_gafadf7dbd1a65971db7df09fb00e68680}{}\label{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_gafadf7dbd1a65971db7df09fb00e68680}
+\index{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}!U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+remove@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+remove}}
+\index{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+remove@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+remove}!U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}}
+\subsubsection[{\texorpdfstring{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+remove(const void $\ast$previous, const void $\ast$current)}{UNCHECKED_TooNetworking_bufferlist_remove(const void *previous, const void *current)}}]{\setlength{\rightskip}{0pt plus 5cm}void U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+remove (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{previous, }
+\item[{const void $\ast$}]{current}
+\end{DoxyParamCaption}
+)}\hypertarget{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga221880c55f667111e587482e6c8f5912}{}\label{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga221880c55f667111e587482e6c8f5912}
+\index{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}!U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+send@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+send}}
+\index{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+send@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+send}!U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}}
+\subsubsection[{\texorpdfstring{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+send(void $\ast$item, Nonce\+Received $\ast$nonce, void $\ast$previousitem)}{UNCHECKED_TooNetworking_bufferlist_send(void *item, NonceReceived *nonce, void *previousitem)}}]{\setlength{\rightskip}{0pt plus 5cm}bool U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+send (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{item, }
+\item[{{\bf Nonce\+Received} $\ast$}]{nonce, }
+\item[{void $\ast$}]{previousitem}
+\end{DoxyParamCaption}
+)}\hypertarget{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga95e0ad62a44fba61ccec4a5ecc948fce}{}\label{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga95e0ad62a44fba61ccec4a5ecc948fce}
+\index{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}!U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+send\+\_\+all@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+send\+\_\+all}}
+\index{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+send\+\_\+all@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+send\+\_\+all}!U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}}
+\subsubsection[{\texorpdfstring{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+send\+\_\+all()}{UNCHECKED_TooNetworking_bufferlist_send_all()}}]{\setlength{\rightskip}{0pt plus 5cm}void U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+bufferlist\+\_\+send\+\_\+all (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_gaa0c4d89eca1353756e8e8b6f06b409d1}{}\label{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_gaa0c4d89eca1353756e8e8b6f06b409d1}
+\index{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}!U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+requested\+\_\+noncelist\+\_\+add@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+requested\+\_\+noncelist\+\_\+add}}
+\index{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+requested\+\_\+noncelist\+\_\+add@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+requested\+\_\+noncelist\+\_\+add}!U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}}
+\subsubsection[{\texorpdfstring{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+requested\+\_\+noncelist\+\_\+add(payload\+\_\+destination)}{UNCHECKED_TooNetworking_requested_noncelist_add(payload_destination)}}]{\setlength{\rightskip}{0pt plus 5cm}U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+requested\+\_\+noncelist\+\_\+add (
+\begin{DoxyParamCaption}
+\item[{{\bf payload\+\_\+destination}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga20f1ad74f3801f9389cb3315df4bbc18}{}\label{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga20f1ad74f3801f9389cb3315df4bbc18}
+
+
+\subsection{Variable Documentation}
+\index{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}!current@{current}}
+\index{current@{current}!U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}}
+\subsubsection[{\texorpdfstring{current}{current}}]{\setlength{\rightskip}{0pt plus 5cm}current = current-\/$>$next}\hypertarget{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_gae8b515cceb310a575b6c2677ba93ea7e}{}\label{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_gae8b515cceb310a575b6c2677ba93ea7e}
+\index{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}!else@{else}}
+\index{else@{else}!U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}}
+\subsubsection[{\texorpdfstring{else}{else}}]{\setlength{\rightskip}{0pt plus 5cm}else}\hypertarget{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga0544c3fe466e421738dae463968b70ba}{}\label{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga0544c3fe466e421738dae463968b70ba}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+    
+    \textcolor{keywordflow}{while} (\hyperlink{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_gae8b515cceb310a575b6c2677ba93ea7e}{current}->next != 0) \{  
+      Serial.println(F(\textcolor{stringliteral}{"Finding the last item"}));
+      \hyperlink{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_gae8b515cceb310a575b6c2677ba93ea7e}{current} = \hyperlink{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_gae8b515cceb310a575b6c2677ba93ea7e}{current}->next;
+    \}
+
+    \hyperlink{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_gae8b515cceb310a575b6c2677ba93ea7e}{current}->next = malloc(\textcolor{keyword}{sizeof}(\hyperlink{structNonceReceived}{NonceReceived}))
+\end{DoxyCode}
+\index{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}!nonce@{nonce}}
+\index{nonce@{nonce}!U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}}
+\subsubsection[{\texorpdfstring{nonce}{nonce}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Nonce\+Received}$\ast$ nonce = U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+received\+\_\+noncelist\+\_\+find\+\_\+from\+\_\+\+ID({\bf payload\+\_\+destination})}\hypertarget{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga8fc64ce47dc28f47b3317ae1051e4359}{}\label{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga8fc64ce47dc28f47b3317ae1051e4359}
+\index{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}!payload@{payload}}
+\index{payload@{payload}!U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}}
+\subsubsection[{\texorpdfstring{payload}{payload}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf current} payload = payload}\hypertarget{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga373c8264cc39aeb3105d87e2b20dd971}{}\label{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga373c8264cc39aeb3105d87e2b20dd971}
+\index{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}!payload\+\_\+destination@{payload\+\_\+destination}}
+\index{payload\+\_\+destination@{payload\+\_\+destination}!U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}}
+\subsubsection[{\texorpdfstring{payload\+\_\+destination}{payload_destination}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf current} payload\+\_\+destination = payload\+\_\+destination}\hypertarget{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga76db772dc25d4b2f5eb800e93ca3fd0b}{}\label{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga76db772dc25d4b2f5eb800e93ca3fd0b}
+\index{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}!payload\+\_\+size@{payload\+\_\+size}}
+\index{payload\+\_\+size@{payload\+\_\+size}!U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}}
+\subsubsection[{\texorpdfstring{payload\+\_\+size}{payload_size}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf current} payload\+\_\+size = size}\hypertarget{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_gaca16f9091ec66e37bff7fc67b75eba73}{}\label{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_gaca16f9091ec66e37bff7fc67b75eba73}
+\index{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}!previous@{previous}}
+\index{previous@{previous}!U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}}
+\subsubsection[{\texorpdfstring{previous}{previous}}]{\setlength{\rightskip}{0pt plus 5cm}previous = {\bf current}}\hypertarget{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_gaf1966d7084d2373905ae510e8f04a581}{}\label{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_gaf1966d7084d2373905ae510e8f04a581}
+\index{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}!true@{true}}
+\index{true@{true}!U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER@{U\+N\+C\+H\+E\+C\+K\+E\+D\+\_\+\+Too\+Networking\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+F\+F\+ER}}
+\subsubsection[{\texorpdfstring{true}{true}}]{\setlength{\rightskip}{0pt plus 5cm}return true}\hypertarget{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga930920b2bc42824a5c03be681830f4b2}{}\label{group__UNCHECKED__TooNetworking__SIMPLE__BUFFER_ga930920b2bc42824a5c03be681830f4b2}
