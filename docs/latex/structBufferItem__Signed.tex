@@ -4,29 +4,20 @@
 
 {\ttfamily \#include $<$Too\+Networking.\+h$>$}
 
-
-
-Collaboration diagram for Buffer\+Item\+\_\+\+Signed\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=218pt]{structBufferItem__Signed__coll__graph}
-\end{center}
-\end{figure}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 uint8\+\_\+t \hyperlink{structBufferItem__Signed_a99af0ec40a5d44a11df8592667fe7614}{payload\+\_\+size} = 0
 \item 
-uint8\+\_\+t \hyperlink{structBufferItem__Signed_aea55c4b9fa78da421de8f83df370fb57}{payload\+\_\+hash} \mbox{[}32\mbox{]} = \{0\}
-\item 
 uint8\+\_\+t \hyperlink{structBufferItem__Signed_a75a67331ae70b15b59ba8941313e4fce}{payload\+\_\+type} = 0
 \item 
 uint8\+\_\+t \hyperlink{structBufferItem__Signed_ad71dae240fb681bedb0c0332fff403fe}{payload\+\_\+destination} = 0
 \item 
-\hyperlink{structBufferItem__Signed}{Buffer\+Item\+\_\+\+Signed} $\ast$ \hyperlink{structBufferItem__Signed_a86ea87809ef5786a04f1218ac028fa13}{next} = 0
+void $\ast$ \hyperlink{structBufferItem__Signed_afd4c3d25479c65a1b34d430d8d0372c3}{next} = 0
 \item 
 void $\ast$ \hyperlink{structBufferItem__Signed_a4f268b032fb161b2c73daad2d2659291}{payload} = 0
+\item 
+uint8\+\_\+t \hyperlink{structBufferItem__Signed_aea55c4b9fa78da421de8f83df370fb57}{payload\+\_\+hash} \mbox{[}32\mbox{]} = \{0\}
 \end{DoxyCompactItemize}
 
 
@@ -36,7 +27,7 @@ Used for storing metadata about the signed payload until the payload is sent
 \subsection{Member Data Documentation}
 \index{Buffer\+Item\+\_\+\+Signed@{Buffer\+Item\+\_\+\+Signed}!next@{next}}
 \index{next@{next}!Buffer\+Item\+\_\+\+Signed@{Buffer\+Item\+\_\+\+Signed}}
-\subsubsection[{\texorpdfstring{next}{next}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Buffer\+Item\+\_\+\+Signed}$\ast$ Buffer\+Item\+\_\+\+Signed\+::next = 0}\hypertarget{structBufferItem__Signed_a86ea87809ef5786a04f1218ac028fa13}{}\label{structBufferItem__Signed_a86ea87809ef5786a04f1218ac028fa13}
+\subsubsection[{\texorpdfstring{next}{next}}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ Buffer\+Item\+\_\+\+Signed\+::next = 0}\hypertarget{structBufferItem__Signed_afd4c3d25479c65a1b34d430d8d0372c3}{}\label{structBufferItem__Signed_afd4c3d25479c65a1b34d430d8d0372c3}
 Next item in the list \index{Buffer\+Item\+\_\+\+Signed@{Buffer\+Item\+\_\+\+Signed}!payload@{payload}}
 \index{payload@{payload}!Buffer\+Item\+\_\+\+Signed@{Buffer\+Item\+\_\+\+Signed}}
 \subsubsection[{\texorpdfstring{payload}{payload}}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ Buffer\+Item\+\_\+\+Signed\+::payload = 0}\hypertarget{structBufferItem__Signed_a4f268b032fb161b2c73daad2d2659291}{}\label{structBufferItem__Signed_a4f268b032fb161b2c73daad2d2659291}

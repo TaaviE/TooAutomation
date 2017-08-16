@@ -89,6 +89,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
@@ -102,11 +103,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structBufferItem.html">BufferItem</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPayload__Metadata.html">Payload_Metadata</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPayload__Metadata__Received.html">Payload_Metadata_Received</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPayload__MetadataSigned.html">Payload_MetadataSigned</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structBufferItem__Signed.html">BufferItem_Signed</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPayload__MetadataSigned__Received.html">Payload_MetadataSigned_Received</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structNonceSent.html">NonceSent</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -117,6 +116,19 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structNonceRequested.html">NonceRequested</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ga8a71ab4395ca4331fc50559eb1127e76"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TOONETWORKING__RESERVED__TYPES.html#ga8a71ab4395ca4331fc50559eb1127e76">MessageTypes</a> { <br />
+&#160;&#160;<a class="el" href="group__TOONETWORKING__RESERVED__TYPES.html#gga8a71ab4395ca4331fc50559eb1127e76ad5c46e5b7ec0dba6e94d65bc86858d7c">MSG_NONCE</a> = 'A', 
+<a class="el" href="group__TOONETWORKING__RESERVED__TYPES.html#gga8a71ab4395ca4331fc50559eb1127e76a8d265ec37da8534c760f2fee6a8c64fb">MSG_SIGNED</a> = 'B', 
+<a class="el" href="group__TOONETWORKING__RESERVED__TYPES.html#gga8a71ab4395ca4331fc50559eb1127e76a97fc08aa67e7764cea7da63a1f79337a">MSG_NONCE_REQUEST</a> = 'C', 
+<a class="el" href="group__TOONETWORKING__RESERVED__TYPES.html#gga8a71ab4395ca4331fc50559eb1127e76a972f68fcfa03e7af55204cd68d7049ea">MSG_DUAL</a> = 'D', 
+<br />
+&#160;&#160;<a class="el" href="group__TOONETWORKING__RESERVED__TYPES.html#gga8a71ab4395ca4331fc50559eb1127e76ae4de076a3523014f7456aecbd1a4022c">MSG_ENCRYPTED</a> = 'E'
+<br />
+ }</td></tr>
+<tr class="separator:ga8a71ab4395ca4331fc50559eb1127e76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a173f695381b08642c89a68cdcd76a5d4"><td class="memItemLeft" align="right" valign="top">RF24&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a173f695381b08642c89a68cdcd76a5d4">radio</a> (TOO_RF24_CE, TOO_RF24_CS)</td></tr>
@@ -125,46 +137,68 @@ Functions</h2></td></tr>
 <tr class="separator:aa7924d94ea32c8d33a81ff41f8678320"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdda8f09b9d475ed2c23a2376e2e0151"><td class="memItemLeft" align="right" valign="top">RF24Mesh&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#abdda8f09b9d475ed2c23a2376e2e0151">mesh</a> (<a class="el" href="TooNetworking_8h.html#a173f695381b08642c89a68cdcd76a5d4">radio</a>, <a class="el" href="TooNetworking_8h.html#aa7924d94ea32c8d33a81ff41f8678320">network</a>)</td></tr>
 <tr class="separator:abdda8f09b9d475ed2c23a2376e2e0151"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec97902cf0d3ec10fd86927f3d1df0c6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#aec97902cf0d3ec10fd86927f3d1df0c6">TooNetworking_connection_begin</a> (uint8_t passed_node_id)</td></tr>
-<tr class="separator:aec97902cf0d3ec10fd86927f3d1df0c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a723608b997230cc461d06454b2cdb8c3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a723608b997230cc461d06454b2cdb8c3">TooNetworking_send</a> (uint8_t for_node, void *payload, uint8_t size, uint8_t type)</td></tr>
-<tr class="separator:a723608b997230cc461d06454b2cdb8c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebce8a08126d4cdbc42dfff4af857a91"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#aebce8a08126d4cdbc42dfff4af857a91">NOTREVIEWED_TooNetworking_connection_begin</a> (uint8_t passed_node_id)</td></tr>
+<tr class="separator:aebce8a08126d4cdbc42dfff4af857a91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46674b3fdc9ee370b0839869aa145b75"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a46674b3fdc9ee370b0839869aa145b75">TooNetworking_send</a> (uint8_t for_node, void *payload, uint8_t size, uint8_t identifier)</td></tr>
+<tr class="separator:a46674b3fdc9ee370b0839869aa145b75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9209f3e1a2fdf0b3b88d49105b8fc359"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a9209f3e1a2fdf0b3b88d49105b8fc359">TooNetworking_send_signed</a> (uint8_t for_node, void *payload, uint8_t size)</td></tr>
 <tr class="separator:a9209f3e1a2fdf0b3b88d49105b8fc359"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f893c3218491ee86282fdcd9f376500"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a9f893c3218491ee86282fdcd9f376500">TooNetworking_send_signed_</a> (uint8_t for_node, void *payload, uint8_t size, uint32_t nonce)</td></tr>
+<tr class="memitem:a9f893c3218491ee86282fdcd9f376500"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a9f893c3218491ee86282fdcd9f376500">TooNetworking_send_signed_</a> (uint8_t for_node, void *payload, uint8_t size, uint32_t <a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#ga8fc64ce47dc28f47b3317ae1051e4359">nonce</a>)</td></tr>
 <tr class="separator:a9f893c3218491ee86282fdcd9f376500"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86fb32acfc42a498be62a3236c778454"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a86fb32acfc42a498be62a3236c778454">TooNetworking_send_encrypted</a> (uint8_t for_node, void *payload, uint8_t size)</td></tr>
 <tr class="separator:a86fb32acfc42a498be62a3236c778454"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5861e5d6df60aa6701af1b9ec7e942a8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a5861e5d6df60aa6701af1b9ec7e942a8">TooNetworking_send_signed_encrypted</a> (uint8_t for_node, void *payload, uint8_t size)</td></tr>
 <tr class="separator:a5861e5d6df60aa6701af1b9ec7e942a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b2b7fde063d7268ae7deabffeba6152"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a8b2b7fde063d7268ae7deabffeba6152">TooNetworking_peek</a> (RF24NetworkHeader &amp;header, void *message, uint16_t maxlen)</td></tr>
-<tr class="separator:a8b2b7fde063d7268ae7deabffeba6152"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9cd17becc197be8de7befa25116c3a67"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a9cd17becc197be8de7befa25116c3a67">TooNetworking_read</a> (RF24NetworkHeader &amp;header, void *message, uint16_t maxlen)</td></tr>
-<tr class="separator:a9cd17becc197be8de7befa25116c3a67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac352268e177fa2ddf91c8afa5cd04bbf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#ac352268e177fa2ddf91c8afa5cd04bbf">TooNetworking_connection_available</a> ()</td></tr>
-<tr class="separator:ac352268e177fa2ddf91c8afa5cd04bbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48504aef69d9ac92e34269a64f7b518b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a48504aef69d9ac92e34269a64f7b518b">TooNetworking_connection_check</a> ()</td></tr>
-<tr class="separator:a48504aef69d9ac92e34269a64f7b518b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b42d9bcdd127cd4de2bf454642c06fe"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a3b42d9bcdd127cd4de2bf454642c06fe">NOTREVIEWED_TooNetworking_peek</a> (RF24NetworkHeader &amp;header, void *message, uint16_t maxlen)</td></tr>
+<tr class="separator:a3b42d9bcdd127cd4de2bf454642c06fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ae16c4ec6baf0f0f554784440d7f9a6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a5ae16c4ec6baf0f0f554784440d7f9a6">NOTREVIEWED_TooNetworking_read</a> (RF24NetworkHeader &amp;header, void *message, uint16_t maxlen)</td></tr>
+<tr class="separator:a5ae16c4ec6baf0f0f554784440d7f9a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2efde1a53bcc71339afb509baf5b6565"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a2efde1a53bcc71339afb509baf5b6565">NOTREVIEWED_TooNetworking_connection_available</a> ()</td></tr>
+<tr class="separator:a2efde1a53bcc71339afb509baf5b6565"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa1c3d9e1bf9b3890b18f54c3c754a93"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#afa1c3d9e1bf9b3890b18f54c3c754a93">NOTREVIEWED_TooNetworking_connection_check</a> ()</td></tr>
+<tr class="separator:afa1c3d9e1bf9b3890b18f54c3c754a93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03886e705694bc0a742aefd89c44297e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a03886e705694bc0a742aefd89c44297e">NOTREVIEWED_TooNetworking_connection_fix</a> ()</td></tr>
+<tr class="separator:a03886e705694bc0a742aefd89c44297e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9f816f47d9f17d503ec26405d424170"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#ac9f816f47d9f17d503ec26405d424170">NOTREVIEWED_TooNetworking_connection_maintenance</a> ()</td></tr>
+<tr class="separator:ac9f816f47d9f17d503ec26405d424170"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabc4c02ca4eefe0474368ecde5573f9e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#gabc4c02ca4eefe0474368ecde5573f9e1">TooNetworking_bufferlist_remove</a> (const <a class="el" href="structBufferItem.html">BufferItem</a> *<a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#gaf1966d7084d2373905ae510e8f04a581">previous</a>, const <a class="el" href="structBufferItem.html">BufferItem</a> *<a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#gae8b515cceb310a575b6c2677ba93ea7e">current</a>)</td></tr>
+<tr class="separator:gabc4c02ca4eefe0474368ecde5573f9e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa8a4e879d4d71fed2a8940cf93b75ae4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#gaa8a4e879d4d71fed2a8940cf93b75ae4">TooNetworking_bufferlist_initialize</a> ()</td></tr>
+<tr class="separator:gaa8a4e879d4d71fed2a8940cf93b75ae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0dd5e9de81eea99b99669a607c9b4028"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structBufferItem.html">BufferItem</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#ga0dd5e9de81eea99b99669a607c9b4028">TooNetworking_bufferlist_find_for_id</a> (uint8_t nodeID)</td></tr>
+<tr class="separator:ga0dd5e9de81eea99b99669a607c9b4028"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf0c72173d810d3aa6d14e1414904f3d0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#gaf0c72173d810d3aa6d14e1414904f3d0">TooNetworking_bufferlist_send_</a> (<a class="el" href="structBufferItem.html">BufferItem</a> <a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#gae8b515cceb310a575b6c2677ba93ea7e">current</a>, <a class="el" href="structBufferItem.html">BufferItem</a> <a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#gaf1966d7084d2373905ae510e8f04a581">previous</a>)</td></tr>
+<tr class="separator:gaf0c72173d810d3aa6d14e1414904f3d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga915fbb5e8e24dc6d0a23c246c7d8c0d2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#ga915fbb5e8e24dc6d0a23c246c7d8c0d2">TooNetworking_bufferlist_add</a> (uint8_t <a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#ga76db772dc25d4b2f5eb800e93ca3fd0b">payload_destination</a>, void *payload, uint8_t size, uint8_t type=0)</td></tr>
+<tr class="separator:ga915fbb5e8e24dc6d0a23c246c7d8c0d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacc00c9f431dfb687a7177bdfc7ddf9b5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#gacc00c9f431dfb687a7177bdfc7ddf9b5">while</a> (<a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#gae8b515cceb310a575b6c2677ba93ea7e">current</a>-&gt;next!=NULL)</td></tr>
+<tr class="separator:gacc00c9f431dfb687a7177bdfc7ddf9b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf03e7287c6f8fcd712db428ea10ca2f2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#gaf03e7287c6f8fcd712db428ea10ca2f2">if</a> (type==0)</td></tr>
+<tr class="separator:gaf03e7287c6f8fcd712db428ea10ca2f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaf318681cf7c6b13563cc7b4c1dea447"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#gaaf318681cf7c6b13563cc7b4c1dea447">if</a> (nonce!=0)</td></tr>
+<tr class="separator:gaaf318681cf7c6b13563cc7b4c1dea447"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf4ef0c13c26288a0ff2b63ebee26c99d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#gaf4ef0c13c26288a0ff2b63ebee26c99d">TooNetworking_requested_noncelist_add</a> (<a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#ga76db772dc25d4b2f5eb800e93ca3fd0b">payload_destination</a>)</td></tr>
+<tr class="separator:gaf4ef0c13c26288a0ff2b63ebee26c99d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad723079a3b6e374adda415cef80a1f49"><td class="memItemLeft" align="right" valign="top">Serial&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#gad723079a3b6e374adda415cef80a1f49">println</a> (F(&quot;Added&quot;))</td></tr>
+<tr class="separator:gad723079a3b6e374adda415cef80a1f49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0b4c5929e97949cacfeeef70ec1e08b8"><td class="memItemLeft" align="right" valign="top">Serial&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#ga0b4c5929e97949cacfeeef70ec1e08b8">println</a> (F(&quot;Adding item to buffer list&quot;))</td></tr>
+<tr class="separator:ga0b4c5929e97949cacfeeef70ec1e08b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab2dffc70527ea7fec99a282b41e2ba0f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#gab2dffc70527ea7fec99a282b41e2ba0f">if</a> (<a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#gae8b515cceb310a575b6c2677ba93ea7e">current</a>-&gt;<a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#gaa775cb983053439822fe541f3fa9166a">next</a>==NULL)</td></tr>
+<tr class="separator:gab2dffc70527ea7fec99a282b41e2ba0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga00890a1640039d4f6a925b290994a004"><td class="memItemLeft" align="right" valign="top">Serial&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#ga00890a1640039d4f6a925b290994a004">println</a> (F(&quot;Added item to buffer list&quot;))</td></tr>
+<tr class="separator:ga00890a1640039d4f6a925b290994a004"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf4808c2c0857cde9a6721ad54f5ab42d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#gaf4808c2c0857cde9a6721ad54f5ab42d">TooNetworking_other_node_is_online</a> (uint8_t nodeID)</td></tr>
+<tr class="separator:gaf4808c2c0857cde9a6721ad54f5ab42d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa7771141375a0a88ce46bb99ab56ee51"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#gaa7771141375a0a88ce46bb99ab56ee51">TooNetworking_this_node_is_online</a> ()</td></tr>
+<tr class="separator:gaa7771141375a0a88ce46bb99ab56ee51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab58e06e0eb6f2f8ecbebeaf3c173fb22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#gab58e06e0eb6f2f8ecbebeaf3c173fb22">TooNetworking_bufferlist_send_all</a> ()</td></tr>
+<tr class="separator:gab58e06e0eb6f2f8ecbebeaf3c173fb22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2b5485b317146ce7c14bbad26172d796"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#ga2b5485b317146ce7c14bbad26172d796">TooNetworking_bufferlist_print</a> ()</td></tr>
+<tr class="separator:ga2b5485b317146ce7c14bbad26172d796"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefc5dad88b637efb11a3a7b2f76a19b9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#aefc5dad88b637efb11a3a7b2f76a19b9">TooNetworking_connection_fix</a> ()</td></tr>
 <tr class="separator:aefc5dad88b637efb11a3a7b2f76a19b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7382ba1aed5405c3adc02011ea6c45dd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a7382ba1aed5405c3adc02011ea6c45dd">TooNetworking_connection_maintenance</a> ()</td></tr>
-<tr class="separator:a7382ba1aed5405c3adc02011ea6c45dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3c91b7ab2f6500c287ecc7ab4a018ef6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SIMPLE__BUFFER.html#ga3c91b7ab2f6500c287ecc7ab4a018ef6">TooNetworking_bufferlist_remove</a> (<a class="el" href="structBufferItem.html">BufferItem</a> *previous, <a class="el" href="structBufferItem.html">BufferItem</a> *current)</td></tr>
-<tr class="separator:ga3c91b7ab2f6500c287ecc7ab4a018ef6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa8a4e879d4d71fed2a8940cf93b75ae4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SIMPLE__BUFFER.html#gaa8a4e879d4d71fed2a8940cf93b75ae4">TooNetworking_bufferlist_initialize</a> ()</td></tr>
-<tr class="separator:gaa8a4e879d4d71fed2a8940cf93b75ae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0dd5e9de81eea99b99669a607c9b4028"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structBufferItem.html">BufferItem</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SIMPLE__BUFFER.html#ga0dd5e9de81eea99b99669a607c9b4028">TooNetworking_bufferlist_find_for_id</a> (uint8_t nodeID)</td></tr>
-<tr class="separator:ga0dd5e9de81eea99b99669a607c9b4028"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae72372a8084e8486f1306240a9af6474"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SIMPLE__BUFFER.html#gae72372a8084e8486f1306240a9af6474">TooNetworking_bufferlist_send</a> (<a class="el" href="structBufferItem.html">BufferItem</a> *item, <a class="el" href="structNonceReceived.html">NonceReceived</a> *nonce, <a class="el" href="structBufferItem.html">BufferItem</a> *previousitem)</td></tr>
-<tr class="separator:gae72372a8084e8486f1306240a9af6474"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1fca7e85a8a2f91a1b20a8bb23b4e893"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SIMPLE__BUFFER.html#ga1fca7e85a8a2f91a1b20a8bb23b4e893">TooNetworking_bufferlist_add</a> (uint8_t payload_destination, void *payload, uint8_t size)</td></tr>
-<tr class="separator:ga1fca7e85a8a2f91a1b20a8bb23b4e893"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab58e06e0eb6f2f8ecbebeaf3c173fb22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SIMPLE__BUFFER.html#gab58e06e0eb6f2f8ecbebeaf3c173fb22">TooNetworking_bufferlist_send_all</a> ()</td></tr>
-<tr class="separator:gab58e06e0eb6f2f8ecbebeaf3c173fb22"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2b5485b317146ce7c14bbad26172d796"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SIMPLE__BUFFER.html#ga2b5485b317146ce7c14bbad26172d796">TooNetworking_bufferlist_print</a> ()</td></tr>
-<tr class="separator:ga2b5485b317146ce7c14bbad26172d796"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2676204dee95da1ef337de95eb0e9bcb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a2676204dee95da1ef337de95eb0e9bcb">TooNetworking_begin</a> (uint8_t passed_node_id)</td></tr>
-<tr class="separator:a2676204dee95da1ef337de95eb0e9bcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f93b5fc7703dd4b3511fbeb41ef1271"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a4f93b5fc7703dd4b3511fbeb41ef1271">NOTREVIEWED_TooNetworking_begin</a> (uint8_t passed_node_id)</td></tr>
+<tr class="separator:a4f93b5fc7703dd4b3511fbeb41ef1271"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -178,8 +212,26 @@ Variables</h2></td></tr>
 <tr class="separator:ad145f92b978c39b1728ffd91e896277a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac43930ae93d50eea7e1ae8aee603524"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structNonceRequested.html">NonceRequested</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#aac43930ae93d50eea7e1ae8aee603524">nonce_requested_first</a> = 0</td></tr>
 <tr class="separator:aac43930ae93d50eea7e1ae8aee603524"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c24840cd9eb766eb04c1db0d2363cd5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structBufferItem.html">BufferItem</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a7c24840cd9eb766eb04c1db0d2363cd5">buffer_first</a> = 0</td></tr>
-<tr class="separator:a7c24840cd9eb766eb04c1db0d2363cd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11d4f129f71dc36defd23ed9785c3c64"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structBufferItem.html">BufferItem</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8h.html#a11d4f129f71dc36defd23ed9785c3c64">buffer_first</a> = 0</td></tr>
+<tr class="separator:a11d4f129f71dc36defd23ed9785c3c64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf1966d7084d2373905ae510e8f04a581"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#gaf1966d7084d2373905ae510e8f04a581">previous</a> = <a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#gae8b515cceb310a575b6c2677ba93ea7e">current</a></td></tr>
+<tr class="separator:gaf1966d7084d2373905ae510e8f04a581"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae8b515cceb310a575b6c2677ba93ea7e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#gae8b515cceb310a575b6c2677ba93ea7e">current</a> = current-&gt;<a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#gaa775cb983053439822fe541f3fa9166a">next</a></td></tr>
+<tr class="separator:gae8b515cceb310a575b6c2677ba93ea7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga76db772dc25d4b2f5eb800e93ca3fd0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#gae8b515cceb310a575b6c2677ba93ea7e">current</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#ga76db772dc25d4b2f5eb800e93ca3fd0b">payload_destination</a> = payload_destination</td></tr>
+<tr class="separator:ga76db772dc25d4b2f5eb800e93ca3fd0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaca16f9091ec66e37bff7fc67b75eba73"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#gae8b515cceb310a575b6c2677ba93ea7e">current</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#gaca16f9091ec66e37bff7fc67b75eba73">payload_size</a> = size</td></tr>
+<tr class="separator:gaca16f9091ec66e37bff7fc67b75eba73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab2ced9a16c7ca839c034e133999f2f40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#gae8b515cceb310a575b6c2677ba93ea7e">current</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#gab2ced9a16c7ca839c034e133999f2f40">payload_type</a> = type</td></tr>
+<tr class="separator:gab2ced9a16c7ca839c034e133999f2f40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0544c3fe466e421738dae463968b70ba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#ga0544c3fe466e421738dae463968b70ba">else</a></td></tr>
+<tr class="separator:ga0544c3fe466e421738dae463968b70ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8fc64ce47dc28f47b3317ae1051e4359"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structNonceReceived.html">NonceReceived</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#ga8fc64ce47dc28f47b3317ae1051e4359">nonce</a> = TooNetworking_received_noncelist_find_from_ID(<a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#ga76db772dc25d4b2f5eb800e93ca3fd0b">payload_destination</a>)</td></tr>
+<tr class="separator:ga8fc64ce47dc28f47b3317ae1051e4359"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa775cb983053439822fe541f3fa9166a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#gae8b515cceb310a575b6c2677ba93ea7e">current</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#gaa775cb983053439822fe541f3fa9166a">next</a> = malloc(sizeof(<a class="el" href="structBufferItem.html">BufferItem</a>))</td></tr>
+<tr class="separator:gaa775cb983053439822fe541f3fa9166a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga930920b2bc42824a5c03be681830f4b2"><td class="memItemLeft" align="right" valign="top">return&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#ga930920b2bc42824a5c03be681830f4b2">true</a></td></tr>
+<tr class="separator:ga930920b2bc42824a5c03be681830f4b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file implements the necessary functionality that allow nodes in the network to communicate </p>
@@ -226,38 +278,12 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a173f695381b08642c89a68cdcd76a5d4"></a>
+<a class="anchor" id="a4f93b5fc7703dd4b3511fbeb41ef1271"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">RF24 radio </td>
-          <td>(</td>
-          <td class="paramtype">TOO_RF24_CE&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">TOO_RF24_CS&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a2676204dee95da1ef337de95eb0e9bcb"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool TooNetworking_begin </td>
+          <td class="memname">bool NOTREVIEWED_TooNetworking_begin </td>
           <td>(</td>
           <td class="paramtype">uint8_t&#160;</td>
           <td class="paramname"><em>passed_node_id</em></td><td>)</td>
@@ -265,7 +291,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Automatically set up the networking Every radio should provide <a class="el" href="TooNetworking_8h.html#aec97902cf0d3ec10fd86927f3d1df0c6">TooNetworking_connection_begin(uint8_t nodeID)</a> for easy initialization of the network</p>
+<p>Automatically set up the networking Every radio should provide TooNetworking_connection_begin(uint8_t nodeID) for easy initialization of the network</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">passed_node_id</td><td>Current node's ID. </td></tr>
@@ -276,12 +302,12 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac352268e177fa2ddf91c8afa5cd04bbf"></a>
+<a class="anchor" id="a2efde1a53bcc71339afb509baf5b6565"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool TooNetworking_connection_available </td>
+          <td class="memname">bool NOTREVIEWED_TooNetworking_connection_available </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -293,12 +319,12 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aec97902cf0d3ec10fd86927f3d1df0c6"></a>
+<a class="anchor" id="aebce8a08126d4cdbc42dfff4af857a91"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool TooNetworking_connection_begin </td>
+          <td class="memname">bool NOTREVIEWED_TooNetworking_connection_begin </td>
           <td>(</td>
           <td class="paramtype">uint8_t&#160;</td>
           <td class="paramname"><em>passed_node_id</em></td><td>)</td>
@@ -317,12 +343,12 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a48504aef69d9ac92e34269a64f7b518b"></a>
+<a class="anchor" id="afa1c3d9e1bf9b3890b18f54c3c754a93"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool TooNetworking_connection_check </td>
+          <td class="memname">bool NOTREVIEWED_TooNetworking_connection_check </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -334,12 +360,12 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aefc5dad88b637efb11a3a7b2f76a19b9"></a>
+<a class="anchor" id="a03886e705694bc0a742aefd89c44297e"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool TooNetworking_connection_fix </td>
+          <td class="memname">bool NOTREVIEWED_TooNetworking_connection_fix </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -351,12 +377,12 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a7382ba1aed5405c3adc02011ea6c45dd"></a>
+<a class="anchor" id="ac9f816f47d9f17d503ec26405d424170"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool TooNetworking_connection_maintenance </td>
+          <td class="memname">bool NOTREVIEWED_TooNetworking_connection_maintenance </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -370,12 +396,12 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a8b2b7fde063d7268ae7deabffeba6152"></a>
+<a class="anchor" id="a3b42d9bcdd127cd4de2bf454642c06fe"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool TooNetworking_peek </td>
+          <td class="memname">bool NOTREVIEWED_TooNetworking_peek </td>
           <td>(</td>
           <td class="paramtype">RF24NetworkHeader &amp;&#160;</td>
           <td class="paramname"><em>header</em>, </td>
@@ -409,12 +435,12 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9cd17becc197be8de7befa25116c3a67"></a>
+<a class="anchor" id="a5ae16c4ec6baf0f0f554784440d7f9a6"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool TooNetworking_read </td>
+          <td class="memname">bool NOTREVIEWED_TooNetworking_read </td>
           <td>(</td>
           <td class="paramtype">RF24NetworkHeader &amp;&#160;</td>
           <td class="paramname"><em>header</em>, </td>
@@ -448,7 +474,50 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a723608b997230cc461d06454b2cdb8c3"></a>
+<a class="anchor" id="a173f695381b08642c89a68cdcd76a5d4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RF24 radio </td>
+          <td>(</td>
+          <td class="paramtype">TOO_RF24_CE&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TOO_RF24_CS&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aefc5dad88b637efb11a3a7b2f76a19b9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TooNetworking_connection_fix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Tries to reestablish connection to the network</p>
+<dl class="section return"><dt>Returns</dt><dd>True if successful, false otherwise </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a46674b3fdc9ee370b0839869aa145b75"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -474,7 +543,7 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>type</em>&#160;</td>
+          <td class="paramname"><em>identifier</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -486,10 +555,14 @@ Variables</h2></td></tr>
 <p>Allows sending a encrypted message</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname"></td><td></td></tr>
+    <tr><td class="paramname">identifier</td><td>sets the used payload type, see TOONETWORKING_RESERVED_TYPES for more information </td></tr>
+    <tr><td class="paramname">size</td><td>payload size </td></tr>
+    <tr><td class="paramname">for_node</td><td>destination node </td></tr>
+    <tr><td class="paramname">payload</td><td>payload </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successful, false otherwise </dd></dl>
 
 </div>
 </div>
@@ -663,12 +736,12 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a class="anchor" id="a7c24840cd9eb766eb04c1db0d2363cd5"></a>
+<a class="anchor" id="a11d4f129f71dc36defd23ed9785c3c64"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structBufferItem.html">BufferItem</a> * buffer_first = 0</td>
+          <td class="memname"><a class="el" href="structBufferItem.html">BufferItem</a>* buffer_first = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
