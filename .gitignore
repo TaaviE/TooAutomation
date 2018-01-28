@@ -34,3 +34,6 @@
 # Linux temporary files
 *.*~
 .directory
+
+# IDEA
+.idea
