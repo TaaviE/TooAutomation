@@ -33,3 +33,4 @@
 
 # Linux temporary files
 *.*~
+.directory
