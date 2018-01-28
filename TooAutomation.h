@@ -17,11 +17,19 @@
 
 /**
  * @file TooAutomation.h
- * 
+ *
+ *
+ *
  */
 
-#pragma once
+#ifndef __TooAutomation_H__
+#define __TooAutomation_H__
 
 #include <Arduino.h>
-#include "modules/TooSensors/TooSensors.h"
+#include "modules/TooInput/TooInput.h"
+#include "modules/TooOutput/TooOutput.h"
 #include "modules/TooNetworking/TooNetworking.h"
+#include "modules/TooNetworking/TooNetworking_data.h"
+
+#endif // __TooAutomation_H__
+

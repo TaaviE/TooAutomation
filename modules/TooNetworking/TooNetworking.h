@@ -36,6 +36,14 @@ uint8_t current_node_ID;
 #ifdef TooNetworking_SIGNING
 #include "sha256.h"
 #include "modules/TooSigning/TooSigning.h"
+#include "modules/TooNetworking/TooNetworking_data.h"
+
+
+#ifdef TOONETWORKING_SIGNING
+#include "modules/TooSigning/TooSigning.h"
+#include "sha256.h"
+Sha256Class Sha256; /**< Hashing library object construction */
+
 /**
  * Secret HMACs
  */
@@ -153,6 +161,11 @@ BufferItem * buffer_first = 0;              /**< Pointer to the payload list sta
 
 #ifdef TOORADIO_RF24
 
+#endif // TOONETWORKING_SIGNING
+
+uint8_t current_node_ID;
+BufferItem * buffer_first = 0;              /**< Pointer to the payload list start */
+
 /*
 * TODO:
 * Send signed
@@ -178,11 +191,20 @@ RF24Mesh mesh(radio, network);
    * @param passed_node_id Current node's ID.
    * @return true if successful, false otherwise
    */
-bool NOTREVIEWED_TooNetworking_connection_begin(uint8_t passed_node_id){
+bool TooNetworking_connection_begin(uint8_t passed_node_id){
   mesh.setNodeID(passed_node_id);
   Serial.println(mesh.getNodeID());
   mesh.begin();
   Serial.println(F("Mesh initialized"));
+}
+
+#ifdef TOONETWORKING_SIGNING
+  //TooSigning_signed_network_begin(passed_node_id);
+#endif // TOONETWORKING_SIGNING
+
+#ifdef TOONETWORKING_ENCRYPTION
+  //TODO: Init encryption
+#endif // TOONETWORKING_SIGNING
 }
 
   /**
@@ -346,6 +368,55 @@ bool NOTREVIEWED_TooNetworking_connection_maintenance(){
    
 }
 #endif
+/**
+ * Allows reading a message from buffer
+ * and it's NOT cleared after being read
+ *
+ * @param
+ */
+void TooNetworking_peek(RF24NetworkHeader& header, void* message, uint16_t maxlen){
+  network.peek(header, message, maxlen);
+}
+
+/**
+ * Allows reading a message from buffer
+ * and it's cleared after being read
+ *
+ * @param
+ * @return true if successful, false otherwise
+ */
+bool TooNetworking_read(RF24NetworkHeader& header, void* message, uint16_t maxlen){
+  return network.read(header, message, maxlen);
+}
+
+/**
+ * Checks if there's something ready to be processed
+ *
+ * @return True if successful, false otherwise
+ */
+bool TooNetworking_connection_available(){
+  return network.available();
+}
+
+/**
+ * Checks if the master node is reachable
+ *
+ * @return true if successful, false otherwise
+ */
+bool TooNetworking_connection_check(){
+  return mesh.checkConnection();
+}
+
+/**
+ * Tries to reestablish connection to the network
+ *
+ * @return True if successful, false otherwise
+ */
+bool TooNetworking_connection_fix(){
+  if(!TooNetworking_connection_available()){
+    return mesh.renewAddress();
+  }
+}
 
 /**
  * **Regular message buffer list**
@@ -356,8 +427,22 @@ bool NOTREVIEWED_TooNetworking_connection_maintenance(){
  * @{
  */
 
+void TooNetworking_bufferlist_print() {
+  Serial.println(F("___ BUFFER DUMP ___"));
 
-void TooNetworking_bufferlist_remove(const BufferItem * previous, const BufferItem * current) {
+  BufferItem * current = buffer_first;
+  while (current != 0) {
+    Serial.print(F("For: "));
+    Serial.println(current->payload_destination);
+    Serial.print(F("Pointer to next: "));
+    Serial.println((uint16_t) current->next);
+    Serial.print(F("Payload size: "));
+    Serial.println(current->payload_size);
+    current = current->next;
+  }
+}
+
+void TooNetworking_bufferlist_remove(BufferItem * previous, BufferItem * current) {
   Serial.println(F("Removing from buffer list"));
   if (current = buffer_first) { // Start of buffer list
     free(current->payload);
@@ -394,6 +479,8 @@ bool TooNetworking_bufferlist_initialize() {
   }
 
   (BufferItem)buffer_first->next = NULL;
+
+  buffer_first->next = NULL;
   return true;
 }
 
@@ -434,11 +521,57 @@ TooNetworking_bufferlist_add(uint8_t payload_destination, void * payload, uint8_
   } 
   
   while (current->next != NULL) {  //Take the last item in the list
+=======
+
+  return NULL;
+}
+
+bool TooNetworking_bufferlist_send_(BufferItem * current, BufferItem * previous){
+  if(TooNetworking_connection_available()){
+    if(TooNetworking_connection_other_available(current->payload_destination)){
+      size_t buffer_size = current->payload_size+sizeof(Payload_Metadata_Received);
+      void * buffer = malloc(buffer_size);
+      memmove(buffer, current, sizeof(Payload_Metadata_Received)); //Copy metadata to buffer
+      memmove(buffer+sizeof(Payload_Metadata_Received), current->payload, current->payload_size); //Copy payload to buffer after metadata
+
+      if(TooNetworking_send(current->payload_destination, buffer, buffer_size, MSG_HEADER_REGULAR)){
+        TooNetworking_bufferlist_remove(current, previous);
+        return true;
+      } else{
+        return false;
+      }
+    } else{
+      return false;
+    }
+  } else{
+    //TODO: Non-blocking fix connection
+    return false;
+  }
+}
+
+/**
+ * Adds message that the system couldn't send instantly to the buffer
+ *
+ * */
+void TooNetworking_bufferlist_add(uint8_t payload_destination, void * payload, uint8_t size, uint8_t type=MSG_HEADER_REGULAR){
+  Serial.println(F("Add item to buffer list"));
+  BufferItem * current = buffer_first;
+  BufferItem * previous = NULL;
+  if (buffer_first == 0) {
+    if (!TooNetworking_bufferlist_initialize()) {
+      return false;
+    } else {
+      current = buffer_first;
+    }
+  }
+
+  while ((current->next) != NULL) {  //Take the last item in the list
     Serial.println(F("Finding the last item"));
     current = current->next;
   }
   
   previous = current;
+  current->next = malloc(sizeof(BufferItem)); //TODO: Safe malloc (enough room and error handling)
   current = current->next;
   
   current->payload_destination = payload_destination;
@@ -484,6 +617,124 @@ bool TooNetworking_this_node_is_online(){
 
 void TooNetworking_bufferlist_send_all() {
   BufferItem * current = (BufferItem) buffer_first;
+
+/** @} */
+
+#ifdef TOONETWORKING_SIGNING
+
+/**
+ * Allows sending a signed message, type must be embedded inside the payload
+ * the receiver must know what to do with the message once it's been
+ * verified, messages that fail the checks are DISCARDED!
+ *
+ * @param for_node destination
+ * @param payload payload
+ * @param size size of payload
+ * @param nonce nonce
+ * @return true if successful, false otherwise
+ */
+bool TooNetworking_send_signed(uint8_t for_node, void * payload, uint8_t size, uint32_t nonce){
+  if(TooNetworking_connection_available()){
+    Serial.println(F("Node is online"));
+    if(TooNetworking_connection_other_available(for_node)){
+      Serial.println(F("Destination is online"));
+
+      size_t buffer_size = size+sizeof(Payload_MetadataSigned_Received);
+      void * buffer = malloc(buffer_size);
+      Payload_MetadataSigned_Received metadata;
+      metadata.payload_size = size;
+      metadata.payload_type = MSG_HEADER_SIGNED;
+      //Payload signing process start
+      uint8_t hmac[20] = {0};
+      TooSigning_read_hmac_from_progmem(for_node, &hmac);
+
+      Serial.println(F("HMAC used: "));
+      for (int i; i > 20; i++) {
+        Serial.print(hmac[i]);
+      }
+      Serial.println();
+      Sha256.initHmac(hmac, 20);
+
+      TooSigning_random_data_print(payload, size);
+      TooSigning_hash_data(payload, size);
+      TooSigning_hash_data(&nonce, sizeof(uint32_t));
+      TooSigning_hash_store(Sha256.resultHmac(), metadata.payload_hash);
+      //Payload signing process end
+      //To buffer, from metadata, with the size of metadata
+      memmove(buffer, &metadata, sizeof(Payload_MetadataSigned_Received)); //Copy metadata to buffer
+      //To buffer with an offset, from payload, with the size of payload
+      memmove(buffer+sizeof(Payload_Metadata_Received), payload, size); //Copy payload to buffer after metadata
+
+      if(TooNetworking_send(for_node, buffer, buffer_size, MSG_HEADER_REGULAR)){
+        return true;
+      }
+    }
+    Serial.println(F("Destination is offline"));
+  } else{
+    Serial.println(F("This node is offline"));
+    //TODO: Non-blocking fix connection
+  }
+}
+
+/**
+ * Allows sending a signed message, type must be embedded inside the payload
+ * the receiver must know what to do with the message once it's been
+ * verified, messages that fail the checks are DISCARDED!
+ *
+ * @param for_node destination
+ * @param payload payload
+ * @param size size of payload
+ * @return true if successful, false otherwise
+ */
+bool TooNetworking_bufferlist_send_signed(uint8_t for_node, void * payload, uint8_t size){
+  //Check if there's a nonce for that node
+  uint32_t tempnonce = TooSigning_received_noncelist_find_from_ID(for_node);
+  if(tempnonce != 0){
+    if(TooNetworking_send_signed(for_node, payload, size, tempnonce)){
+      //Message hasn't made it to the buffer list
+      return true;
+    }
+  }
+
+  //Else send nonce request
+  TooSigning_requested_noncelist_add(for_node);
+
+  //Store in buffer
+  TooNetworking_bufferlist_add(for_node, payload, size, MSG_HEADER_SIGNED);
+  return true;
+}
+
+#endif //TOONETWORKING_SIGNING
+
+
+#ifdef TOONETWORKING_ENCRYPTION
+  /**
+   * Allows sending an encrypted message
+   *
+   * @param
+   * @return true if successful, false otherwise
+   */
+bool TooNetworking_send_encrypted(uint8_t for_node, void * payload, uint8_t size){
+
+}
+#endif // TOONETWORKING_ENCRYPTION
+
+#ifdef TOONETWORKING_ENCRYPTION && TOONETWORKING_SIGNING
+
+  /**
+   * Allows sending a signed and encrypted message
+   *
+   * @param
+   * @return true if successful, false otherwise
+   */
+bool TooNetworking_send_signedencrypted(uint8_t for_node, void * payload, uint8_t size){
+
+}
+#endif // TOONETWORKING_ENCRYPTION && TOONETWORKING_SIGNING
+
+void TooNetworking_bufferlist_send_all() {
+  BufferItem * current = buffer_first;
+>>>>>>> 79802c3552a474864d89f4624aab2bf93c584e89
   BufferItem * previous = 0;
   
   TooNetworking_bufferlist_print();
@@ -502,6 +753,25 @@ void TooNetworking_bufferlist_send_all() {
        TooNetworking_send_signed(current, nonce, previous);
      }
     }
+
+    if(current->payload_type == MSG_HEADER_REGULAR){
+      if(TooNetworking_bufferlist_send_(current, previous)){
+        TooNetworking_bufferlist_remove(current, previous);
+      }
+    }
+    #ifdef TOONETWORKING_SIGNING
+    else if(current->payload_type == MSG_HEADER_SIGNED){
+      uint32_t nonce = TooSigning_received_noncelist_find_from_ID(current->payload_destination);
+
+      if (nonce != 0) {
+        Serial.println(F(" ..one nonce for node is not 0!"));
+        if(TooNetworking_send_signed(current->payload_destination, current->payload, current->payload_size, nonce)){
+          //Message was sent, might as well remove it
+          TooNetworking_bufferlist_remove(previous, current);
+        }
+      }
+    }
+    #endif
     previous = current;
     current = current->next;
   }
@@ -539,6 +809,24 @@ void TooNetworking_bufferlist_print() {
 bool TooNetworking_connection_fix(){
    return mesh.renewAddress();
 }
+  /**
+   * Does the necessary master node
+   * maintenance and DHCP(-like) actions on the network
+   *
+   * @return True if successful, false otherwise
+   */
+bool TooNetworking_connection_maintenance(){
+#ifdef TOONETWORKING_MASTER
+  mesh.DHCP();
+#endif // TOONETWORKING_MASTER
+
+#ifdef TOONETWORKING_SIGNING
+  //TooSigning_signed_network_begin(20);
+  TooSigning_signed_network_update();
+#endif // TOONETWORKING_SIGNING
+
+  mesh.update();
+}
 
 
 #else  // TOORADIO_RF24
@@ -553,8 +841,27 @@ bool TooNetworking_connection_fix(){
    * @param passed_node_id Current node's ID.
    * @return true if successful, false otherwise
    */
-bool NOTREVIEWED_TooNetworking_begin(uint8_t passed_node_id){
-  NOTREVIEWED_TooNetworking_connection_begin(passed_node_id);
-}
 
-#endif // __NOTREVIEWED_TooNetworking_H__
+  bool TooNetworking_begin(uint8_t passed_node_id) {
+      TooNetworking_connection_begin(passed_node_id);
+  }
+
+/**
+ * Error out when preprocessor flags are with the wrong
+ * capitalization to save debugging time
+ *
+ */
+#ifdef TooNetworking_SIGNING
+#error "Define TOONETWORKING_SIGNING instead!"
+#endif
+
+#ifdef TooNetworking_MASTER
+#error "Define TOONETWORKING_MASTER instead!"
+#endif
+
+#ifdef TooRadio_RF24
+#error "Define TOORADIO_RF24 instead!"
+#endif
+
+#endif // __TooNetworking_H__
+

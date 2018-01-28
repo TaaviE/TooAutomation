@@ -23,11 +23,14 @@
 
 #include "TooAutomation.h"
 
+static const PROGMEM uint8_t
+nodeID = 0;
+
 void setup(void){
-  
+    TooNetworking_connection_begin(nodeID);
 }
 
 void loop(void){
-  
+    TooNetworking_connection_maintenance();
 }
 
