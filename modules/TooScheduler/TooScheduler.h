@@ -1,6 +1,6 @@
 /*
-    TooAutomation - Home automation framework
-    Copyright (C) 2017 Taavi E
+    TooScheduler - Timed function execution for TooAutomation
+    Copyright (C) 2018 Taavi E.
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -15,20 +15,8 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-/**
- * @file TooAutomation.h
- *
- *
- *
- */
+#ifndef __TooScheduler_H__
+#define __TooScheduler_H__
 
-#ifndef __TooAutomation_H__
-#define __TooAutomation_H__
 
-#include <Arduino.h>
-#include "modules/TooInput/TooInput.h"
-#include "modules/TooOutput/TooOutput.h"
-#include "modules/TooNetworking/TooNetworking.h"
-
-#endif // __TooAutomation_H__
-
+#endif //__TooScheduler_H__

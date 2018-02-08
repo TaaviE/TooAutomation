@@ -1,6 +1,6 @@
 /*
     TooInput - Sensor and other input abstraction layer for TooAutomation
-    Copyright (C) 2017 Taavi E.
+    Copyright (C) 2018 Taavi E.
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -55,7 +55,7 @@ TODO:
 
 #ifdef __cplusplus
 }
-#endif 
+#endif
 
 //#ifdef __cplusplus
 //#include "cpp_wrapper.h" 

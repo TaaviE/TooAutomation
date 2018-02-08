@@ -34,6 +34,8 @@
 # Linux temporary files
 *.*~
 .directory
+*.kate-swp
+cmake-build-debug/
 
 # IDEA
 .idea

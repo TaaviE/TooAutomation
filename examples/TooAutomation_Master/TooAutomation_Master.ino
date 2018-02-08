@@ -1,6 +1,6 @@
 /*
     TooAutomation_Master - Example of a master node of TooAutomation
-    Copyright (C) 2017 Taavi E
+    Copyright (C) 2018 Taavi E
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,7 @@
 
 #define TOONETWORKING_MASTER // Indicates this is the master node
 #define TOONETWORKING_SIGNING // Enable signing
+#define SW_SIGNING
 #define TOORADIO_RF24 // Select nRF24L01+ as the radio
 #define TOO_RF24_CE 9 // Define needed pins
 #define TOO_RF24_CS 10
@@ -26,11 +27,11 @@
 static const PROGMEM uint8_t
 nodeID = 0;
 
-void setup(void){
+void setup(void) {
     TooNetworking_connection_begin(nodeID);
 }
 
-void loop(void){
+void loop(void) {
     TooNetworking_connection_maintenance();
 }
 

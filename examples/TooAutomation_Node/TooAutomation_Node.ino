@@ -1,6 +1,6 @@
 /*
     TooAutomation_Node - Example of a standard node of TooAutomation
-    Copyright (C) 2017 Taavi E
+    Copyright (C) 2018 Taavi E
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -22,11 +22,11 @@
 
 #include "TooAutomation.h"
 
-void setup(void){
-  
+void setup(void) {
+
 }
 
-void loop(void){
-  
+void loop(void) {
+
 }
 
