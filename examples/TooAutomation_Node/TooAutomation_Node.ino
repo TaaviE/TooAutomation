@@ -16,6 +16,7 @@
 */
 
 #define TOONETWORKING_SIGNING // Enable signing
+//#define SW_SIGNING
 #define TOORADIO_RF24 // Select nRF24L01+ as the radio
 #define TOO_RF24_CE 9 // Define needed pins
 #define TOO_RF24_CS 10

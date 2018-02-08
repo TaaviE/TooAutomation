@@ -1,0 +1,182 @@
+\hypertarget{classATSHA204Class}{}\section{A\+T\+S\+H\+A204\+Class Class Reference}
+\label{classATSHA204Class}\index{A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}}
+
+
+{\ttfamily \#include $<$A\+T\+S\+H\+A204.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classATSHA204Class_ac2d1196f44961ce709be1f8bf59c162b}{A\+T\+S\+H\+A204\+Class} (uint8\+\_\+t pin)
+\item 
+void \hyperlink{classATSHA204Class_ac51be7c43d75dcc439d89ecb0493149b}{sha204c\+\_\+sleep} ()
+\item 
+uint8\+\_\+t \hyperlink{classATSHA204Class_a8600d67f5c574e1584ef5555429f305b}{sha204m\+\_\+execute} (uint8\+\_\+t op\+\_\+code, uint8\+\_\+t param1, uint16\+\_\+t param2, uint8\+\_\+t datalen1, uint8\+\_\+t $\ast$data1, uint8\+\_\+t tx\+\_\+size, uint8\+\_\+t $\ast$tx\+\_\+buffer, uint8\+\_\+t rx\+\_\+size, uint8\+\_\+t $\ast$rx\+\_\+buffer)
+\item 
+void \hyperlink{classATSHA204Class_ade50092ec236d13cde64e7684b59ab7b}{get\+Serial\+Number} (uint8\+\_\+t $\ast$response)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classATSHA204Class_a42b8beceec64c89148a9bb49b26f0fb1}{sha204c\+\_\+calculate\+\_\+crc} (uint8\+\_\+t length, uint8\+\_\+t $\ast$data, uint8\+\_\+t $\ast$crc)
+\item 
+uint8\+\_\+t \hyperlink{classATSHA204Class_a30b1fad66d47a88848ebc6d74b66ec97}{sha204c\+\_\+check\+\_\+crc} (uint8\+\_\+t $\ast$response)
+\item 
+void \hyperlink{classATSHA204Class_a2d69316e4670b7fd17a1e2b6231191ff}{swi\+\_\+set\+\_\+signal\+\_\+pin} (uint8\+\_\+t is\+\_\+high)
+\item 
+uint8\+\_\+t \hyperlink{classATSHA204Class_ae81c8e3063da186b698d31bad70e543b}{swi\+\_\+receive\+\_\+bytes} (uint8\+\_\+t count, uint8\+\_\+t $\ast$buffer)
+\item 
+uint8\+\_\+t \hyperlink{classATSHA204Class_a0f8c2167d152bbe670d1b1187d7b2897}{swi\+\_\+send\+\_\+bytes} (uint8\+\_\+t count, uint8\+\_\+t $\ast$buffer)
+\item 
+uint8\+\_\+t \hyperlink{classATSHA204Class_abe55ac783f1a37777bd09b7fc369ebc9}{swi\+\_\+send\+\_\+byte} (uint8\+\_\+t value)
+\item 
+uint8\+\_\+t \hyperlink{classATSHA204Class_ae5c777e2388de999d13afef7008a36a7}{sha204p\+\_\+receive\+\_\+response} (uint8\+\_\+t size, uint8\+\_\+t $\ast$response)
+\item 
+uint8\+\_\+t \hyperlink{classATSHA204Class_a6bcaa1359ac7392ed066641323fe8d5d}{sha204m\+\_\+read} (uint8\+\_\+t $\ast$tx\+\_\+buffer, uint8\+\_\+t $\ast$rx\+\_\+buffer, uint8\+\_\+t zone, uint16\+\_\+t address)
+\item 
+uint8\+\_\+t \hyperlink{classATSHA204Class_a2772385d612dee11f65c310334d7952b}{sha204c\+\_\+wakeup} (uint8\+\_\+t $\ast$response)
+\item 
+uint8\+\_\+t \hyperlink{classATSHA204Class_a0d8eab6a8af231835dd5b6734df0d670}{sha204c\+\_\+resync} (uint8\+\_\+t size, uint8\+\_\+t $\ast$response)
+\item 
+uint8\+\_\+t \hyperlink{classATSHA204Class_a3689222ad46022e5c50ba484053d9b2c}{sha204c\+\_\+send\+\_\+and\+\_\+receive} (uint8\+\_\+t $\ast$tx\+\_\+buffer, uint8\+\_\+t rx\+\_\+size, uint8\+\_\+t $\ast$rx\+\_\+buffer, uint8\+\_\+t execution\+\_\+delay, uint8\+\_\+t execution\+\_\+timeout)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \hyperlink{classATSHA204Class_af0ab12881adf592031ce4e272fd06d3b}{device\+\_\+pin}
+\item 
+volatile uint8\+\_\+t $\ast$ \hyperlink{classATSHA204Class_a122693bbcf51517cc0362f1c0ddfaa39}{device\+\_\+port\+\_\+\+D\+DR}
+\item 
+volatile uint8\+\_\+t $\ast$ \hyperlink{classATSHA204Class_a5a6c964a1ab185c22bf9d1a50e29dcab}{device\+\_\+port\+\_\+\+O\+UT}
+\item 
+volatile uint8\+\_\+t $\ast$ \hyperlink{classATSHA204Class_aaf7cad7ce8ea007c5e73548a3c335385}{device\+\_\+port\+\_\+\+IN}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classATSHA204Class_ac2d1196f44961ce709be1f8bf59c162b}\label{classATSHA204Class_ac2d1196f44961ce709be1f8bf59c162b}} 
+\index{A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}!A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}}
+\index{A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}!A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}}
+\subsubsection{\texorpdfstring{A\+T\+S\+H\+A204\+Class()}{ATSHA204Class()}}
+{\footnotesize\ttfamily A\+T\+S\+H\+A204\+Class\+::\+A\+T\+S\+H\+A204\+Class (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classATSHA204Class_ade50092ec236d13cde64e7684b59ab7b}\label{classATSHA204Class_ade50092ec236d13cde64e7684b59ab7b}} 
+\index{A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}!get\+Serial\+Number@{get\+Serial\+Number}}
+\index{get\+Serial\+Number@{get\+Serial\+Number}!A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}}
+\subsubsection{\texorpdfstring{get\+Serial\+Number()}{getSerialNumber()}}
+{\footnotesize\ttfamily void A\+T\+S\+H\+A204\+Class\+::get\+Serial\+Number (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{response }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classATSHA204Class_a42b8beceec64c89148a9bb49b26f0fb1}\label{classATSHA204Class_a42b8beceec64c89148a9bb49b26f0fb1}} 
+\index{A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}!sha204c\+\_\+calculate\+\_\+crc@{sha204c\+\_\+calculate\+\_\+crc}}
+\index{sha204c\+\_\+calculate\+\_\+crc@{sha204c\+\_\+calculate\+\_\+crc}!A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}}
+\subsubsection{\texorpdfstring{sha204c\+\_\+calculate\+\_\+crc()}{sha204c\_calculate\_crc()}}
+{\footnotesize\ttfamily void A\+T\+S\+H\+A204\+Class\+::sha204c\+\_\+calculate\+\_\+crc (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{length,  }\item[{uint8\+\_\+t $\ast$}]{data,  }\item[{uint8\+\_\+t $\ast$}]{crc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classATSHA204Class_a30b1fad66d47a88848ebc6d74b66ec97}\label{classATSHA204Class_a30b1fad66d47a88848ebc6d74b66ec97}} 
+\index{A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}!sha204c\+\_\+check\+\_\+crc@{sha204c\+\_\+check\+\_\+crc}}
+\index{sha204c\+\_\+check\+\_\+crc@{sha204c\+\_\+check\+\_\+crc}!A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}}
+\subsubsection{\texorpdfstring{sha204c\+\_\+check\+\_\+crc()}{sha204c\_check\_crc()}}
+{\footnotesize\ttfamily uint8\+\_\+t A\+T\+S\+H\+A204\+Class\+::sha204c\+\_\+check\+\_\+crc (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classATSHA204Class_a0d8eab6a8af231835dd5b6734df0d670}\label{classATSHA204Class_a0d8eab6a8af231835dd5b6734df0d670}} 
+\index{A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}!sha204c\+\_\+resync@{sha204c\+\_\+resync}}
+\index{sha204c\+\_\+resync@{sha204c\+\_\+resync}!A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}}
+\subsubsection{\texorpdfstring{sha204c\+\_\+resync()}{sha204c\_resync()}}
+{\footnotesize\ttfamily uint8\+\_\+t A\+T\+S\+H\+A204\+Class\+::sha204c\+\_\+resync (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{size,  }\item[{uint8\+\_\+t $\ast$}]{response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classATSHA204Class_a3689222ad46022e5c50ba484053d9b2c}\label{classATSHA204Class_a3689222ad46022e5c50ba484053d9b2c}} 
+\index{A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}!sha204c\+\_\+send\+\_\+and\+\_\+receive@{sha204c\+\_\+send\+\_\+and\+\_\+receive}}
+\index{sha204c\+\_\+send\+\_\+and\+\_\+receive@{sha204c\+\_\+send\+\_\+and\+\_\+receive}!A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}}
+\subsubsection{\texorpdfstring{sha204c\+\_\+send\+\_\+and\+\_\+receive()}{sha204c\_send\_and\_receive()}}
+{\footnotesize\ttfamily uint8\+\_\+t A\+T\+S\+H\+A204\+Class\+::sha204c\+\_\+send\+\_\+and\+\_\+receive (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{tx\+\_\+buffer,  }\item[{uint8\+\_\+t}]{rx\+\_\+size,  }\item[{uint8\+\_\+t $\ast$}]{rx\+\_\+buffer,  }\item[{uint8\+\_\+t}]{execution\+\_\+delay,  }\item[{uint8\+\_\+t}]{execution\+\_\+timeout }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classATSHA204Class_ac51be7c43d75dcc439d89ecb0493149b}\label{classATSHA204Class_ac51be7c43d75dcc439d89ecb0493149b}} 
+\index{A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}!sha204c\+\_\+sleep@{sha204c\+\_\+sleep}}
+\index{sha204c\+\_\+sleep@{sha204c\+\_\+sleep}!A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}}
+\subsubsection{\texorpdfstring{sha204c\+\_\+sleep()}{sha204c\_sleep()}}
+{\footnotesize\ttfamily void A\+T\+S\+H\+A204\+Class\+::sha204c\+\_\+sleep (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classATSHA204Class_a2772385d612dee11f65c310334d7952b}\label{classATSHA204Class_a2772385d612dee11f65c310334d7952b}} 
+\index{A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}!sha204c\+\_\+wakeup@{sha204c\+\_\+wakeup}}
+\index{sha204c\+\_\+wakeup@{sha204c\+\_\+wakeup}!A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}}
+\subsubsection{\texorpdfstring{sha204c\+\_\+wakeup()}{sha204c\_wakeup()}}
+{\footnotesize\ttfamily uint8\+\_\+t A\+T\+S\+H\+A204\+Class\+::sha204c\+\_\+wakeup (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classATSHA204Class_a8600d67f5c574e1584ef5555429f305b}\label{classATSHA204Class_a8600d67f5c574e1584ef5555429f305b}} 
+\index{A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}!sha204m\+\_\+execute@{sha204m\+\_\+execute}}
+\index{sha204m\+\_\+execute@{sha204m\+\_\+execute}!A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}}
+\subsubsection{\texorpdfstring{sha204m\+\_\+execute()}{sha204m\_execute()}}
+{\footnotesize\ttfamily uint8\+\_\+t A\+T\+S\+H\+A204\+Class\+::sha204m\+\_\+execute (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{op\+\_\+code,  }\item[{uint8\+\_\+t}]{param1,  }\item[{uint16\+\_\+t}]{param2,  }\item[{uint8\+\_\+t}]{datalen1,  }\item[{uint8\+\_\+t $\ast$}]{data1,  }\item[{uint8\+\_\+t}]{tx\+\_\+size,  }\item[{uint8\+\_\+t $\ast$}]{tx\+\_\+buffer,  }\item[{uint8\+\_\+t}]{rx\+\_\+size,  }\item[{uint8\+\_\+t $\ast$}]{rx\+\_\+buffer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classATSHA204Class_a6bcaa1359ac7392ed066641323fe8d5d}\label{classATSHA204Class_a6bcaa1359ac7392ed066641323fe8d5d}} 
+\index{A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}!sha204m\+\_\+read@{sha204m\+\_\+read}}
+\index{sha204m\+\_\+read@{sha204m\+\_\+read}!A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}}
+\subsubsection{\texorpdfstring{sha204m\+\_\+read()}{sha204m\_read()}}
+{\footnotesize\ttfamily uint8\+\_\+t A\+T\+S\+H\+A204\+Class\+::sha204m\+\_\+read (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{tx\+\_\+buffer,  }\item[{uint8\+\_\+t $\ast$}]{rx\+\_\+buffer,  }\item[{uint8\+\_\+t}]{zone,  }\item[{uint16\+\_\+t}]{address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classATSHA204Class_ae5c777e2388de999d13afef7008a36a7}\label{classATSHA204Class_ae5c777e2388de999d13afef7008a36a7}} 
+\index{A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}!sha204p\+\_\+receive\+\_\+response@{sha204p\+\_\+receive\+\_\+response}}
+\index{sha204p\+\_\+receive\+\_\+response@{sha204p\+\_\+receive\+\_\+response}!A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}}
+\subsubsection{\texorpdfstring{sha204p\+\_\+receive\+\_\+response()}{sha204p\_receive\_response()}}
+{\footnotesize\ttfamily uint8\+\_\+t A\+T\+S\+H\+A204\+Class\+::sha204p\+\_\+receive\+\_\+response (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{size,  }\item[{uint8\+\_\+t $\ast$}]{response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classATSHA204Class_ae81c8e3063da186b698d31bad70e543b}\label{classATSHA204Class_ae81c8e3063da186b698d31bad70e543b}} 
+\index{A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}!swi\+\_\+receive\+\_\+bytes@{swi\+\_\+receive\+\_\+bytes}}
+\index{swi\+\_\+receive\+\_\+bytes@{swi\+\_\+receive\+\_\+bytes}!A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}}
+\subsubsection{\texorpdfstring{swi\+\_\+receive\+\_\+bytes()}{swi\_receive\_bytes()}}
+{\footnotesize\ttfamily uint8\+\_\+t A\+T\+S\+H\+A204\+Class\+::swi\+\_\+receive\+\_\+bytes (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{count,  }\item[{uint8\+\_\+t $\ast$}]{buffer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classATSHA204Class_abe55ac783f1a37777bd09b7fc369ebc9}\label{classATSHA204Class_abe55ac783f1a37777bd09b7fc369ebc9}} 
+\index{A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}!swi\+\_\+send\+\_\+byte@{swi\+\_\+send\+\_\+byte}}
+\index{swi\+\_\+send\+\_\+byte@{swi\+\_\+send\+\_\+byte}!A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}}
+\subsubsection{\texorpdfstring{swi\+\_\+send\+\_\+byte()}{swi\_send\_byte()}}
+{\footnotesize\ttfamily uint8\+\_\+t A\+T\+S\+H\+A204\+Class\+::swi\+\_\+send\+\_\+byte (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classATSHA204Class_a0f8c2167d152bbe670d1b1187d7b2897}\label{classATSHA204Class_a0f8c2167d152bbe670d1b1187d7b2897}} 
+\index{A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}!swi\+\_\+send\+\_\+bytes@{swi\+\_\+send\+\_\+bytes}}
+\index{swi\+\_\+send\+\_\+bytes@{swi\+\_\+send\+\_\+bytes}!A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}}
+\subsubsection{\texorpdfstring{swi\+\_\+send\+\_\+bytes()}{swi\_send\_bytes()}}
+{\footnotesize\ttfamily uint8\+\_\+t A\+T\+S\+H\+A204\+Class\+::swi\+\_\+send\+\_\+bytes (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{count,  }\item[{uint8\+\_\+t $\ast$}]{buffer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classATSHA204Class_a2d69316e4670b7fd17a1e2b6231191ff}\label{classATSHA204Class_a2d69316e4670b7fd17a1e2b6231191ff}} 
+\index{A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}!swi\+\_\+set\+\_\+signal\+\_\+pin@{swi\+\_\+set\+\_\+signal\+\_\+pin}}
+\index{swi\+\_\+set\+\_\+signal\+\_\+pin@{swi\+\_\+set\+\_\+signal\+\_\+pin}!A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}}
+\subsubsection{\texorpdfstring{swi\+\_\+set\+\_\+signal\+\_\+pin()}{swi\_set\_signal\_pin()}}
+{\footnotesize\ttfamily void A\+T\+S\+H\+A204\+Class\+::swi\+\_\+set\+\_\+signal\+\_\+pin (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{is\+\_\+high }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classATSHA204Class_af0ab12881adf592031ce4e272fd06d3b}\label{classATSHA204Class_af0ab12881adf592031ce4e272fd06d3b}} 
+\index{A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}!device\+\_\+pin@{device\+\_\+pin}}
+\index{device\+\_\+pin@{device\+\_\+pin}!A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}}
+\subsubsection{\texorpdfstring{device\+\_\+pin}{device\_pin}}
+{\footnotesize\ttfamily uint8\+\_\+t A\+T\+S\+H\+A204\+Class\+::device\+\_\+pin\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classATSHA204Class_a122693bbcf51517cc0362f1c0ddfaa39}\label{classATSHA204Class_a122693bbcf51517cc0362f1c0ddfaa39}} 
+\index{A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}!device\+\_\+port\+\_\+\+D\+DR@{device\+\_\+port\+\_\+\+D\+DR}}
+\index{device\+\_\+port\+\_\+\+D\+DR@{device\+\_\+port\+\_\+\+D\+DR}!A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}}
+\subsubsection{\texorpdfstring{device\+\_\+port\+\_\+\+D\+DR}{device\_port\_DDR}}
+{\footnotesize\ttfamily volatile uint8\+\_\+t$\ast$ A\+T\+S\+H\+A204\+Class\+::device\+\_\+port\+\_\+\+D\+DR\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classATSHA204Class_aaf7cad7ce8ea007c5e73548a3c335385}\label{classATSHA204Class_aaf7cad7ce8ea007c5e73548a3c335385}} 
+\index{A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}!device\+\_\+port\+\_\+\+IN@{device\+\_\+port\+\_\+\+IN}}
+\index{device\+\_\+port\+\_\+\+IN@{device\+\_\+port\+\_\+\+IN}!A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}}
+\subsubsection{\texorpdfstring{device\+\_\+port\+\_\+\+IN}{device\_port\_IN}}
+{\footnotesize\ttfamily volatile uint8\+\_\+t $\ast$ A\+T\+S\+H\+A204\+Class\+::device\+\_\+port\+\_\+\+IN\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classATSHA204Class_a5a6c964a1ab185c22bf9d1a50e29dcab}\label{classATSHA204Class_a5a6c964a1ab185c22bf9d1a50e29dcab}} 
+\index{A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}!device\+\_\+port\+\_\+\+O\+UT@{device\+\_\+port\+\_\+\+O\+UT}}
+\index{device\+\_\+port\+\_\+\+O\+UT@{device\+\_\+port\+\_\+\+O\+UT}!A\+T\+S\+H\+A204\+Class@{A\+T\+S\+H\+A204\+Class}}
+\subsubsection{\texorpdfstring{device\+\_\+port\+\_\+\+O\+UT}{device\_port\_OUT}}
+{\footnotesize\ttfamily volatile uint8\+\_\+t $\ast$ A\+T\+S\+H\+A204\+Class\+::device\+\_\+port\+\_\+\+O\+UT\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ATSHA204_8h}{A\+T\+S\+H\+A204.\+h}\item 
+\hyperlink{ATSHA204_8cpp}{A\+T\+S\+H\+A204.\+cpp}\end{DoxyCompactItemize}

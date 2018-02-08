@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['if',['if',['../group__TOONETWORKING__SIMPLE__BUFFER.html#gaf03e7287c6f8fcd712db428ea10ca2f2',1,'if(type==0):&#160;TooNetworking.h'],['../group__TOONETWORKING__SIMPLE__BUFFER.html#gaaf318681cf7c6b13563cc7b4c1dea447',1,'if(nonce!=0):&#160;TooNetworking.h'],['../group__TOONETWORKING__SIMPLE__BUFFER.html#gab2dffc70527ea7fec99a282b41e2ba0f',1,'if(current-&gt;next==NULL):&#160;TooNetworking.h']]]
+  ['device_5fpin',['device_pin',['../classATSHA204Class.html#af0ab12881adf592031ce4e272fd06d3b',1,'ATSHA204Class']]],
+  ['device_5fport_5fddr',['device_port_DDR',['../classATSHA204Class.html#a122693bbcf51517cc0362f1c0ddfaa39',1,'ATSHA204Class']]],
+  ['device_5fport_5fin',['device_port_IN',['../classATSHA204Class.html#aaf7cad7ce8ea007c5e73548a3c335385',1,'ATSHA204Class']]],
+  ['device_5fport_5fout',['device_port_OUT',['../classATSHA204Class.html#a5a6c964a1ab185c22bf9d1a50e29dcab',1,'ATSHA204Class']]]
 ];

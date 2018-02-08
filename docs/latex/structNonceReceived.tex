@@ -2,7 +2,7 @@
 \label{structNonceReceived}\index{Nonce\+Received@{Nonce\+Received}}
 
 
-{\ttfamily \#include $<$Too\+Networking.\+h$>$}
+{\ttfamily \#include $<$Too\+Networking\+\_\+data.\+h$>$}
 
 
 
@@ -20,7 +20,7 @@ uint8\+\_\+t \hyperlink{structNonceReceived_aa6f2777bb591400ce057bd1fa9b23fca}{n
 \item 
 uint32\+\_\+t \hyperlink{structNonceReceived_a8da2f90de05746f252706f24ec5bc539}{nonce} = 0
 \item 
-uint32\+\_\+t \hyperlink{structNonceReceived_ae159a71415a2908807ef1ed39f0b9dfa}{noncestamp} = 0
+uint32\+\_\+t \hyperlink{structNonceReceived_a70f93629f2db41ac9f7850c83df5debd}{nonce\+\_\+when} = 0
 \item 
 \hyperlink{structNonceReceived}{Nonce\+Received} $\ast$ \hyperlink{structNonceReceived_ad976d0df8941f1f626de24afd2febca7}{next} = 0
 \end{DoxyCompactItemize}
@@ -30,20 +30,32 @@ uint32\+\_\+t \hyperlink{structNonceReceived_ae159a71415a2908807ef1ed39f0b9dfa}{
 Used for storing the nonce and metadata 
 
 \subsection{Member Data Documentation}
+\mbox{\Hypertarget{structNonceReceived_ad976d0df8941f1f626de24afd2febca7}\label{structNonceReceived_ad976d0df8941f1f626de24afd2febca7}} 
 \index{Nonce\+Received@{Nonce\+Received}!next@{next}}
 \index{next@{next}!Nonce\+Received@{Nonce\+Received}}
-\subsubsection[{\texorpdfstring{next}{next}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Nonce\+Received}$\ast$ Nonce\+Received\+::next = 0}\hypertarget{structNonceReceived_ad976d0df8941f1f626de24afd2febca7}{}\label{structNonceReceived_ad976d0df8941f1f626de24afd2febca7}
-Next in the list \index{Nonce\+Received@{Nonce\+Received}!nonce@{nonce}}
+\subsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily \hyperlink{structNonceReceived}{Nonce\+Received}$\ast$ Nonce\+Received\+::next = 0}
+
+Next in the list \mbox{\Hypertarget{structNonceReceived_a8da2f90de05746f252706f24ec5bc539}\label{structNonceReceived_a8da2f90de05746f252706f24ec5bc539}} 
+\index{Nonce\+Received@{Nonce\+Received}!nonce@{nonce}}
 \index{nonce@{nonce}!Nonce\+Received@{Nonce\+Received}}
-\subsubsection[{\texorpdfstring{nonce}{nonce}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t Nonce\+Received\+::nonce = 0}\hypertarget{structNonceReceived_a8da2f90de05746f252706f24ec5bc539}{}\label{structNonceReceived_a8da2f90de05746f252706f24ec5bc539}
-Nonce itself \index{Nonce\+Received@{Nonce\+Received}!nonce\+\_\+from@{nonce\+\_\+from}}
+\subsubsection{\texorpdfstring{nonce}{nonce}}
+{\footnotesize\ttfamily uint32\+\_\+t Nonce\+Received\+::nonce = 0}
+
+Nonce itself \mbox{\Hypertarget{structNonceReceived_aa6f2777bb591400ce057bd1fa9b23fca}\label{structNonceReceived_aa6f2777bb591400ce057bd1fa9b23fca}} 
+\index{Nonce\+Received@{Nonce\+Received}!nonce\+\_\+from@{nonce\+\_\+from}}
 \index{nonce\+\_\+from@{nonce\+\_\+from}!Nonce\+Received@{Nonce\+Received}}
-\subsubsection[{\texorpdfstring{nonce\+\_\+from}{nonce_from}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Nonce\+Received\+::nonce\+\_\+from = 255}\hypertarget{structNonceReceived_aa6f2777bb591400ce057bd1fa9b23fca}{}\label{structNonceReceived_aa6f2777bb591400ce057bd1fa9b23fca}
-Sender \index{Nonce\+Received@{Nonce\+Received}!noncestamp@{noncestamp}}
-\index{noncestamp@{noncestamp}!Nonce\+Received@{Nonce\+Received}}
-\subsubsection[{\texorpdfstring{noncestamp}{noncestamp}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t Nonce\+Received\+::noncestamp = 0}\hypertarget{structNonceReceived_ae159a71415a2908807ef1ed39f0b9dfa}{}\label{structNonceReceived_ae159a71415a2908807ef1ed39f0b9dfa}
-Destination 
+\subsubsection{\texorpdfstring{nonce\+\_\+from}{nonce\_from}}
+{\footnotesize\ttfamily uint8\+\_\+t Nonce\+Received\+::nonce\+\_\+from = 255}
+
+Sender \mbox{\Hypertarget{structNonceReceived_a70f93629f2db41ac9f7850c83df5debd}\label{structNonceReceived_a70f93629f2db41ac9f7850c83df5debd}} 
+\index{Nonce\+Received@{Nonce\+Received}!nonce\+\_\+when@{nonce\+\_\+when}}
+\index{nonce\+\_\+when@{nonce\+\_\+when}!Nonce\+Received@{Nonce\+Received}}
+\subsubsection{\texorpdfstring{nonce\+\_\+when}{nonce\_when}}
+{\footnotesize\ttfamily uint32\+\_\+t Nonce\+Received\+::nonce\+\_\+when = 0}
+
+Nonce timestamp 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-\hyperlink{TooNetworking_8h}{Too\+Networking.\+h}\end{DoxyCompactItemize}
+\hyperlink{TooNetworking__data_8h}{Too\+Networking\+\_\+data.\+h}\end{DoxyCompactItemize}

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['buffer_5ffirst',['buffer_first',['../TooNetworking_8h.html#a11d4f129f71dc36defd23ed9785c3c64',1,'TooNetworking.h']]],
-  ['bufferitem',['BufferItem',['../structBufferItem.html',1,'']]]
+  ['_5fbuffer',['_buffer',['../union__buffer.html',1,'']]],
+  ['_5fstate',['_state',['../union__state.html',1,'']]]
 ];

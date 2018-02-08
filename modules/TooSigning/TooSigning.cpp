@@ -27,11 +27,9 @@
 #include "configuration/hmacs.c"
 
 #ifdef SW_SIGNING
-#include "drivers/ATSHA204_SW/ATSHA204_SW.h"
+    #include "drivers/ATSHA204_SW/ATSHA204_SW.h"
 #else
-
-#include "drivers/ATSHA204/ATSHA204.h"
-
+    #include "drivers/ATSHA204/ATSHA204.h"
 #endif
 
 extern class Sha256Class Sha256;

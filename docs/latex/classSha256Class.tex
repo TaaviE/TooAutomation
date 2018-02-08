@@ -1,0 +1,157 @@
+\hypertarget{classSha256Class}{}\section{Sha256\+Class Class Reference}
+\label{classSha256Class}\index{Sha256\+Class@{Sha256\+Class}}
+
+
+{\ttfamily \#include $<$A\+T\+S\+H\+A204\+\_\+\+S\+W.\+h$>$}
+
+
+
+Collaboration diagram for Sha256\+Class\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classSha256Class__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classSha256Class_ac1025d69c51fcd1b882ee41114e58339}{init} (void)
+\item 
+void \hyperlink{classSha256Class_a7f6acc6b6c922cf168a7bde69408734d}{init\+Hmac} (const uint8\+\_\+t $\ast$secret, int secret\+Length)
+\item 
+uint8\+\_\+t $\ast$ \hyperlink{classSha256Class_a0ca245a22f8b056a3d1902da3c64b705}{result} (void)
+\item 
+uint8\+\_\+t $\ast$ \hyperlink{classSha256Class_a7556f29cadf7eaca21a537df41318af3}{result\+Hmac} (void)
+\item 
+void \hyperlink{classSha256Class_a0f0fc4bd4d8c53d232df0d41d7ea25e0}{write} (uint8\+\_\+t)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classSha256Class_a82049dae520ccf0bd8478f2aef639149}{pad} ()
+\item 
+void \hyperlink{classSha256Class_ab0b46743e3d59b1c68f52ed89dfaff50}{add\+Uncounted} (uint8\+\_\+t data)
+\item 
+void \hyperlink{classSha256Class_a399d2a23951e2130f54af8ac7712068f}{hash\+Block} ()
+\item 
+uint32\+\_\+t \hyperlink{classSha256Class_ae275718ce9813bb33b2d8d8fbf018bd6}{ror32} (uint32\+\_\+t number, uint8\+\_\+t bits)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{union__buffer}{\+\_\+buffer} \hyperlink{classSha256Class_af8b8cc54c6a6d49740a46f080a4c192b}{buffer}
+\item 
+uint8\+\_\+t \hyperlink{classSha256Class_a867b0496a2013dbc43e62a672e73394e}{buffer\+Offset}
+\item 
+\hyperlink{union__state}{\+\_\+state} \hyperlink{classSha256Class_a8dc721620a543ed0f9c2015b07aefe0e}{state}
+\item 
+uint32\+\_\+t \hyperlink{classSha256Class_ab66aee87718acd5bd8546dadb8cf6cf7}{byte\+Count}
+\item 
+uint8\+\_\+t \hyperlink{classSha256Class_a067a077fcf1396d44dfbc7cf1f646ca1}{key\+Buffer} \mbox{[}B\+L\+O\+C\+K\+\_\+\+L\+E\+N\+G\+TH\mbox{]}
+\item 
+uint8\+\_\+t \hyperlink{classSha256Class_ac7f65171164cfc576b718a8fcb3a3f0b}{inner\+Hash} \mbox{[}H\+A\+S\+H\+\_\+\+L\+E\+N\+G\+TH\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSha256Class_ab0b46743e3d59b1c68f52ed89dfaff50}\label{classSha256Class_ab0b46743e3d59b1c68f52ed89dfaff50}} 
+\index{Sha256\+Class@{Sha256\+Class}!add\+Uncounted@{add\+Uncounted}}
+\index{add\+Uncounted@{add\+Uncounted}!Sha256\+Class@{Sha256\+Class}}
+\subsubsection{\texorpdfstring{add\+Uncounted()}{addUncounted()}}
+{\footnotesize\ttfamily void Sha256\+Class\+::add\+Uncounted (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSha256Class_a399d2a23951e2130f54af8ac7712068f}\label{classSha256Class_a399d2a23951e2130f54af8ac7712068f}} 
+\index{Sha256\+Class@{Sha256\+Class}!hash\+Block@{hash\+Block}}
+\index{hash\+Block@{hash\+Block}!Sha256\+Class@{Sha256\+Class}}
+\subsubsection{\texorpdfstring{hash\+Block()}{hashBlock()}}
+{\footnotesize\ttfamily void Sha256\+Class\+::hash\+Block (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSha256Class_ac1025d69c51fcd1b882ee41114e58339}\label{classSha256Class_ac1025d69c51fcd1b882ee41114e58339}} 
+\index{Sha256\+Class@{Sha256\+Class}!init@{init}}
+\index{init@{init}!Sha256\+Class@{Sha256\+Class}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Sha256\+Class\+::init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classSha256Class_a7f6acc6b6c922cf168a7bde69408734d}\label{classSha256Class_a7f6acc6b6c922cf168a7bde69408734d}} 
+\index{Sha256\+Class@{Sha256\+Class}!init\+Hmac@{init\+Hmac}}
+\index{init\+Hmac@{init\+Hmac}!Sha256\+Class@{Sha256\+Class}}
+\subsubsection{\texorpdfstring{init\+Hmac()}{initHmac()}}
+{\footnotesize\ttfamily void Sha256\+Class\+::init\+Hmac (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{secret,  }\item[{int}]{secret\+Length }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classSha256Class_a82049dae520ccf0bd8478f2aef639149}\label{classSha256Class_a82049dae520ccf0bd8478f2aef639149}} 
+\index{Sha256\+Class@{Sha256\+Class}!pad@{pad}}
+\index{pad@{pad}!Sha256\+Class@{Sha256\+Class}}
+\subsubsection{\texorpdfstring{pad()}{pad()}}
+{\footnotesize\ttfamily void Sha256\+Class\+::pad (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSha256Class_a0ca245a22f8b056a3d1902da3c64b705}\label{classSha256Class_a0ca245a22f8b056a3d1902da3c64b705}} 
+\index{Sha256\+Class@{Sha256\+Class}!result@{result}}
+\index{result@{result}!Sha256\+Class@{Sha256\+Class}}
+\subsubsection{\texorpdfstring{result()}{result()}}
+{\footnotesize\ttfamily uint8\+\_\+t $\ast$ Sha256\+Class\+::result (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classSha256Class_a7556f29cadf7eaca21a537df41318af3}\label{classSha256Class_a7556f29cadf7eaca21a537df41318af3}} 
+\index{Sha256\+Class@{Sha256\+Class}!result\+Hmac@{result\+Hmac}}
+\index{result\+Hmac@{result\+Hmac}!Sha256\+Class@{Sha256\+Class}}
+\subsubsection{\texorpdfstring{result\+Hmac()}{resultHmac()}}
+{\footnotesize\ttfamily uint8\+\_\+t $\ast$ Sha256\+Class\+::result\+Hmac (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classSha256Class_ae275718ce9813bb33b2d8d8fbf018bd6}\label{classSha256Class_ae275718ce9813bb33b2d8d8fbf018bd6}} 
+\index{Sha256\+Class@{Sha256\+Class}!ror32@{ror32}}
+\index{ror32@{ror32}!Sha256\+Class@{Sha256\+Class}}
+\subsubsection{\texorpdfstring{ror32()}{ror32()}}
+{\footnotesize\ttfamily uint32\+\_\+t Sha256\+Class\+::ror32 (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{number,  }\item[{uint8\+\_\+t}]{bits }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSha256Class_a0f0fc4bd4d8c53d232df0d41d7ea25e0}\label{classSha256Class_a0f0fc4bd4d8c53d232df0d41d7ea25e0}} 
+\index{Sha256\+Class@{Sha256\+Class}!write@{write}}
+\index{write@{write}!Sha256\+Class@{Sha256\+Class}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void Sha256\+Class\+::write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{data }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classSha256Class_af8b8cc54c6a6d49740a46f080a4c192b}\label{classSha256Class_af8b8cc54c6a6d49740a46f080a4c192b}} 
+\index{Sha256\+Class@{Sha256\+Class}!buffer@{buffer}}
+\index{buffer@{buffer}!Sha256\+Class@{Sha256\+Class}}
+\subsubsection{\texorpdfstring{buffer}{buffer}}
+{\footnotesize\ttfamily \hyperlink{union__buffer}{\+\_\+buffer} Sha256\+Class\+::buffer\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSha256Class_a867b0496a2013dbc43e62a672e73394e}\label{classSha256Class_a867b0496a2013dbc43e62a672e73394e}} 
+\index{Sha256\+Class@{Sha256\+Class}!buffer\+Offset@{buffer\+Offset}}
+\index{buffer\+Offset@{buffer\+Offset}!Sha256\+Class@{Sha256\+Class}}
+\subsubsection{\texorpdfstring{buffer\+Offset}{bufferOffset}}
+{\footnotesize\ttfamily uint8\+\_\+t Sha256\+Class\+::buffer\+Offset\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSha256Class_ab66aee87718acd5bd8546dadb8cf6cf7}\label{classSha256Class_ab66aee87718acd5bd8546dadb8cf6cf7}} 
+\index{Sha256\+Class@{Sha256\+Class}!byte\+Count@{byte\+Count}}
+\index{byte\+Count@{byte\+Count}!Sha256\+Class@{Sha256\+Class}}
+\subsubsection{\texorpdfstring{byte\+Count}{byteCount}}
+{\footnotesize\ttfamily uint32\+\_\+t Sha256\+Class\+::byte\+Count\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSha256Class_ac7f65171164cfc576b718a8fcb3a3f0b}\label{classSha256Class_ac7f65171164cfc576b718a8fcb3a3f0b}} 
+\index{Sha256\+Class@{Sha256\+Class}!inner\+Hash@{inner\+Hash}}
+\index{inner\+Hash@{inner\+Hash}!Sha256\+Class@{Sha256\+Class}}
+\subsubsection{\texorpdfstring{inner\+Hash}{innerHash}}
+{\footnotesize\ttfamily uint8\+\_\+t Sha256\+Class\+::inner\+Hash\mbox{[}H\+A\+S\+H\+\_\+\+L\+E\+N\+G\+TH\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSha256Class_a067a077fcf1396d44dfbc7cf1f646ca1}\label{classSha256Class_a067a077fcf1396d44dfbc7cf1f646ca1}} 
+\index{Sha256\+Class@{Sha256\+Class}!key\+Buffer@{key\+Buffer}}
+\index{key\+Buffer@{key\+Buffer}!Sha256\+Class@{Sha256\+Class}}
+\subsubsection{\texorpdfstring{key\+Buffer}{keyBuffer}}
+{\footnotesize\ttfamily uint8\+\_\+t Sha256\+Class\+::key\+Buffer\mbox{[}B\+L\+O\+C\+K\+\_\+\+L\+E\+N\+G\+TH\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSha256Class_a8dc721620a543ed0f9c2015b07aefe0e}\label{classSha256Class_a8dc721620a543ed0f9c2015b07aefe0e}} 
+\index{Sha256\+Class@{Sha256\+Class}!state@{state}}
+\index{state@{state}!Sha256\+Class@{Sha256\+Class}}
+\subsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily \hyperlink{union__state}{\+\_\+state} Sha256\+Class\+::state\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ATSHA204__SW_8h}{A\+T\+S\+H\+A204\+\_\+\+S\+W.\+h}\item 
+\hyperlink{ATSHA204__SW_8cpp}{A\+T\+S\+H\+A204\+\_\+\+S\+W.\+cpp}\end{DoxyCompactItemize}
