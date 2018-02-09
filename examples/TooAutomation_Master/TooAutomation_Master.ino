@@ -24,10 +24,10 @@
 
 #include "TooAutomation.h"
 
-static const PROGMEM uint8_t
-nodeID = 0;
+#define nodeID 0
 
 void setup(void) {
+    Serial.begin(115200);
     TooNetworking_connection_begin(nodeID);
 }
 

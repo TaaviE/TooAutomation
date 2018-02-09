@@ -31,12 +31,13 @@
 uint8_t current_node_ID;
 
 #ifdef TOONETWORKING_SIGNING
+
 #include "modules/TooSigning/TooSigning.h"
 
 #ifdef SW_SIGNING
-#include "drivers/ATSHA204_SW/ATSHA204_SW.h"
+    #include "drivers/ATSHA204_SW/ATSHA204_SW.h"
 #else
-#include "drivers/ATSHA204/ATSHA204.h"
+    #include "drivers/ATSHA204/ATSHA204.h"
 #endif // SW_SIGNING
 
 /**
@@ -75,19 +76,20 @@ RF24Mesh mesh(radio, network);
  * @return true if successful, false otherwise
  */
 bool TooNetworking_connection_begin(uint8_t passed_node_id){
-  mesh.setNodeID(passed_node_id);
-  Serial.println(mesh.getNodeID());
-  mesh.begin();
-  Serial.println(F("Mesh initialized"));
+    mesh.setNodeID(passed_node_id);
+    Serial.print("Node ID: ");
+    Serial.println(mesh.getNodeID());
+    mesh.begin();
+    Serial.println(F("Mesh initialized"));
+    
+    #ifdef TOONETWORKING_SIGNING
+    TooSigning_signed_network_begin(passed_node_id);
+    #endif // TOONETWORKING_SIGNING
+    
+    #ifdef TOONETWORKING_ENCRYPTION
+    // TODO: Init encryption
+    #endif // TOONETWORKING_SIGNING
 }
-
-#ifdef TOONETWORKING_SIGNING
-//TooSigning_signed_network_begin(passed_node_id);
-#endif // TOONETWORKING_SIGNING
-
-#ifdef TOONETWORKING_ENCRYPTION
-//TODO: Init encryption
-#endif // TOONETWORKING_SIGNING
 
 /**
  * Allows sending a encrypted message
@@ -103,11 +105,11 @@ bool TooNetworking_send(uint8_t for_node, void * payload, uint8_t size, uint8_t 
 }
 
 bool TooNetworking_other_node_is_online(uint8_t nodeID){
-  return true; //TODO
+  return true; // TODO
 }
 
 bool TooNetworking_this_node_is_online(){
-  return true; //TODO
+  return true; // TODO
 }
 
 #ifdef TOONETWORKING_SIGNING
@@ -223,10 +225,11 @@ void TooNetworking_bufferlist_add(uint8_t payload_destination, void * payload, u
       return false;
     } else {
       current = buffer_first;
+      Serial.println(F("Initialized the buffer"));
     }
   }
   
-  while ((current->next) != NULL) {  //Take the last item in the list
+  while (current != NULL) {  //Take the last item in the list
     Serial.println(F("Finding the last item"));
     current = current->next;
   }
@@ -416,6 +419,7 @@ BufferItem * TooNetworking_bufferlist_find_for_id(uint8_t nodeID) {
  * @param nonce nonce
  * @return true if successful, false otherwise
  */
+
 bool TooNetworking_send_signed(uint8_t for_node, void * payload, uint8_t size, uint32_t nonce){
   if(TooNetworking_connection_available()){
     Serial.println(F("Node is online"));
@@ -436,12 +440,12 @@ bool TooNetworking_send_signed(uint8_t for_node, void * payload, uint8_t size, u
         Serial.print(hmac[i]);
       }
       Serial.println();
-      Sha256.initHmac(hmac, 20);
+      TooSigning_init_hmac(hmac, 20);
       
       TooSigning_random_data_print(payload, size);
       TooSigning_hash_data(payload, size);
       TooSigning_hash_data(&nonce, sizeof(uint32_t));
-      TooSigning_hash_store(Sha256.resultHmac(), metadata.payload_hash);
+      TooSigning_hash_store(TooSigning_get_hmac(), metadata.payload_hash);
       //Payload signing process end
       //To buffer, from metadata, with the size of metadata
       memmove(buffer, &metadata, sizeof(Payload_MetadataSigned_Received)); //Copy metadata to buffer

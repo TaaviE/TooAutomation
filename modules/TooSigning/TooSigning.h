@@ -47,12 +47,7 @@ extern class RF24Network network;
 
 extern class RF24Mesh mesh;
 
-class Sha256Class Sha256;
-
-
-#ifdef __cplusplus
-extern "C" {
-#endif
+extern class Sha256Class Sha256;
 
 /**
    Initialize the signing library
@@ -150,7 +145,12 @@ bool TooSigning_received_noncelist_initialize(void);
    @return bool if the initialization succeeded
 */
 bool TooSigning_requested_noncelist_initialize(void);
+
 /** @} */
+
+void TooSigning_init_hmac(uint8_t* hmac, uint8_t length);
+
+uint8_t * TooSigning_get_hmac();
 
 /**
    Requests nonce from node
@@ -196,11 +196,6 @@ void TooSigning_received_noncelist_remove_timeout(void);
 
 
 void TooSigning_read_hmac_from_progmem(uint8_t nodeID, void *hmac_pointer);
-
-
-#ifdef __cplusplus
-}
-#endif
 
 //#ifdef __cplusplus
 //#include "cpp_wrapper.h"

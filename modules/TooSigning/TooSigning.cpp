@@ -32,7 +32,7 @@
     #include "drivers/ATSHA204/ATSHA204.h"
 #endif
 
-extern class Sha256Class Sha256;
+Sha256Class Sha256;
 
 extern class RF24Mesh mesh;
 
@@ -42,13 +42,9 @@ extern class RF24 radio;
 
 extern uint8_t current_node_ID;
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-NonceReceived *nonce_received_start;
-NonceSent *nonce_sent_start;
-NonceRequested *nonce_requested_start;
+NonceReceived *nonce_received_start = 0;
+NonceSent *nonce_sent_start = 0;
+NonceRequested *nonce_requested_start = 0;
 
 /*
   Hashing related functions
@@ -101,7 +97,11 @@ void TooSigning_requested_noncelist_print() {
         Serial.println(current->nonce_request_last);
         Serial.print(F("Requested next: "));
         Serial.println((uint8_t) current->next);
+        
         current = current->next;
+        if(current->nonce_request_first == 0){
+            current = 0;
+        }
     }
 }
 
@@ -154,24 +154,31 @@ bool TooSigning_sent_noncelist_initialize() {
         return false;
     }
     Serial.println(F("Returning true"));
+    nonce_sent_start->next = 0;
+    nonce_sent_start->nonce = 0;
+    nonce_sent_start->nonce_to = 0;
     return true;
 }
 
 bool TooSigning_received_noncelist_initialize() {
     Serial.print(F("Received nonce list init: "));
-    nonce_requested_start = malloc(sizeof(NonceReceived));
+    nonce_received_start = malloc(sizeof(NonceReceived));
     Serial.println(F("Malloc'd"));
-    Serial.println((uint8_t) nonce_requested_start);
-    if (nonce_requested_start == 0) {
+    Serial.println((uint8_t) nonce_received_start);
+    if (nonce_received_start == 0) {
         return false;
     }
 
-    Serial.println(F("Setting next to 0"));
-    nonce_requested_start->next = 0;
+    Serial.println(F("Returning true"));
+    nonce_received_start->next = 0; 
+    nonce_received_start->nonce_from = 255;
+    nonce_received_start->nonce = 0;
+    nonce_received_start->nonce_when = 0;
     return true;
 }
 
 bool TooSigning_requested_noncelist_initialize() {
+    Serial.print(F("Requested nonce list init: "));
     nonce_requested_start = malloc(sizeof(NonceRequested));
     Serial.println((uint8_t) nonce_requested_start);
     if (nonce_requested_start == 0) {
@@ -179,7 +186,11 @@ bool TooSigning_requested_noncelist_initialize() {
         return false;
     }
 
+    Serial.println(F("Setting next to 0"));
     nonce_requested_start->next = 0;
+    nonce_requested_start->nonce_from = 255;    
+    nonce_requested_start->nonce_request_first = 0;
+    nonce_requested_start->nonce_request_last = 0;
     return true;
 }
 
@@ -264,10 +275,12 @@ bool TooSigning_requested_noncelist_retry_all() {
     while (current != 0) {
         Serial.println(F("Request list is not 0"));
         Serial.println(current->nonce_request_last);
-        if (millis() - current->nonce_request_last > 2000) {
-            Serial.println(F("Rerequesting nonce"));
-            TooSigning_request_nonce_from_node_id(current->nonce_from);
-            current->nonce_request_last = millis();
+        if (current->nonce_request_first != 0){
+            if (millis() - current->nonce_request_last > 2000) {
+                Serial.println(F("Rerequesting nonce"));
+                TooSigning_request_nonce_from_node_id(current->nonce_from);
+                current->nonce_request_last = millis();
+            }
         }
         previous = current;
         current = current->next;
@@ -278,9 +291,11 @@ bool TooSigning_requested_noncelist_remove_timeout() {
     NonceRequested *current = nonce_requested_start;
     NonceRequested *previous = 0;
     while (current != 0) {
-        if (millis() - current->nonce_request_first > 10000) {
-            Serial.println(F("Removing nonce request"));
-            TooSigning_requested_noncelist_delete(previous, current); //deletes current
+        if (current->nonce_request_first != 0){
+            if (millis() - current->nonce_request_first > 10000) {
+                Serial.println(F("Removing nonce request"));
+                TooSigning_requested_noncelist_delete(previous, current); //deletes current
+            }
         }
         previous = current;
         current = current->next;
@@ -288,9 +303,6 @@ bool TooSigning_requested_noncelist_remove_timeout() {
     }
     return 0;
 }
-
-
-//
 
 NonceSent *TooSigning_sent_noncelist_find_from_ID(uint8_t nodeID) {
     NonceSent *current = nonce_sent_start;
@@ -344,17 +356,18 @@ bool TooSigning_sent_noncelist_add(uint8_t toNodeID, uint32_t nonce) {
 
 void TooSigning_sent_noncelist_remove(NonceSent *previous, NonceSent *current) {
     Serial.println(F("Removing nonce"));
-    Serial.println(F("Current:"));
-    Serial.print(F("Nonce: "));
+    Serial.println(F("/* Current:"));
+    Serial.print(F("* Nonce: "));
     Serial.println(current->nonce);
-    Serial.print(F("Millis: "));
+    Serial.print(F("* Millis: "));
     Serial.println(millis());
-    Serial.print(F("This: "));
+    Serial.print(F("* This: "));
     Serial.println((uint8_t) current);
-    Serial.print(F("Previous: "));
+    Serial.print(F("* Previous: "));
     Serial.println((uint8_t) previous);
-    Serial.print(F("Next: "));
+    Serial.print(F("* Next: "));
     Serial.println((uint8_t) current->next);
+    Serial.println(F("\*"));
     if (previous != 0) {
         previous->next = current->next;
     } else {
@@ -369,15 +382,17 @@ void TooSigning_sent_noncelist_remove_timeout() {
     NonceSent *current = nonce_sent_start;
     NonceSent *previous = 0;
     while (current != 0) {
-        if (millis() - current->nonce > 5000) {
-            Serial.println(F("Found outdated nonce"));
-            TooSigning_sent_noncelist_remove(previous, current);
+        if (current->nonce != 0){
+            if (millis() - current->nonce > 5000) {
+                Serial.println(F("Found outdated nonce"));
+                TooSigning_sent_noncelist_remove(previous, current);
+            }
+        } else{
+            Serial.println(F("Start of buffer, ignored"));   
         }
 
         previous = current;
         current = current->next;
-
-
     }
 }
 
@@ -475,6 +490,14 @@ void TooSigning_read_hmac_from_progmem(uint8_t nodeID, void *hmac_pointer) {
     Serial.println();
 }
 
+
+void TooSigning_init_hmac(uint8_t* hmac, uint8_t length){
+    Sha256.initHmac(hmac, length);
+}
+
+uint8_t * TooSigning_get_hmac(){
+    return Sha256.resultHmac();
+}
 /*
   Intercepting signing payloads
 */
@@ -659,6 +682,8 @@ void TooSigning_signed_network_update() {
     mesh.update();
 }
 
-#ifdef __cplusplus
+void TooSigning_signed_network_begin(uint8_t nodeID){
+  TooSigning_received_noncelist_initialize();
+  TooSigning_requested_noncelist_initialize();
+  TooSigning_sent_noncelist_initialize();
 }
-#endif

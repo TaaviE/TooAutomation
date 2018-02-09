@@ -16,18 +16,29 @@
 */
 
 #define TOONETWORKING_SIGNING // Enable signing
-//#define SW_SIGNING
+#define SW_SIGNING
 #define TOORADIO_RF24 // Select nRF24L01+ as the radio
 #define TOO_RF24_CE 9 // Define needed pins
 #define TOO_RF24_CS 10
 
 #include "TooAutomation.h"
 
-void setup(void) {
+// Node ID
+#define nodeID 1 
 
+uint32_t timer = 0;
+
+void setup(void) {
+   Serial.begin(115200);
+   TooNetworking_connection_begin(nodeID);
 }
 
 void loop(void) {
+    TooNetworking_connection_maintenance();
 
+    if(millis() - timer > 1000){
+         uint32_t dat = timer;
+         TooNetworking_bufferlist_send_signed(0, &dat, sizeof(dat));
+         timer = millis();
+    }
 }
-

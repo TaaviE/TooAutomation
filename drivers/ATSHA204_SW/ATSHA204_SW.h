@@ -1,7 +1,7 @@
 // This code is taken from https://github.com/Cathedrow/Cryptosuite (Peter Knight) and is lightly modified for MySensors use
-#ifndef Sha256_h
-#define Sha256_h
-#if !DOXYGEN
+#ifndef __ATSHA204_SW_H__
+#define __ATSHA204_SW_H__
+
 #include <inttypes.h>
 
 #define HASH_LENGTH 32
@@ -20,7 +20,7 @@ class Sha256Class
 {
   public:
     void init(void);
-    void initHmac(const uint8_t* secret, int secretLength);
+    void initHmac(const uint8_t* secret, uint8_t secretLength);
     uint8_t* result(void);
     uint8_t* resultHmac(void);
     void write(uint8_t);
@@ -37,5 +37,6 @@ class Sha256Class
     uint8_t innerHash[HASH_LENGTH];
 };
 
-#endif
+#include "ATSHA204_SW.cpp"
+
 #endif

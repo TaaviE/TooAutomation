@@ -1,12 +1,13 @@
 #include <string.h>
-#if defined(__AVR__)
-	#include <avr/pgmspace.h>
-	#define PRIPSTR "%S"
-#elif defined(ESP8266)
-#include <pgmspace.h>
-#endif
-#include "sha256.h"
 
+#ifdef __AVR__
+    #include <avr/pgmspace.h>
+    #define PRIPSTR "%S"
+#elif defined(ESP8266)
+    #include <pgmspace.h>
+#endif // ESP8266
+
+#include "ATSHA204_SW.h"
 
 const uint32_t sha256K[] PROGMEM = {
   0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,
@@ -141,7 +142,7 @@ uint8_t* Sha256Class::result(void) {
 uint8_t keyBuffer[BLOCK_LENGTH]; // K0 in FIPS-198a
 uint8_t innerHash[HASH_LENGTH];
 
-void Sha256Class::initHmac(const uint8_t* key, int keyLength) {
+void Sha256Class::initHmac(const uint8_t* key, uint8_t keyLength) {
   uint8_t i;
   memset(keyBuffer,0,BLOCK_LENGTH);
   if (keyLength > BLOCK_LENGTH) {
