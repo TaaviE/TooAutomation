@@ -1,0 +1,7 @@
+<map id="ATSHA204Class::sha204c_wakeup" name="ATSHA204Class::sha204c_wakeup">
+<area shape="rect" id="node2" href="$classATSHA204Class.html#a2d69316e4670b7fd17a1e2b6231191ff" title="ATSHA204Class::swi\l_set_signal_pin" alt="" coords="246,5,397,47"/>
+<area shape="rect" id="node3" href="$classATSHA204Class.html#ae5c777e2388de999d13afef7008a36a7" title="ATSHA204Class::sha204p\l_receive_response" alt="" coords="232,71,411,112"/>
+<area shape="rect" id="node4" href="$classATSHA204Class.html#abe55ac783f1a37777bd09b7fc369ebc9" title="ATSHA204Class::swi\l_send_byte" alt="" coords="459,37,609,79"/>
+<area shape="rect" id="node6" href="$classATSHA204Class.html#ae81c8e3063da186b698d31bad70e543b" title="ATSHA204Class::swi\l_receive_bytes" alt="" coords="459,103,609,144"/>
+<area shape="rect" id="node5" href="$classATSHA204Class.html#a0f8c2167d152bbe670d1b1187d7b2897" title="ATSHA204Class::swi\l_send_bytes" alt="" coords="657,37,808,79"/>
+</map>

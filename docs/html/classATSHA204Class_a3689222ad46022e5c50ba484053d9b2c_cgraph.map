@@ -1,0 +1,12 @@
+<map id="ATSHA204Class::sha204c_send_and_receive" name="ATSHA204Class::sha204c_send_and_receive">
+<area shape="rect" id="node2" href="$classATSHA204Class.html#a42b8beceec64c89148a9bb49b26f0fb1" title="ATSHA204Class::sha204c\l_calculate_crc" alt="" coords="459,10,637,51"/>
+<area shape="rect" id="node3" href="$classATSHA204Class.html#abe55ac783f1a37777bd09b7fc369ebc9" title="ATSHA204Class::swi\l_send_byte" alt="" coords="912,182,1063,223"/>
+<area shape="rect" id="node4" href="$classATSHA204Class.html#a0f8c2167d152bbe670d1b1187d7b2897" title="ATSHA204Class::swi\l_send_bytes" alt="" coords="1111,127,1261,168"/>
+<area shape="rect" id="node5" href="$classATSHA204Class.html#a0d8eab6a8af231835dd5b6734df0d670" title="ATSHA204Class::sha204c\l_resync" alt="" coords="232,236,411,278"/>
+<area shape="rect" id="node6" href="$classATSHA204Class.html#ae5c777e2388de999d13afef7008a36a7" title="ATSHA204Class::sha204p\l_receive_response" alt="" coords="685,338,864,379"/>
+<area shape="rect" id="node11" href="$classATSHA204Class.html#a30b1fad66d47a88848ebc6d74b66ec97" title="ATSHA204Class::sha204c\l_check_crc" alt="" coords="232,39,411,80"/>
+<area shape="rect" id="node8" href="$classATSHA204Class.html#ac51be7c43d75dcc439d89ecb0493149b" title="ATSHA204Class::sha204c\l_sleep" alt="" coords="685,207,864,248"/>
+<area shape="rect" id="node9" href="$classATSHA204Class.html#a2772385d612dee11f65c310334d7952b" title="ATSHA204Class::sha204c\l_wakeup" alt="" coords="459,266,637,307"/>
+<area shape="rect" id="node7" href="$classATSHA204Class.html#ae81c8e3063da186b698d31bad70e543b" title="ATSHA204Class::swi\l_receive_bytes" alt="" coords="912,338,1063,379"/>
+<area shape="rect" id="node10" href="$classATSHA204Class.html#a2d69316e4670b7fd17a1e2b6231191ff" title="ATSHA204Class::swi\l_set_signal_pin" alt="" coords="699,272,850,314"/>
+</map>

@@ -85,51 +85,53 @@ bool TooSigning_hash_compare(void *hash1, void *hash2) {
 
 void TooSigning_requested_noncelist_print() {
     NonceRequested *current = nonce_requested_start;
-    Serial.println(F("___ REQUESTED NONCE LIST DUMP ___"));
+    Serial.println(F("|>___ REQUESTED NONCE LIST DUMP ___"));
     while (current != 0) {
-        Serial.print(F("Requested this: "));
+        Serial.print(F("|> Requested this: "));
         Serial.println((uint8_t) current);
-        Serial.print(F("Requested from: "));
+        Serial.print(F("|> Requested from: "));
         Serial.println(current->nonce_from);
-        Serial.print(F("Requested time: "));
+        Serial.print(F("|> Requested time: "));
         Serial.println(current->nonce_request_first);
-        Serial.print(F("Requested last: "));
+        Serial.print(F("|> Requested last: "));
         Serial.println(current->nonce_request_last);
-        Serial.print(F("Requested next: "));
+        Serial.print(F("|> Requested next: "));
         Serial.println((uint8_t) current->next);
         
         current = current->next;
         if(current->nonce_request_first == 0){
             current = 0;
         }
+        Serial.print(F("|>"));     
     }
 }
 
 void TooSigning_sent_noncelist_print() {
-    Serial.println(F("___ SENT NONCE DUMP ___"));
+    Serial.println(F(">___ SENT NONCE DUMP ___"));
 
     NonceSent *current = nonce_sent_start;
     while (current != 0) {
-        Serial.print(F("To: "));
+        Serial.print(F("> To: "));
         Serial.println(current->nonce_to);
-        Serial.print(F("Nonce: "));
+        Serial.print(F("> Nonce: "));
         Serial.println(current->nonce);
         current = current->next;
+        Serial.print(F(">"));     
     }
 }
 
 void TooSigning_received_noncelist_print() {
     NonceReceived *current = nonce_received_start;
-    Serial.println(F("___ RECEIVED NONCE DUMP ___"));
+    Serial.println(F("<___ RECEIVED NONCE DUMP ___"));
     while (current != 0) {
-        Serial.print(F("To: "));
+        Serial.print(F("< To: "));
         Serial.println(current->nonce_from);
-        Serial.print(F("Nonce: "));
+        Serial.print(F("< Nonce: "));
         Serial.println(current->nonce);
-        Serial.print(F("Timestamp: "));
+        Serial.print(F("< Timestamp: "));
         Serial.println(current->nonce_when);
         current = current->next;
-
+        Serial.print(F("<"));
     }
 }
 
@@ -276,6 +278,7 @@ bool TooSigning_requested_noncelist_retry_all() {
         Serial.println(F("Request list is not 0"));
         Serial.println(current->nonce_request_last);
         if (current->nonce_request_first != 0){
+            Serial.println(F("Nonce has never been requested (start), ignoring"));            
             if (millis() - current->nonce_request_last > 2000) {
                 Serial.println(F("Rerequesting nonce"));
                 TooSigning_request_nonce_from_node_id(current->nonce_from);

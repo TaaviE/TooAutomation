@@ -1,0 +1,14 @@
+<map id="ATSHA204Class::getSerialNumber" name="ATSHA204Class::getSerialNumber">
+<area shape="rect" id="node2" href="$classATSHA204Class.html#a6bcaa1359ac7392ed066641323fe8d5d" title="ATSHA204Class::sha204m_read" alt="" coords="235,130,449,157"/>
+<area shape="rect" id="node3" href="$classATSHA204Class.html#a3689222ad46022e5c50ba484053d9b2c" title="ATSHA204Class::sha204c\l_send_and_receive" alt="" coords="497,123,676,164"/>
+<area shape="rect" id="node4" href="$classATSHA204Class.html#a42b8beceec64c89148a9bb49b26f0fb1" title="ATSHA204Class::sha204c\l_calculate_crc" alt="" coords="951,10,1129,51"/>
+<area shape="rect" id="node5" href="$classATSHA204Class.html#abe55ac783f1a37777bd09b7fc369ebc9" title="ATSHA204Class::swi\l_send_byte" alt="" coords="1404,182,1555,223"/>
+<area shape="rect" id="node6" href="$classATSHA204Class.html#a0f8c2167d152bbe670d1b1187d7b2897" title="ATSHA204Class::swi\l_send_bytes" alt="" coords="1603,127,1753,168"/>
+<area shape="rect" id="node7" href="$classATSHA204Class.html#a0d8eab6a8af231835dd5b6734df0d670" title="ATSHA204Class::sha204c\l_resync" alt="" coords="724,236,903,278"/>
+<area shape="rect" id="node8" href="$classATSHA204Class.html#ae5c777e2388de999d13afef7008a36a7" title="ATSHA204Class::sha204p\l_receive_response" alt="" coords="1177,338,1356,379"/>
+<area shape="rect" id="node13" href="$classATSHA204Class.html#a30b1fad66d47a88848ebc6d74b66ec97" title="ATSHA204Class::sha204c\l_check_crc" alt="" coords="724,39,903,80"/>
+<area shape="rect" id="node10" href="$classATSHA204Class.html#ac51be7c43d75dcc439d89ecb0493149b" title="ATSHA204Class::sha204c\l_sleep" alt="" coords="1177,207,1356,248"/>
+<area shape="rect" id="node11" href="$classATSHA204Class.html#a2772385d612dee11f65c310334d7952b" title="ATSHA204Class::sha204c\l_wakeup" alt="" coords="951,266,1129,307"/>
+<area shape="rect" id="node9" href="$classATSHA204Class.html#ae81c8e3063da186b698d31bad70e543b" title="ATSHA204Class::swi\l_receive_bytes" alt="" coords="1404,338,1555,379"/>
+<area shape="rect" id="node12" href="$classATSHA204Class.html#a2d69316e4670b7fd17a1e2b6231191ff" title="ATSHA204Class::swi\l_set_signal_pin" alt="" coords="1191,272,1342,314"/>
+</map>

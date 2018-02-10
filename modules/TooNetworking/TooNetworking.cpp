@@ -381,14 +381,16 @@ void TooNetworking_bufferlist_print() {
   
   BufferItem * current = buffer_first;
   while (current != 0) {
-    Serial.print(F("For: "));
+    Serial.print(F("| For: "));
     Serial.println(current->payload_destination);
-    Serial.print(F("Pointer to next: "));
+    Serial.print(F("| Pointer to next: "));
     Serial.println((uint16_t) current->next);
-    Serial.print(F("Payload size: "));
+    Serial.print(F("| Payload size: "));
     Serial.println(current->payload_size);
     current = current->next;
+    Serial.println(F("-------------------"));
   }
+  Serial.println(F(""));
 }
 
 BufferItem * TooNetworking_bufferlist_find_for_id(uint8_t nodeID) {
