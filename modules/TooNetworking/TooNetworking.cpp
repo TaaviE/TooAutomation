@@ -12,7 +12,7 @@
  *    GNU General Public License for more details.
  * 
  *    You should have received a copy of the GNU General Public License
- *    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *    along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
 /**
@@ -82,13 +82,15 @@ bool TooNetworking_connection_begin(uint8_t passed_node_id){
     mesh.begin();
     Serial.println(F("Mesh initialized"));
     
-    #ifdef TOONETWORKING_SIGNING
+    #ifdef TOONETWORKING_SIGNING 
     TooSigning_signed_network_begin(passed_node_id);
     #endif // TOONETWORKING_SIGNING
     
     #ifdef TOONETWORKING_ENCRYPTION
     // TODO: Init encryption
     #endif // TOONETWORKING_SIGNING
+    radio.flush_rx();
+    radio.flush_tx();
 }
 
 /**
@@ -101,15 +103,15 @@ bool TooNetworking_connection_begin(uint8_t passed_node_id){
  * @return true if successful, false otherwise
  */
 bool TooNetworking_send(uint8_t for_node, void * payload, uint8_t size, uint8_t identifier){
-  return mesh.write(for_node, payload, identifier, size);
+    return mesh.write(for_node, payload, identifier, size);
 }
 
 bool TooNetworking_other_node_is_online(uint8_t nodeID){
-  return true; // TODO
+    return true; // TODO
 }
 
 bool TooNetworking_this_node_is_online(){
-  return true; // TODO
+    return true; // TODO
 }
 
 #ifdef TOONETWORKING_SIGNING
@@ -124,92 +126,93 @@ bool TooNetworking_this_node_is_online(){
  * @param nonce nonce
  * @return true if successful, false otherwise
  */
-bool TooNetworking_send_signed_(uint8_t for_node, void * payload, uint8_t size, uint32_t nonce){
-  if(TooNetworking_this_node_is_online()){
-    Serial.println(F("Node is online"));
-    if(TooNetworking_other_node_is_online(for_node)){
-      Serial.println(F("Destination is online"));
-      return true; //Message is sent, return
+/*bool TooNetworking_send_signed_(uint8_t for_node, void * payload, uint8_t size, uint32_t nonce){
+    if(TooNetworking_this_node_is_online()){
+        Serial.println(F("Node is online"));
+        if(TooNetworking_other_node_is_online(for_node)){
+            Serial.println(F("Destination is online"));
+            delay(10000);
+            return true; //Message is sent, return
+        }
+        Serial.println(F("Destination is offline"));
+    } else{
+        Serial.println(F("This node is offline"));
+        //TODO: Non-blocking fix connection
     }
-    Serial.println(F("Destination is offline"));
-  } else{
-    Serial.println(F("This node is offline"));
-    //TODO: Non-blocking fix connection
-  }
-}
+}*/
 
 bool TooNetworking_bufferlist_initialize() {
-  buffer_first = malloc(sizeof(BufferItem));
-  Serial.println((uint8_t) sizeof(buffer_first));
-  if (buffer_first == NULL) {
-    Serial.println(F("Buffer init failed"));
-    return false;
-  }
+    buffer_first = malloc(sizeof(BufferItem));
+    Serial.println((uint8_t) sizeof(buffer_first));
+    if (buffer_first == NULL) {
+        Serial.println(F("Buffer init failed"));
+        return false;
+    }
   
-  ((BufferItem *) buffer_first)->next = NULL;
+    ((BufferItem *) buffer_first)->next = NULL;
   
-  buffer_first->next = NULL;
-  return true;
+    buffer_first->next = NULL;
+    return true;
 }
 
 /**
- * Checks if there's something ready to be processed
+ * Checks if there's connection
  *
  * @return True if successful, false otherwise
  */
 bool TooNetworking_connection_available(){
-  return network.available();
+    return mesh.checkConnection();
 }
 
 void TooNetworking_bufferlist_remove(BufferItem * previous, BufferItem * current) {
-  Serial.println(F("Removing from buffer list"));
-  if (current = buffer_first) { // Start of buffer list
-    free(current->payload);
-    free(current);
-    buffer_first = NULL;
-  } else if (current->next == NULL) { // First in the buffer list
-    free(current->payload);
-    free(current);
-    previous->next = NULL;
-  } else if (previous != NULL) { // Somehwere in the middle of the list
-    previous->next = current->next;
-    free(current->payload);
-    free(current);
-  } else {
-    Serial.print(F("Error case not matched, dumping pointers: "));
-    Serial.print((uint8_t) buffer_first);
-    Serial.print(F(" "));
-    Serial.print((uint8_t) previous);
-    Serial.print(F(" "));
-    Serial.print((uint8_t) previous->next);
-    Serial.print(F(" "));
-    Serial.print((uint8_t) current);
-    Serial.print(F(" "));
-    Serial.println((uint8_t) current->next);
-  }
+    Serial.println(F("Removing from buffer list"));
+    if (current = buffer_first) { // Start of buffer list
+        free(current->payload);
+        free(current);
+        buffer_first = NULL;
+    } else if (current->next == NULL) { // First in the buffer list
+        free(current->payload);
+        free(current);
+        previous->next = NULL;
+    } else if (previous != NULL) { // Somehwere in the middle of the list
+        previous->next = current->next;
+        free(current->payload);
+        free(current);
+    } else {
+        Serial.print(F("Error case not matched, dumping pointers: "));
+        Serial.print((uint8_t) buffer_first);
+        Serial.print(F(" "));
+        Serial.print((uint8_t) previous);
+        Serial.print(F(" "));
+        Serial.print((uint8_t) previous->next);
+        Serial.print(F(" "));
+        Serial.print((uint8_t) current);
+        Serial.print(F(" "));
+        Serial.println((uint8_t) current->next);
+    }
 }
 
 bool TooNetworking_bufferlist_send_(BufferItem * current, BufferItem * previous){
-  if(TooNetworking_connection_available()){
-    if(TooNetworking_other_node_is_online(current->payload_destination)){
-      size_t buffer_size = current->payload_size+sizeof(Payload_Metadata_Received);
-      void * buffer = malloc(buffer_size);
-      memmove(buffer, current, sizeof(Payload_Metadata_Received)); //Copy metadata to buffer
-      memmove(buffer+sizeof(Payload_Metadata_Received), current->payload, current->payload_size); //Copy payload to buffer after metadata
-      
-      if(TooNetworking_send(current->payload_destination, buffer, buffer_size, MSG_REGULAR)){
-        TooNetworking_bufferlist_remove(current, previous);
-        return true;
-      } else{
-        return false;
-      }
+    if(TooNetworking_connection_available()){
+        if(TooNetworking_other_node_is_online(current->payload_destination)){
+            size_t buffer_size = current->payload_size+sizeof(Payload_Metadata_Received);
+            void * buffer = malloc(buffer_size);
+            memmove(buffer, current, sizeof(Payload_Metadata_Received)); //Copy metadata to buffer
+            memmove(buffer+sizeof(Payload_Metadata_Received), current->payload, current->payload_size); //Copy payload to buffer after  metadata
+        
+            if(TooNetworking_send(current->payload_destination, buffer, buffer_size, MSG_REGULAR)){
+                TooNetworking_bufferlist_remove(current, previous);
+                return true;
+            } else {
+                return false;
+            }
+        } else{
+            return false;
+        }
     } else{
-      return false;
+        //TODO: Non-blocking fix connection
+        return false;
     }
-  } else{
-    //TODO: Non-blocking fix connection
-    return false;
-  }
 }
 
 /**
@@ -217,58 +220,59 @@ bool TooNetworking_bufferlist_send_(BufferItem * current, BufferItem * previous)
  *
  * */
 void TooNetworking_bufferlist_add(uint8_t payload_destination, void * payload, uint8_t size, uint8_t type=MSG_REGULAR){
-  Serial.println(F("Add item to buffer list"));
-  BufferItem * current = buffer_first;
-  BufferItem * previous = NULL;
-  if (buffer_first == 0) {
-    if (!TooNetworking_bufferlist_initialize()) {
-      return false;
-    } else {
-      current = buffer_first;
-      Serial.println(F("Initialized the buffer"));
+    Serial.println(F("Add item to buffer list"));
+    BufferItem * current = buffer_first;
+    BufferItem * previous = NULL;
+    if (buffer_first == 0) {
+        if (!TooNetworking_bufferlist_initialize()) {
+            return false;
+        } else {
+        current = buffer_first;
+        Serial.println(F("Initialized the buffer"));
+        }
     }
-  }
   
-  while (current != NULL) {  //Take the last item in the list
-    Serial.println(F("Finding the last item"));
+    while (current != NULL) {  //Take the last item in the list
+        Serial.print(F("Finding the last item: "));
+        Serial.println((uint8_t) &current);
+        current = current->next;
+    }
+  
+    previous = current;
+    current->next = malloc(sizeof(BufferItem)); //TODO: Safe malloc (enough room and error handling)
     current = current->next;
-  }
   
-  previous = current;
-  current->next = malloc(sizeof(BufferItem)); //TODO: Safe malloc (enough room and error handling)
-  current = current->next;
+    current->payload_destination = payload_destination;
+    current->payload_size = size;
+    current->payload_type = type;
   
-  current->payload_destination = payload_destination;
-  current->payload_size = size;
-  current->payload_type = type;
-  
-  if(type == 0){
-    if(TooNetworking_bufferlist_send_(current, previous)){
-      return true;
-    }
-  } else {
-    Serial.println(F("Finding nonce for nodeID"));
-    NonceReceived * nonce = TooSigning_received_noncelist_find_from_ID(payload_destination);
+    if(type == 0){
+        if(TooNetworking_bufferlist_send_(current, previous)){
+            return true;
+        }
+    } else {
+        Serial.println(F("Finding nonce for nodeID"));
+        NonceReceived * nonce = TooSigning_received_noncelist_find_from_ID(payload_destination);
     
-    if (nonce != 0) {
-      TooNetworking_send_signed_(current->payload_destination, current->payload, current->payload_size, nonce);
-    } else { //TODO: Add encryption
-      Serial.print(F("Adding pending nonce request... "));
-      TooSigning_requested_noncelist_add(payload_destination);
-      Serial.println(F("Added"));
+        if (nonce != 0) {
+            TooNetworking_send_signed(current->payload_destination, current->payload, current->payload_size, nonce);
+        } else { //TODO: Add encryption
+            Serial.print(F("Adding pending nonce request... "));
+            TooSigning_requested_noncelist_add(payload_destination);
+            Serial.println(F("Added"));
+        }
     }
-  }
   
-  Serial.println(F("Adding item to buffer list"));
-  current->next = malloc(sizeof(BufferItem));
+    Serial.println(F("Adding item to buffer list"));
+    current->next = malloc(sizeof(BufferItem));
   
-  if (current->next == NULL) {
-    Serial.println(F("Failed to malloc"));
-    return false;
-  }
+    if (current->next == NULL) {
+        Serial.println(F("Failed to malloc"));
+        return false;
+    }
   
-  Serial.println(F("Added item to buffer list"));
-  return true;
+    Serial.println(F("Added item to buffer list"));
+    return true;
 }
 
 
@@ -284,19 +288,19 @@ void TooNetworking_bufferlist_add(uint8_t payload_destination, void * payload, u
  * @return true if successful, false otherwise
  */
 bool TooNetworking_send_signed(uint8_t for_node, void * payload, uint8_t size){
-  //Check if there's a nonce for that node
-  uint32_t tempnonce = TooSigning_received_noncelist_find_from_ID(for_node);
-  if(tempnonce != 0){
-    TooNetworking_send_signed_(for_node, payload, size, tempnonce);
+    //Check if there's a nonce for that node
+    NonceReceived * tempnonce = TooSigning_received_noncelist_find_from_ID(for_node);
+    if(tempnonce != 0){
+        TooNetworking_send_signed(for_node, payload, size, tempnonce);
+        return true;
+    }
+  
+    //Else send nonce request
+    TooSigning_requested_noncelist_add(for_node);
+  
+    //Store in buffer
+    TooNetworking_bufferlist_add(for_node, payload, size, MSG_SIGNED);
     return true;
-  }
-  
-  //Else send nonce request
-  TooSigning_requested_noncelist_add(for_node);
-  
-  //Store in buffer
-  TooNetworking_bufferlist_add(for_node, payload, size, MSG_SIGNED);
-  return true;
 }
 #endif //TOONETWORKING_SIGNING
 
@@ -333,7 +337,7 @@ bool TooNetworking_send_signed_encrypted(uint8_t for_node, void * payload, uint8
  * @param
  */
 void TooNetworking_peek(RF24NetworkHeader& header, void* message, uint16_t maxlen){
-  network.peek(header, message, maxlen);
+    network.peek(header, message, maxlen);
 }
 
 /**
@@ -344,7 +348,7 @@ void TooNetworking_peek(RF24NetworkHeader& header, void* message, uint16_t maxle
  * @return true if successful, false otherwise
  */
 bool TooNetworking_read(RF24NetworkHeader& header, void* message, uint16_t maxlen){
-  return network.read(header, message, maxlen);
+    return network.read(header, message, maxlen);
 }
 
 /**
@@ -353,7 +357,7 @@ bool TooNetworking_read(RF24NetworkHeader& header, void* message, uint16_t maxle
  * @return true if successful, false otherwise
  */
 bool TooNetworking_connection_check(){
-  return mesh.checkConnection();
+    return mesh.checkConnection();
 }
 
 /**
@@ -362,9 +366,10 @@ bool TooNetworking_connection_check(){
  * @return True if successful, false otherwise
  */
 bool TooNetworking_connection_fix(){
-  if(!TooNetworking_connection_available()){
-    return mesh.renewAddress();
-  }
+    if(!TooNetworking_connection_available()){
+        Serial.println(F("No connection available, renewing"));
+        return mesh.renewAddress();
+    }
 }
 
 /**
@@ -377,32 +382,32 @@ bool TooNetworking_connection_fix(){
  */
 
 void TooNetworking_bufferlist_print() {
-  Serial.println(F("___ BUFFER DUMP ___"));
+    Serial.println(F("___ BUFFER DUMP ___"));
   
-  BufferItem * current = buffer_first;
-  while (current != 0) {
-    Serial.print(F("| For: "));
-    Serial.println(current->payload_destination);
-    Serial.print(F("| Pointer to next: "));
-    Serial.println((uint16_t) current->next);
-    Serial.print(F("| Payload size: "));
-    Serial.println(current->payload_size);
-    current = current->next;
-    Serial.println(F("-------------------"));
-  }
-  Serial.println(F(""));
+    BufferItem * current = buffer_first;
+    while (current != 0) {
+        Serial.print(F("| For: "));
+        Serial.println(current->payload_destination);
+        Serial.print(F("| Pointer to next: "));
+        Serial.println((uint16_t) current->next);
+        Serial.print(F("| Payload size: "));
+        Serial.println(current->payload_size);
+        current = current->next;
+        Serial.println(F("-------------------"));
+    }
+    Serial.println(F(""));
 }
 
 BufferItem * TooNetworking_bufferlist_find_for_id(uint8_t nodeID) {
-  BufferItem * current = buffer_first;
-  while (current != NULL) {
-    if (current->payload_destination == nodeID) {
-      return current;
+    BufferItem * current = buffer_first;
+    while (current != NULL) {
+        if (current->payload_destination == nodeID) {
+            return current;
+        }
+        current = current->next;
     }
-    current = current->next;
-  }
   
-  return NULL;
+    return NULL;
 }
 
 
@@ -423,46 +428,57 @@ BufferItem * TooNetworking_bufferlist_find_for_id(uint8_t nodeID) {
  */
 
 bool TooNetworking_send_signed(uint8_t for_node, void * payload, uint8_t size, uint32_t nonce){
-  if(TooNetworking_connection_available()){
-    Serial.println(F("Node is online"));
-    if(TooNetworking_other_node_is_online(for_node)){
-      Serial.println(F("Destination is online"));
+    if(TooNetworking_connection_available()){
+        Serial.println(F("Node is online"));
+        if(TooNetworking_other_node_is_online(for_node)){
+            Serial.println(F("Destination is online"));
       
-      size_t buffer_size = size+sizeof(Payload_MetadataSigned_Received);
-      void * buffer = malloc(buffer_size);
-      Payload_MetadataSigned_Received metadata;
-      metadata.payload_size = size;
-      metadata.payload_type = MSG_SIGNED;
-      //Payload signing process start
-      uint8_t hmac[20] = {0};
-      TooSigning_read_hmac_from_progmem(for_node, &hmac);
+            size_t buffer_size = size+sizeof(Payload_MetadataSigned_Received);
+            void * buffer = malloc(buffer_size);
+            Payload_MetadataSigned_Received metadata;
+            metadata.payload_size = size;
+            metadata.payload_type = MSG_SIGNED;
+            //Payload signing process start
+            uint8_t hmac[20] = {0};
+            TooSigning_read_hmac_from_progmem(for_node, &hmac);
       
-      Serial.println(F("HMAC used: "));
-      for (int i; i > 20; i++) {
-        Serial.print(hmac[i]);
-      }
-      Serial.println();
-      TooSigning_init_hmac(hmac, 20);
+            Serial.println(F("HMAC used: "));
+            for (int i; i > 20; i++) {
+                Serial.print(hmac[i]);
+            }
+//             Serial.println();
+            TooSigning_init_hmac(hmac, 20);
       
-      TooSigning_random_data_print(payload, size);
-      TooSigning_hash_data(payload, size);
-      TooSigning_hash_data(&nonce, sizeof(uint32_t));
-      TooSigning_hash_store(TooSigning_get_hmac(), metadata.payload_hash);
-      //Payload signing process end
-      //To buffer, from metadata, with the size of metadata
-      memmove(buffer, &metadata, sizeof(Payload_MetadataSigned_Received)); //Copy metadata to buffer
-      //To buffer with an offset, from payload, with the size of payload
-      memmove(buffer+sizeof(Payload_Metadata_Received), payload, size); //Copy payload to buffer after metadata
+            Serial.print(F("Payload: "));
+            TooSigning_hash_data(payload, size);
+            TooSigning_random_data_print(payload, size);
+            
+            Serial.print(F("Nonce used: "));
+            Serial.println(nonce);
+            Serial.println((uint8_t) &nonce);
+            TooSigning_hash_data(&nonce, sizeof(uint32_t));
+            Serial.print(F("Generated hash: "));
+            TooSigning_hash_store(TooSigning_get_hmac(), metadata.payload_hash);
+            TooSigning_random_data_print(metadata.payload_hash, 20);
+            //Payload signing process end
+            //To buffer, from metadata, with the size of metadata
+            memmove(buffer, &metadata, sizeof(Payload_MetadataSigned_Received)); //Copy metadata to buffer
+            //To buffer with an offset, from payload, with the size of payload
+            memmove(buffer+sizeof(Payload_Metadata_Received), payload, size); //Copy payload to buffer after metadata
+            
+            Serial.print(F("Full buffer: "));
+            TooSigning_random_data_print(buffer, sizeof(Payload_MetadataSigned_Received)+size);
       
-      if(TooNetworking_send(for_node, buffer, buffer_size, MSG_SIGNED)){
-        return true;
-      }
+            if(TooNetworking_send(for_node, buffer, buffer_size, MSG_SIGNED)){
+                return true;
+            }
+        }
+        Serial.println(F("Destination is offline"));
+    } else{
+        Serial.println(F("This node is offline"));
+        TooNetworking_connection_fix();
+        //TODO: Preferrably non-blocking fix connection
     }
-    Serial.println(F("Destination is offline"));
-  } else{
-    Serial.println(F("This node is offline"));
-    //TODO: Non-blocking fix connection
-  }
 }
 
 /**
@@ -476,21 +492,22 @@ bool TooNetworking_send_signed(uint8_t for_node, void * payload, uint8_t size, u
  * @return true if successful, false otherwise
  */
 bool TooNetworking_bufferlist_send_signed(uint8_t for_node, void * payload, uint8_t size){
-  //Check if there's a nonce for that node
-  uint32_t tempnonce = TooSigning_received_noncelist_find_from_ID(for_node);
-  if(tempnonce != 0){
-    if(TooNetworking_send_signed(for_node, payload, size, tempnonce)){
-      //Message hasn't made it to the buffer list
-      return true;
+    //Check if there's a nonce for that node
+    NonceReceived * tempnonce = TooSigning_received_noncelist_find_from_ID(for_node);
+    if(tempnonce != 0){
+        TooSigning_random_data_print(payload, size);
+        if(TooNetworking_send_signed(for_node, payload, size, tempnonce->nonce)){  
+            //Message hasn't made it to the buffer list
+            return true;
+        }
     }
-  }
   
-  //Else send nonce request
-  TooSigning_requested_noncelist_add(for_node);
+    //Else send nonce request
+    TooSigning_requested_noncelist_add(for_node);
   
-  //Store in buffer
-  TooNetworking_bufferlist_add(for_node, payload, size, MSG_SIGNED);
-  return true;
+    //Store in buffer
+    TooNetworking_bufferlist_add(for_node, payload, size, MSG_SIGNED);
+    return true;
 }
 
 #endif //TOONETWORKING_SIGNING
@@ -508,51 +525,38 @@ bool TooNetworking_send_encrypted(uint8_t for_node, void * payload, uint8_t size
 }
 #endif // TOONETWORKING_ENCRYPTION
 
-#ifdef TOONETWORKING_ENCRYPTION && TOONETWORKING_SIGNING
-
-/**
- * Allows sending a signed and encrypted message
- *
- * @param
- * @return true if successful, false otherwise
- */
-bool TooNetworking_send_signedencrypted(uint8_t for_node, void * payload, uint8_t size){
-  
-}
-#endif // TOONETWORKING_ENCRYPTION && TOONETWORKING_SIGNING
-
 void TooNetworking_bufferlist_send_all() {
-  BufferItem * current = buffer_first;
-  BufferItem * previous = 0;
+    BufferItem * current = buffer_first;
+    BufferItem * previous = 0;
   
-  TooNetworking_bufferlist_print();
-  Serial.println(F("Sending all: "));
-  Serial.println((uint8_t) buffer_first);
-  Serial.println((uint8_t) buffer_first->next);
-  while (current != 0) {
-    Serial.println(F("There's something in the buffer to send"));
+    TooNetworking_bufferlist_print();
+    Serial.println(F("Sending all: "));
+    Serial.println((uint8_t) buffer_first);
+    Serial.println((uint8_t) buffer_first->next);
+    while (current != 0) {
+        Serial.println(F("There's something in the buffer to send"));
     
-    if(current->payload_type == MSG_REGULAR){
-      if(TooNetworking_bufferlist_send_(current, previous)){
-        TooNetworking_bufferlist_remove(current, previous);
-      }
-    }
-    #ifdef TOONETWORKING_SIGNING
-    else if(current->payload_type == MSG_SIGNED){
-      uint32_t nonce = TooSigning_received_noncelist_find_from_ID(current->payload_destination);
-      
-      if (nonce != 0) {
-        Serial.println(F(" ..one nonce for node is not 0!"));
-        if(TooNetworking_send_signed(current->payload_destination, current->payload, current->payload_size, nonce)){
-          //Message was sent, might as well remove it
-          TooNetworking_bufferlist_remove(previous, current);
+        if(current->payload_type == MSG_REGULAR){
+            if(TooNetworking_bufferlist_send_(current, previous)){
+                TooNetworking_bufferlist_remove(current, previous);
+            }
         }
-      }
-    }
+        #ifdef TOONETWORKING_SIGNING
+        else if(current->payload_type == MSG_SIGNED){
+            NonceReceived * nonce = TooSigning_received_noncelist_find_from_ID(current->payload_destination);
+      
+            if (nonce != 0) {
+                Serial.println(F(" ..one nonce for node is not 0!"));
+                if(TooNetworking_send_signed(current->payload_destination, current->payload, current->payload_size, nonce->nonce)){
+                    //Message was sent, might as well remove it
+                    TooNetworking_bufferlist_remove(previous, current);
+                }
+            }
+        }
     #endif
-    previous = current;
-    current = current->next;
-  }
+        previous = current;
+        current = current->next;
+    }
 }
 
 /** @} */
@@ -563,17 +567,37 @@ void TooNetworking_bufferlist_send_all() {
  *
  * @return True if successful, false otherwise
  */
+uint32_t displayTimer = 0;
 bool TooNetworking_connection_maintenance(){
-  #ifdef TOONETWORKING_MASTER
-  mesh.DHCP();
-  #endif // TOONETWORKING_MASTER
-  
-  #ifdef TOONETWORKING_SIGNING
-  //TooSigning_signed_network_begin(20);
-  TooSigning_signed_network_update();
-  #endif // TOONETWORKING_SIGNING
-  
-  mesh.update();
+    mesh.update();
+    #ifdef TOONETWORKING_MASTER
+        //Serial.print(F("D"));
+        mesh.DHCP();
+        if (millis() - displayTimer > 5000) {
+            displayTimer = millis();
+            Serial.println(" ");
+            Serial.println(F("********Assigned Addresses********"));
+            for (int i = 0; i < mesh.addrListTop; i++) {
+                Serial.print("NodeID: ");
+                Serial.print(mesh.addrList[i].nodeID);
+                Serial.print(" RF24Network Address: 0");
+                Serial.println(mesh.addrList[i].address, OCT);
+            }
+            Serial.println(F("**********************************"));
+        }
+    #endif // TOONETWORKING_MASTER
+    
+    #ifdef TOONETWORKING_SIGNING
+        //Serial.print(F("U"));
+        //TooSigning_signed_network_begin(20);
+        TooSigning_signed_network_update();
+    #endif // TOONETWORKING_SIGNING
+    
+    #ifndef TOONETWORKING_MANUAL && !TOONETWORKING_SIGNING
+        //Serial.print(F("A"));
+        TooSigning_unsigned_network_available();
+    #endif
+    mesh.update();
 }
 
 
@@ -591,7 +615,7 @@ bool TooNetworking_connection_maintenance(){
  */
 
 bool TooNetworking_begin(uint8_t passed_node_id) {
-  TooNetworking_connection_begin(passed_node_id);
+    TooNetworking_connection_begin(passed_node_id);
 }
 
 /**

@@ -12,7 +12,7 @@
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
 #define TOONETWORKING_MASTER // Indicates this is the master node
@@ -27,11 +27,11 @@
 #define nodeID 0
 
 void setup(void) {
-    Serial.begin(115200);
-    TooNetworking_connection_begin(nodeID);
+  Serial.begin(115200);
+  TooNetworking_connection_begin(nodeID);
 }
 
 void loop(void) {
-    TooNetworking_connection_maintenance();
+  TooNetworking_connection_maintenance();
 }
 

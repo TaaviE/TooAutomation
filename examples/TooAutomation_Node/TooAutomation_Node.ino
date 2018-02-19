@@ -12,7 +12,7 @@
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
 #define TOONETWORKING_SIGNING // Enable signing
@@ -36,9 +36,11 @@ void setup(void) {
 void loop(void) {
     TooNetworking_connection_maintenance();
 
-    if(millis() - timer > 1000){
-         uint32_t dat = timer;
+    if(millis() - timer > 2000){
+         uint32_t dat = 0;
+         Serial.println(F("----------------- SENDING ---------------------"));
          TooNetworking_bufferlist_send_signed(0, &dat, sizeof(dat));
          timer = millis();
+         Serial.println(F("-----------------------------------------------"));
     }
 }

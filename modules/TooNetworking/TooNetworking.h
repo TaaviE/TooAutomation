@@ -12,7 +12,7 @@
  *    GNU General Public License for more details.
  * 
  *    You should have received a copy of the GNU General Public License
- *    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *    along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
 /**
@@ -23,11 +23,11 @@
  */
 
 #pragma once
+#include "TooNetworking_data.h"
+#include "RF24Network.h"
 
 #ifndef __TooNetworking_H__
 #define __TooNetworking_H__
-
-#include "TooNetworking.cpp"
 
 bool TooNetworking_connection_begin(uint8_t passed_node_id);
 
@@ -59,7 +59,7 @@ bool TooNetworking_read(RF24NetworkHeader& header, void* message, uint16_t maxle
 
 bool TooNetworking_connection_check();
 
-bool TooNetworking_connection_fix();
+bool TooNetworking_connection_fix(void);
 
 void TooNetworking_bufferlist_print();
 
@@ -80,5 +80,7 @@ void TooNetworking_bufferlist_send_all();
 bool TooNetworking_connection_maintenance();
 
 bool TooNetworking_begin(uint8_t passed_node_id);
+
+#include "TooNetworking.cpp"
 
 #endif // __TooNetworking_H__

@@ -12,7 +12,7 @@
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
 /**
@@ -40,8 +40,6 @@
 #else
     #include "drivers/ATSHA204/ATSHA204.h"
 #endif
-
-#include "TooSigning.cpp"
 
 extern class RF24Network network;
 
@@ -113,7 +111,7 @@ void TooSigning_sent_noncelist_print(void);
 
 void TooSigning_received_noncelist_print(void);
 
-void TooSigning_random_data_print(void *data, size_t size);
+void TooSigning_random_data_print(const void *data, uint8_t size);
 /** @} */
 
 
@@ -197,8 +195,11 @@ void TooSigning_received_noncelist_remove_timeout(void);
 
 void TooSigning_read_hmac_from_progmem(uint8_t nodeID, void *hmac_pointer);
 
+void TooSigning_connection_fix(void);
 //#ifdef __cplusplus
 //#include "cpp_wrapper.h"
 //#endif
+
+#include "TooSigning.cpp"
 
 #endif // __RF24_H__

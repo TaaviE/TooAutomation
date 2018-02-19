@@ -12,7 +12,7 @@
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
 /**
@@ -23,6 +23,7 @@
  * signed messages
  */
 #include "modules/TooNetworking/TooNetworking.h"
+#include "modules/TooNetworking/TooNetworking_data.h"
 #include "TooSigning.h"
 #include "configuration/hmacs.c"
 
@@ -83,6 +84,15 @@ bool TooSigning_hash_compare(void *hash1, void *hash2) {
     return true;
 }
 
+void TooSigning_random_data_print(const void *data, uint8_t size) {
+    
+    for (uint8_t offset = 0; offset < size; offset++) {
+        Serial.print(*((uint8_t *) data + offset));
+        Serial.print(F(" "));
+    }
+    Serial.println(F(" "));
+}
+
 void TooSigning_requested_noncelist_print() {
     NonceRequested *current = nonce_requested_start;
     Serial.println(F("|>___ REQUESTED NONCE LIST DUMP ___"));
@@ -130,19 +140,15 @@ void TooSigning_received_noncelist_print() {
         Serial.println(current->nonce);
         Serial.print(F("< Timestamp: "));
         Serial.println(current->nonce_when);
-        current = current->next;
         Serial.print(F("<"));
+        
+        if(current->next != 0){
+            Serial.println("--- NEXT ---");
+            current = current->next;
+        } else{
+            break;
+        }
     }
-}
-
-void TooSigning_random_data_print(void *data, size_t size) {
-    void *start = data;
-
-    for (uint8_t offset = 0; offset < size; offset++) {
-        Serial.print((uint8_t)(*((uint8_t * )(data + offset))));
-        Serial.print(F(" "));
-    }
-    Serial.println(F(" "));
 }
 
 bool TooSigning_sent_noncelist_initialize() {
@@ -155,10 +161,10 @@ bool TooSigning_sent_noncelist_initialize() {
     if (nonce_sent_start == 0) {
         return false;
     }
-    Serial.println(F("Returning true"));
     nonce_sent_start->next = 0;
     nonce_sent_start->nonce = 0;
     nonce_sent_start->nonce_to = 0;
+    Serial.println(F("Returning true"));
     return true;
 }
 
@@ -171,11 +177,11 @@ bool TooSigning_received_noncelist_initialize() {
         return false;
     }
 
-    Serial.println(F("Returning true"));
     nonce_received_start->next = 0; 
     nonce_received_start->nonce_from = 255;
     nonce_received_start->nonce = 0;
     nonce_received_start->nonce_when = 0;
+    Serial.println(F("Returning true"));
     return true;
 }
 
@@ -188,11 +194,11 @@ bool TooSigning_requested_noncelist_initialize() {
         return false;
     }
 
-    Serial.println(F("Setting next to 0"));
     nonce_requested_start->next = 0;
     nonce_requested_start->nonce_from = 255;    
     nonce_requested_start->nonce_request_first = 0;
     nonce_requested_start->nonce_request_last = 0;
+    Serial.println(F("Returning true"));
     return true;
 }
 
@@ -201,10 +207,32 @@ void TooSigning_request_nonce_from_node_id(uint8_t nodeID) {
     nonce_payload.nonce = 0;
     Serial.print(F("Requesting nonce from: "));
     Serial.println(nodeID);
-    uint8_t status = mesh.write(&nonce_payload, 'R', 1, nodeID);
+    uint8_t status = mesh.write(&nonce_payload, MSG_NONCE_REQUEST, 1, nodeID);
     Serial.print(F("Status: "));
     Serial.println(status);
+    if(status == 0){
+        Serial.println(F("Fixing connection"));
+        TooSigning_connection_fix();
+        Serial.println(F("Connection fixed"));
+    }
 }
+
+void TooSigning_connection_fix(){
+    TooNetworking_connection_fix();
+}
+
+NonceRequested *TooSigning_requested_noncelist_find_for_nodeID(uint8_t passed_nodeID) {
+    //Find if request exists for nodeID
+    NonceRequested *current = nonce_requested_start;
+    while (current != 0) {
+        if (current->nonce_from == passed_nodeID) {
+            return current;
+        }
+        current = current->next;
+    }
+    return 0;
+}
+
 
 bool TooSigning_requested_noncelist_add(uint8_t passed_nodeID) {
     Serial.println(F("Adding to requested noncelist"));
@@ -216,9 +244,14 @@ bool TooSigning_requested_noncelist_add(uint8_t passed_nodeID) {
         }
         current = nonce_requested_start;
     } else {
-        while (current->next != 0) {
-            Serial.println(F("Looking for the last"));
-            current = current->next;
+        NonceRequested *found_nonce = TooSigning_requested_noncelist_find_for_nodeID(passed_nodeID);
+        if(found_nonce != 0){
+            current = found_nonce;
+        } else{
+            while (current->next != 0) {
+                Serial.println(F("Looking for the last"));
+                current = current->next;
+            }
         }
     }
     Serial.println(F("Storing data"));
@@ -256,18 +289,6 @@ bool TooSigning_requested_noncelist_received(uint8_t passed_nodeID) {
         previous = current;
         current = current->next;
     }
-}
-
-NonceRequested *TooSigning_requested_noncelist_find_for_nodeID(uint8_t passed_nodeID) {
-    //Find if request exists for nodeID
-    NonceRequested *current = nonce_requested_start;
-    while (current != 0) {
-        if (current->nonce_from == passed_nodeID) {
-            return current;
-        }
-        current = current->next;
-    }
-    return 0;
 }
 
 bool TooSigning_requested_noncelist_retry_all() {
@@ -314,6 +335,10 @@ NonceSent *TooSigning_sent_noncelist_find_from_ID(uint8_t nodeID) {
         if (current->nonce_to == nodeID) {
             Serial.print(F("Found for: "));
             Serial.println(nodeID);
+            Serial.print(F("Nonce: "));
+            Serial.println(current->nonce);
+            Serial.print(F("Nonce pointer: "));
+            Serial.println((uint8_t)current);
             return current;
         }
         current = current->next;
@@ -335,18 +360,24 @@ bool TooSigning_sent_noncelist_add(uint8_t toNodeID, uint32_t nonce) {
         }
         current = nonce_sent_start;
     } else {
-        while (current->next != 0) {
+        NonceSent *found_nonce = TooSigning_sent_noncelist_find_from_ID(toNodeID);
+        if(found_nonce != 0){
+            Serial.println(F("Found existing nonce, using that"));
+            current = found_nonce;
+        } else {
+            while (current->next != 0) {
+                current = current->next;
+            }
+            
+            Serial.println(F("Allocating"));
+            Serial.println((char) current);
+            
+            current->next = calloc(1, sizeof(NonceSent));
+            if (current->next == 0) {
+                return false;
+            }
             current = current->next;
         }
-
-        Serial.println(F("Allocating"));
-        Serial.println((char) current);
-
-        current->next = calloc(1, sizeof(NonceSent));
-        if (current->next == 0) {
-            return false;
-        }
-        current = current->next;
     }
     Serial.println(F("Allocated"));
     current->nonce_to = toNodeID;
@@ -373,6 +404,12 @@ void TooSigning_sent_noncelist_remove(NonceSent *previous, NonceSent *current) {
     Serial.println(F("\*"));
     if (previous != 0) {
         previous->next = current->next;
+        if(previous->next == current){
+            Serial.println(F("First nonce, removing..."));
+            current->next = 0;
+            current->nonce = 0;
+            nonce_sent_start = 0;
+        }
     } else {
         nonce_sent_start = 0;
     }
@@ -429,11 +466,17 @@ bool TooSigning_received_noncelist_add(uint8_t passed_nonce_from, uint32_t passe
         }
         current = nonce_received_start;
     } else {
-        while (current->next != 0) {
+        NonceReceived * existing_nonce = TooSigning_received_noncelist_find_from_ID(passed_nonce_from);
+        if(existing_nonce == 0){
+            while (current->next != 0) {
+                current = current->next;
+            }
+            current->next = malloc(sizeof(NonceReceived));
             current = current->next;
+        } else{
+            current = existing_nonce;
         }
-        current->next = malloc(sizeof(NonceReceived));
-        current = current->next;
+
         if (current == 0) {
             return false;
         }
@@ -506,13 +549,15 @@ uint8_t * TooSigning_get_hmac(){
 */
 bool TooSigning_unsigned_network_available(void) {
     //Serial.println(F(","));
+    
     if (network.available()) {
         Serial.print(F("NETWORK RECEIVE: "));
         RF24NetworkHeader header;
         network.peek(header);
         Serial.println((char) header.type);
         switch (header.type) { // Is there anything ready for us?
-            case 'S': { //"S" like "you sent me something signed"
+            case MSG_SIGNED: { //"S" like "you sent me something signed"
+                Serial.println(F("************ SIGNED MESSAGE ************"));
                 Serial.print(F("S Time: "));
                 Serial.println(millis());
                 Payload_MetadataSigned_Received payload;
@@ -528,16 +573,10 @@ bool TooSigning_unsigned_network_available(void) {
 
                 uint8_t hmac[20] = {0};
                 TooSigning_read_hmac_from_progmem(nodeID, &hmac);
-                if (hmac[0] == hmacs[0][0]) {
-                    Serial.println(F("Equal"));
-                }
 
-                Serial.print(F("HMAC: "));
-                Serial.println(hmacs[0][0], DEC);
-                Serial.println(hmac[0], DEC);
-
-                for (int i; i > 20; i++) {
-                    Serial.print(hmac[i]);
+                Serial.println(F("HMAC used: "));
+                for (uint8_t counter; counter > 20; counter++) {
+                    Serial.print(hmac[counter], DEC);
                 }
 
                 Serial.println();
@@ -547,7 +586,7 @@ bool TooSigning_unsigned_network_available(void) {
                 Serial.print(F("Size of payload: "));
                 Serial.println(payload.payload_size);
 
-                Serial.print(F("Metadata: "));
+                Serial.print(F("Metadata:    "));
                 TooSigning_random_data_print(&payload, sizeof(Payload_MetadataSigned_Received));
 
                 size_t sizeoffullbuffer = sizeof(Payload_MetadataSigned_Received) + payload.payload_size;
@@ -561,8 +600,10 @@ bool TooSigning_unsigned_network_available(void) {
 
                 NonceSent *tempnonce = TooSigning_sent_noncelist_find_from_ID(nodeID);
                 if (tempnonce != 0) {
+                    Serial.println((uint8_t) tempnonce);
                     Serial.print(F("Nonce used: "));
-                    Serial.println(tempnonce->nonce);
+                    Serial.println((uint32_t) tempnonce->nonce);
+                    Serial.println((uint8_t) *((uint32_t *) tempnonce->nonce));
                     TooSigning_hash_data(&(tempnonce->nonce), sizeof(uint32_t));
                 } else {
                     Serial.println(F("Nonce not found!"));
@@ -583,12 +624,13 @@ bool TooSigning_unsigned_network_available(void) {
                     Serial.println(F("EQUAL HASH?!"));
                 } else {
                     Serial.println(F("Inequal hash!"));
+                    delay(50000);
                     return false;
                 }
 
                 return true;
             }
-            case 'R': { //"R" like "send me a nonce"
+            case MSG_NONCE_REQUEST: { //"R" like "send me a nonce"
                 Serial.print(F("R Time: "));
                 Serial.println(millis());
 
@@ -606,17 +648,18 @@ bool TooSigning_unsigned_network_available(void) {
                 uint16_t nodeID = mesh.getNodeID(received_header.from_node);
                 Serial.println(nodeID);
                 Serial.println(F("Switch"));
-                bool state = mesh.write(&payload, 'N', sizeof(payload), nodeID);
+                bool state = mesh.write(&payload, MSG_NONCE, sizeof(payload), nodeID);
                 if (state) {
                     TooSigning_sent_noncelist_add(nodeID, time);
                     Serial.println(F("Nonce stored"));
                     Serial.println(F("Completed nonce sending"));
                     TooSigning_sent_noncelist_print();
                     return false;
+                    delay(5000);
                 }
                 return false;
             }
-            case 'N': { //"N" like "you sent me a nonce"
+            case MSG_NONCE: { //"N" like "you sent me a nonce"
                 Serial.print(F("N Time: "));
                 Serial.println(millis());
 
@@ -640,6 +683,7 @@ bool TooSigning_unsigned_network_available(void) {
             }
         }
     }
+    //Serial.println(F("Nothing available"));
     return false;
 }
 
@@ -655,18 +699,18 @@ void TooSigning_signed_network_update() {
     if (millis() - network_maintenance_timer > 500) {
         Serial.println(F("Maintenance"));
         if (nonce_received_start != 0) {
-            Serial.println(F("1: Checking for received nonce timeouts"));
-            TooSigning_received_noncelist_remove_timeout();
+//             Serial.println(F("1: Checking for received nonce timeouts"));
+//             TooSigning_received_noncelist_remove_timeout();
         }
 
         if (nonce_sent_start != 0) {
-            Serial.println(F("2: Checking for sent nonce timeouts"));
-            TooSigning_sent_noncelist_remove_timeout();
+//             Serial.println(F("2: Checking for sent nonce timeouts"));
+//             TooSigning_sent_noncelist_remove_timeout();
         }
 
         if (nonce_requested_start != 0) {
-            Serial.println(F("3: Checking for requested timeouts"));
-            TooSigning_requested_noncelist_remove_timeout();
+//             Serial.println(F("3: Checking for requested timeouts"));
+//             TooSigning_requested_noncelist_remove_timeout();
         }
 
         network_maintenance_timer = millis();
@@ -689,4 +733,5 @@ void TooSigning_signed_network_begin(uint8_t nodeID){
   TooSigning_received_noncelist_initialize();
   TooSigning_requested_noncelist_initialize();
   TooSigning_sent_noncelist_initialize();
+  Serial.println(F("___ Finished initialization ___"));
 }
