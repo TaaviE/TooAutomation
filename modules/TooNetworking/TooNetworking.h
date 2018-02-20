@@ -67,8 +67,6 @@ void TooNetworking_bufferlist_remove(BufferItem * previous, BufferItem * current
 
 BufferItem * TooNetworking_bufferlist_find_for_id(uint8_t nodeID);
 
-bool TooNetworking_send_signed(uint8_t for_node, void * payload, uint8_t size, uint32_t nonce);
-
 bool TooNetworking_bufferlist_send_signed(uint8_t for_node, void * payload, uint8_t size);
 
 bool TooNetworking_send_encrypted(uint8_t for_node, void * payload, uint8_t size);

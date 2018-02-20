@@ -234,7 +234,7 @@ void TooNetworking_bufferlist_add(uint8_t payload_destination, void * payload, u
             Serial.print(F("TooNetworking_bufferlist_add payload: "));
             TooSigning_random_data_print(current->payload, current->payload_size);
             Serial.println();
-            TooNetworking_send_signed(current->payload_destination, current->payload, current->payload_size, nonce);
+            TooNetworking_send_signed_(current->payload_destination, current->payload, current->payload_size, nonce);
         } else { //TODO: Add encryption
             Serial.print(F("Adding pending nonce request... "));
             TooSigning_requested_noncelist_add(payload_destination);
@@ -273,7 +273,7 @@ bool TooNetworking_send_signed(uint8_t for_node, void * payload, uint8_t size){
         Serial.print(F("TooNetworking_send_signed - Payload: "));
         TooSigning_random_data_print(payload, size);
         Serial.println();
-        TooNetworking_send_signed(for_node, payload, size, tempnonce);
+        TooNetworking_send_signed_(for_node, payload, size, tempnonce);
         return true;
     }
   
@@ -409,12 +409,12 @@ BufferItem * TooNetworking_bufferlist_find_for_id(uint8_t nodeID) {
  * @return true if successful, false otherwise
  */
 
-bool TooNetworking_send_signed(uint8_t for_node, void * payload, uint8_t size, uint32_t nonce){
+bool TooNetworking_send_signed_(uint8_t for_node, void * payload, uint8_t size, uint32_t nonce){
     if(TooNetworking_connection_available()){
         Serial.println(F("Node is online"));
         if(TooNetworking_other_node_is_online(for_node)){
             Serial.println(F("Destination is online"));
-            Serial.print(F("TooNetworking_send_signed - Payload: "));
+            Serial.print(F("TooNetworking_send_signed_ - Payload: "));
             TooSigning_random_data_print(payload, size);
             Serial.println();
             
@@ -481,7 +481,7 @@ bool TooNetworking_bufferlist_send_signed(uint8_t for_node, void * payload, uint
         Serial.print(F("TooNetworking_bufferlist_send_signed - Payload: "));
         TooSigning_random_data_print(payload, size);
         Serial.println();
-        if(TooNetworking_send_signed(for_node, payload, size, tempnonce->nonce)){  
+        if(TooNetworking_send_signed_(for_node, payload, size, tempnonce->nonce)){  
             //Message hasn't made it to the buffer list
             return true;
         }
@@ -535,7 +535,7 @@ void TooNetworking_bufferlist_send_all() {
                 Serial.print(F("TooNetworking_bufferlist_send_all - Payload: "));
                 TooSigning_random_data_print(current->payload, current->payload_size);
                 Serial.println();
-                if(TooNetworking_send_signed(current->payload_destination, current->payload, current->payload_size, nonce->nonce)){
+                if(TooNetworking_send_signed_(current->payload_destination, current->payload, current->payload_size, nonce->nonce)){
                     //Message was sent, might as well remove it
                     TooNetworking_bufferlist_remove(previous, current);
                 }
