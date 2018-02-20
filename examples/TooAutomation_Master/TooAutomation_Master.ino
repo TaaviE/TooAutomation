@@ -33,5 +33,6 @@ void setup(void) {
 
 void loop(void) {
   TooNetworking_connection_maintenance();
+  delay(100);
 }
 

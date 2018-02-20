@@ -15,6 +15,8 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
+#define TOONETWORKING_SIGNING // Enable signing
+#define SW_SIGNING
 #define TOORADIO_RF24 // Select nRF24L01+ as the radio
 #define TOO_RF24_CE 9 // Define needed pins
 #define TOO_RF24_CS 10
@@ -22,7 +24,7 @@
 #include "TooAutomation.h"
 
 // Node ID
-#define nodeID 2 
+#define nodeID 1 
 
 uint32_t timer = 0;
 
@@ -40,7 +42,7 @@ void loop(void) {
          Serial.println((uint8_t) dat);
          Serial.println((uint8_t) dat);
          TooSigning_random_data_print(&dat, 4);
-         TooNetworking_bufferlist_send(0, &dat, sizeof(dat));
+         TooNetworking_bufferlist_send_signed(0, &dat, sizeof(dat));
          timer = millis();
          Serial.println(F("-----------------------------------------------"));
     }

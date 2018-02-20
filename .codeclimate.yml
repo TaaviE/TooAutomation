@@ -10,6 +10,7 @@ engines:
       - javascript
       - python
       - php
+      - c
   eslint:
     enabled: true
   fixme:
@@ -24,5 +25,7 @@ ratings:
   - "**.php"
   - "**.py"
   - "**.rb"
+  - "**.cpp"
+  - "**.h"
 exclude_paths: 
   - "docs/**"

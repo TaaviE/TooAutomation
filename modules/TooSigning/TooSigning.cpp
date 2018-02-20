@@ -95,6 +95,10 @@ void TooSigning_random_data_print(const void *data, uint8_t size) {
 
 void TooSigning_requested_noncelist_print() {
     NonceRequested *current = nonce_requested_start;
+    if(current != 0 && current->nonce_request_first == 0){
+        return;
+    }
+    
     Serial.println(F("|>___ REQUESTED NONCE LIST DUMP ___"));
     while (current != 0) {
         Serial.print(F("|> Requested this: "));
@@ -257,8 +261,8 @@ bool TooSigning_requested_noncelist_add(uint8_t passed_nodeID) {
     Serial.println(F("Storing data"));
     current->nonce_from = passed_nodeID;
     current->nonce_request_first = millis();
-    TooSigning_request_nonce_from_node_id(passed_nodeID);
-    current->nonce_request_last = millis();
+//    TooSigning_request_nonce_from_node_id(passed_nodeID);
+//    current->nonce_request_last = millis();
     Serial.println(F("Stored"));
     TooSigning_requested_noncelist_print();
 }
@@ -575,9 +579,7 @@ bool TooSigning_unsigned_network_available(void) {
                 TooSigning_read_hmac_from_progmem(nodeID, &hmac);
 
                 Serial.println(F("HMAC used: "));
-                for (uint8_t counter; counter > 20; counter++) {
-                    Serial.print(hmac[counter], DEC);
-                }
+                TooSigning_random_data_print(hmac, 20);
 
                 Serial.println();
 
@@ -607,6 +609,7 @@ bool TooSigning_unsigned_network_available(void) {
                     TooSigning_hash_data(&(tempnonce->nonce), sizeof(uint32_t));
                 } else {
                     Serial.println(F("Nonce not found!"));
+                    delay(15000);
                     return false; //TODO WARNING: Just keeping the message in the buffer
                 }
 
@@ -649,14 +652,11 @@ bool TooSigning_unsigned_network_available(void) {
                 Serial.println(nodeID);
                 Serial.println(F("Switch"));
                 bool state = mesh.write(&payload, MSG_NONCE, sizeof(payload), nodeID);
-                if (state) {
-                    TooSigning_sent_noncelist_add(nodeID, time);
-                    Serial.println(F("Nonce stored"));
-                    Serial.println(F("Completed nonce sending"));
-                    TooSigning_sent_noncelist_print();
-                    return false;
-                    delay(5000);
-                }
+                TooSigning_sent_noncelist_add(nodeID, time);
+                Serial.println(F("Nonce stored"));
+                Serial.println(F("Completed nonce sending"));
+                TooSigning_sent_noncelist_print();
+                delay(5000);
                 return false;
             }
             case MSG_NONCE: { //"N" like "you sent me a nonce"
