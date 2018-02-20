@@ -1,7 +1,5 @@
 <map id="TooNetworking_bufferlist_add" name="TooNetworking_bufferlist_add">
-<area shape="rect" id="node2" href="$TooNetworking_8h.html#a9209f3e1a2fdf0b3b88d49105b8fc359" title="TooNetworking_send\l_signed" alt="" coords="248,49,393,90"/>
-<area shape="rect" id="node4" href="$TooNetworking_8h.html#a085ff748b00f6be4ebafcae2bb0dded1" title="TooNetworking_bufferlist\l_send_signed" alt="" coords="684,49,851,90"/>
-<area shape="rect" id="node3" href="$TooNetworking_8h.html#a59be7e774988f57ab43c4c078c570c67" title="TooNetworking_bufferlist_add" alt="" coords="441,5,636,32"/>
-<area shape="rect" id="node6" href="$TooNetworking_8h.html#ab58e06e0eb6f2f8ecbebeaf3c173fb22" title="TooNetworking_bufferlist\l_send_all" alt="" coords="455,107,622,149"/>
-<area shape="rect" id="node5" href="$NODE__SKETCH__TooAutomation__Node_8ino_8cpp.html#a0b33edabd7f1c4e4a0bf32c67269be2f" title="loop" alt="" coords="899,56,945,83"/>
+<area shape="rect" id="node2" href="$TooNetworking_8h.html#a9209f3e1a2fdf0b3b88d49105b8fc359" title="TooNetworking_send\l_signed" alt="" coords="259,5,404,47"/>
+<area shape="rect" id="node3" href="$TooNetworking_8h.html#a085ff748b00f6be4ebafcae2bb0dded1" title="TooNetworking_bufferlist\l_send_signed" alt="" coords="248,71,415,112"/>
+<area shape="rect" id="node4" href="$NODE__SKETCH__TooAutomation__Node_8ino_8cpp.html#a0b33edabd7f1c4e4a0bf32c67269be2f" title="loop" alt="" coords="463,78,509,105"/>
 </map>

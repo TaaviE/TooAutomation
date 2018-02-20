@@ -9,120 +9,120 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 81)">
 <title>Sha256Class::resultHmac</title>
 <polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-81 896,-81 896,4 -4,4"/>
-<!-- Node84 -->
+<!-- Node108 -->
 <g id="node1" class="node">
-<title>Node84</title>
+<title>Node108</title>
 <polygon fill="#bfbfbf" stroke="#000000" points="0,-19.5 0,-38.5 131,-38.5 131,-19.5 0,-19.5"/>
 <text text-anchor="middle" x="65.5" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Sha256Class::resultHmac</text>
 </g>
-<!-- Node85 -->
+<!-- Node109 -->
 <g id="node2" class="node">
-<title>Node85</title>
+<title>Node109</title>
 <g id="a_node2"><a xlink:href="classSha256Class.html#a0ca245a22f8b056a3d1902da3c64b705" target="_top" xlink:title="Sha256Class::result">
 <polygon fill="#ffffff" stroke="#000000" points="167,-57.5 167,-76.5 272,-76.5 272,-57.5 167,-57.5"/>
 <text text-anchor="middle" x="219.5" y="-64.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Sha256Class::result</text>
 </a>
 </g>
 </g>
-<!-- Node84&#45;&gt;Node85 -->
+<!-- Node108&#45;&gt;Node109 -->
 <g id="edge1" class="edge">
-<title>Node84&#45;&gt;Node85</title>
+<title>Node108&#45;&gt;Node109</title>
 <path fill="none" stroke="#191970" d="M104.3607,-38.589C124.5911,-43.5809 149.5207,-49.7324 171.0036,-55.0334"/>
 <polygon fill="#191970" stroke="#191970" points="170.3714,-58.4823 180.9187,-57.4799 172.0485,-51.6861 170.3714,-58.4823"/>
 </g>
-<!-- Node90 -->
+<!-- Node114 -->
 <g id="node7" class="node">
-<title>Node90</title>
+<title>Node114</title>
 <g id="a_node7"><a xlink:href="classSha256Class.html#ac1025d69c51fcd1b882ee41114e58339" target="_top" xlink:title="Sha256Class::init">
 <polygon fill="#ffffff" stroke="#000000" points="172.5,-19.5 172.5,-38.5 266.5,-38.5 266.5,-19.5 172.5,-19.5"/>
 <text text-anchor="middle" x="219.5" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Sha256Class::init</text>
 </a>
 </g>
 </g>
-<!-- Node84&#45;&gt;Node90 -->
+<!-- Node108&#45;&gt;Node114 -->
 <g id="edge6" class="edge">
-<title>Node84&#45;&gt;Node90</title>
+<title>Node108&#45;&gt;Node114</title>
 <path fill="none" stroke="#191970" d="M131.2566,-29C141.4499,-29 151.912,-29 161.9073,-29"/>
 <polygon fill="#191970" stroke="#191970" points="162.1237,-32.5001 172.1237,-29 162.1236,-25.5001 162.1237,-32.5001"/>
 </g>
-<!-- Node91 -->
+<!-- Node115 -->
 <g id="node8" class="node">
-<title>Node91</title>
+<title>Node115</title>
 <g id="a_node8"><a xlink:href="classSha256Class.html#a0f0fc4bd4d8c53d232df0d41d7ea25e0" target="_top" xlink:title="Sha256Class::write">
 <polygon fill="#ffffff" stroke="#000000" points="308,-.5 308,-19.5 410,-19.5 410,-.5 308,-.5"/>
 <text text-anchor="middle" x="359" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Sha256Class::write</text>
 </a>
 </g>
 </g>
-<!-- Node84&#45;&gt;Node91 -->
+<!-- Node108&#45;&gt;Node115 -->
 <g id="edge7" class="edge">
-<title>Node84&#45;&gt;Node91</title>
+<title>Node108&#45;&gt;Node115</title>
 <path fill="none" stroke="#191970" d="M106.7383,-19.489C125.0801,-15.7238 147.007,-11.8552 167,-10 210.5356,-5.9603 259.8635,-6.0603 297.6187,-7.1184"/>
 <polygon fill="#191970" stroke="#191970" points="297.8423,-10.6269 307.9463,-7.4395 298.06,-3.6303 297.8423,-10.6269"/>
 </g>
-<!-- Node86 -->
+<!-- Node110 -->
 <g id="node3" class="node">
-<title>Node86</title>
+<title>Node110</title>
 <g id="a_node3"><a xlink:href="classSha256Class.html#a82049dae520ccf0bd8478f2aef639149" target="_top" xlink:title="Sha256Class::pad">
 <polygon fill="#ffffff" stroke="#000000" points="310.5,-47.5 310.5,-66.5 407.5,-66.5 407.5,-47.5 310.5,-47.5"/>
 <text text-anchor="middle" x="359" y="-54.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Sha256Class::pad</text>
 </a>
 </g>
 </g>
-<!-- Node85&#45;&gt;Node86 -->
+<!-- Node109&#45;&gt;Node110 -->
 <g id="edge2" class="edge">
-<title>Node85&#45;&gt;Node86</title>
+<title>Node109&#45;&gt;Node110</title>
 <path fill="none" stroke="#191970" d="M272.239,-63.2194C281.4181,-62.5614 291.0159,-61.8734 300.3422,-61.2049"/>
 <polygon fill="#191970" stroke="#191970" points="300.5988,-64.6955 310.3229,-60.4894 300.0982,-57.7135 300.5988,-64.6955"/>
 </g>
-<!-- Node87 -->
+<!-- Node111 -->
 <g id="node4" class="node">
-<title>Node87</title>
+<title>Node111</title>
 <g id="a_node4"><a xlink:href="classSha256Class.html#ab0b46743e3d59b1c68f52ed89dfaff50" target="_top" xlink:title="Sha256Class::addUncounted">
 <polygon fill="#ffffff" stroke="#000000" points="446,-19.5 446,-38.5 590,-38.5 590,-19.5 446,-19.5"/>
 <text text-anchor="middle" x="518" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Sha256Class::addUncounted</text>
 </a>
 </g>
 </g>
-<!-- Node86&#45;&gt;Node87 -->
+<!-- Node110&#45;&gt;Node111 -->
 <g id="edge3" class="edge">
-<title>Node86&#45;&gt;Node87</title>
+<title>Node110&#45;&gt;Node111</title>
 <path fill="none" stroke="#191970" d="M407.5692,-48.4469C422.1778,-45.8743 438.4373,-43.011 453.8901,-40.2898"/>
 <polygon fill="#191970" stroke="#191970" points="454.6615,-43.7079 463.9029,-38.5265 453.4474,-36.814 454.6615,-43.7079"/>
 </g>
-<!-- Node88 -->
+<!-- Node112 -->
 <g id="node5" class="node">
-<title>Node88</title>
+<title>Node112</title>
 <g id="a_node5"><a xlink:href="classSha256Class.html#a399d2a23951e2130f54af8ac7712068f" target="_top" xlink:title="Sha256Class::hashBlock">
 <polygon fill="#ffffff" stroke="#000000" points="626,-19.5 626,-38.5 753,-38.5 753,-19.5 626,-19.5"/>
 <text text-anchor="middle" x="689.5" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Sha256Class::hashBlock</text>
 </a>
 </g>
 </g>
-<!-- Node87&#45;&gt;Node88 -->
+<!-- Node111&#45;&gt;Node112 -->
 <g id="edge4" class="edge">
-<title>Node87&#45;&gt;Node88</title>
+<title>Node111&#45;&gt;Node112</title>
 <path fill="none" stroke="#191970" d="M590.2344,-29C598.6298,-29 607.2026,-29 615.6198,-29"/>
 <polygon fill="#191970" stroke="#191970" points="615.7873,-32.5001 625.7873,-29 615.7873,-25.5001 615.7873,-32.5001"/>
 </g>
-<!-- Node89 -->
+<!-- Node113 -->
 <g id="node6" class="node">
-<title>Node89</title>
+<title>Node113</title>
 <g id="a_node6"><a xlink:href="classSha256Class.html#ae275718ce9813bb33b2d8d8fbf018bd6" target="_top" xlink:title="Sha256Class::ror32">
 <polygon fill="#ffffff" stroke="#000000" points="789,-19.5 789,-38.5 892,-38.5 892,-19.5 789,-19.5"/>
 <text text-anchor="middle" x="840.5" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Sha256Class::ror32</text>
 </a>
 </g>
 </g>
-<!-- Node88&#45;&gt;Node89 -->
+<!-- Node112&#45;&gt;Node113 -->
 <g id="edge5" class="edge">
-<title>Node88&#45;&gt;Node89</title>
+<title>Node112&#45;&gt;Node113</title>
 <path fill="none" stroke="#191970" d="M753.1,-29C761.5806,-29 770.2667,-29 778.7157,-29"/>
 <polygon fill="#191970" stroke="#191970" points="778.8743,-32.5001 788.8743,-29 778.8742,-25.5001 778.8743,-32.5001"/>
 </g>
-<!-- Node91&#45;&gt;Node87 -->
+<!-- Node115&#45;&gt;Node111 -->
 <g id="edge8" class="edge">
-<title>Node91&#45;&gt;Node87</title>
+<title>Node115&#45;&gt;Node111</title>
 <path fill="none" stroke="#191970" d="M410.1838,-16.1163C418.3401,-17.091 426.9537,-18.1203 435.6131,-19.155"/>
 <polygon fill="#191970" stroke="#191970" points="435.4302,-22.658 445.7748,-20.3693 436.2608,-15.7074 435.4302,-22.658"/>
 </g>

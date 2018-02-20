@@ -1,10 +1,14 @@
 <map id="Sha256Class::result" name="Sha256Class::result">
-<area shape="rect" id="node2" href="$classSha256Class.html#a73d3dcea6eb667fd146d12aa5d106939" title="Sha256Class::initHmac" alt="" coords="201,39,361,65"/>
-<area shape="rect" id="node8" href="$classSha256Class.html#a7556f29cadf7eaca21a537df41318af3" title="Sha256Class::resultHmac" alt="" coords="193,89,368,116"/>
-<area shape="rect" id="node3" href="$TooSigning_8h.html#a1e2cd2b37702263e1fe166395350bf08" title="TooSigning_init_hmac" alt="" coords="416,5,567,32"/>
-<area shape="rect" id="node5" href="$TooSigning_8cpp.html#a03df9fd005c518d1114f912ae7da9f06" title="TooSigning_unsigned\l_network_available" alt="" coords="418,57,565,98"/>
-<area shape="rect" id="node4" href="$TooNetworking_8h.html#ab5dfe46515ee5ca8f9893675df673d96" title="TooNetworking_send\l_signed" alt="" coords="632,115,777,157"/>
-<area shape="rect" id="node6" href="$TooNetworking_8h.html#a7382ba1aed5405c3adc02011ea6c45dd" title="TooNetworking_connection\l_maintenance" alt="" coords="615,50,795,91"/>
-<area shape="rect" id="node7" href="$NODE__SKETCH__TooAutomation__Node_8ino_8cpp.html#a0b33edabd7f1c4e4a0bf32c67269be2f" title="loop" alt="" coords="843,57,889,84"/>
-<area shape="rect" id="node9" href="$TooSigning_8h.html#ab8a2415b95a77c91ffbc6ebbde622f64" title="TooSigning_get_hmac" alt="" coords="416,123,567,149"/>
+<area shape="rect" id="node2" href="$classSha256Class.html#a73d3dcea6eb667fd146d12aa5d106939" title="Sha256Class::initHmac" alt="" coords="201,89,361,116"/>
+<area shape="rect" id="node12" href="$classSha256Class.html#a7556f29cadf7eaca21a537df41318af3" title="Sha256Class::resultHmac" alt="" coords="193,39,368,65"/>
+<area shape="rect" id="node3" href="$TooSigning_8h.html#a1e2cd2b37702263e1fe166395350bf08" title="TooSigning_init_hmac" alt="" coords="416,123,567,149"/>
+<area shape="rect" id="node10" href="$TooSigning_8cpp.html#a03df9fd005c518d1114f912ae7da9f06" title="TooSigning_unsigned\l_network_available" alt="" coords="418,57,565,98"/>
+<area shape="rect" id="node4" href="$TooNetworking_8h.html#a9f893c3218491ee86282fdcd9f376500" title="TooNetworking_send\l_signed_" alt="" coords="632,115,777,157"/>
+<area shape="rect" id="node5" href="$TooNetworking_8h.html#a59be7e774988f57ab43c4c078c570c67" title="TooNetworking_bufferlist_add" alt="" coords="843,181,1037,208"/>
+<area shape="rect" id="node6" href="$TooNetworking_8h.html#a9209f3e1a2fdf0b3b88d49105b8fc359" title="TooNetworking_send\l_signed" alt="" coords="1096,199,1241,241"/>
+<area shape="rect" id="node7" href="$TooNetworking_8h.html#a085ff748b00f6be4ebafcae2bb0dded1" title="TooNetworking_bufferlist\l_send_signed" alt="" coords="1085,65,1252,106"/>
+<area shape="rect" id="node9" href="$TooNetworking_8h.html#ab58e06e0eb6f2f8ecbebeaf3c173fb22" title="TooNetworking_bufferlist\l_send_all" alt="" coords="857,115,1023,157"/>
+<area shape="rect" id="node8" href="$NODE__SKETCH__TooAutomation__Node_8ino_8cpp.html#a0b33edabd7f1c4e4a0bf32c67269be2f" title="loop" alt="" coords="1300,43,1347,69"/>
+<area shape="rect" id="node11" href="$TooNetworking_8h.html#a7382ba1aed5405c3adc02011ea6c45dd" title="TooNetworking_connection\l_maintenance" alt="" coords="615,29,795,70"/>
+<area shape="rect" id="node13" href="$TooSigning_8h.html#ab8a2415b95a77c91ffbc6ebbde622f64" title="TooSigning_get_hmac" alt="" coords="416,5,567,32"/>
 </map>
