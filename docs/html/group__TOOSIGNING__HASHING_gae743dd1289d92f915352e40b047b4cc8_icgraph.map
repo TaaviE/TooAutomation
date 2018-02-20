@@ -1,4 +1,6 @@
 <map id="TooSigning_hash_store" name="TooSigning_hash_store">
 <area shape="rect" id="node2" href="$TooNetworking_8h.html#ab5dfe46515ee5ca8f9893675df673d96" title="TooNetworking_send\l_signed" alt="" coords="213,5,358,47"/>
 <area shape="rect" id="node3" href="$TooSigning_8cpp.html#a03df9fd005c518d1114f912ae7da9f06" title="TooSigning_unsigned\l_network_available" alt="" coords="212,71,359,112"/>
+<area shape="rect" id="node4" href="$TooNetworking_8h.html#a7382ba1aed5405c3adc02011ea6c45dd" title="TooNetworking_connection\l_maintenance" alt="" coords="407,71,587,112"/>
+<area shape="rect" id="node5" href="$NODE__SKETCH__TooAutomation__Node_8ino_8cpp.html#a0b33edabd7f1c4e4a0bf32c67269be2f" title="loop" alt="" coords="635,78,681,105"/>
 </map>

@@ -1,4 +1,8 @@
 <map id="TooSigning_requested_noncelist_retry_all" name="TooSigning_requested_noncelist_retry_all">
 <area shape="rect" id="node2" href="$group__TOOSIGNING__DEBUGGING.html#gabb54a5e4968d69e35d665869d5c6588f" title="TooSigning_requested\l_noncelist_print" alt="" coords="204,5,355,47"/>
 <area shape="rect" id="node3" href="$TooSigning_8cpp.html#a58143364a83636a3d2df075a95cb2bfc" title="TooSigning_request\l_nonce_from_node_id" alt="" coords="205,71,354,112"/>
+<area shape="rect" id="node4" href="$TooSigning_8cpp.html#a7c4b40a9376e0044a89b8abe3a83c970" title="TooSigning_connection_fix" alt="" coords="403,78,581,105"/>
+<area shape="rect" id="node5" href="$TooNetworking_8cpp.html#aefc5dad88b637efb11a3a7b2f76a19b9" title="TooNetworking_connection_fix" alt="" coords="629,78,831,105"/>
+<area shape="rect" id="node6" href="$TooNetworking_8cpp.html#ac352268e177fa2ddf91c8afa5cd04bbf" title="TooNetworking_connection\l_available" alt="" coords="879,41,1059,83"/>
+<area shape="rect" id="node7" href="$TooNetworking_8cpp.html#abdda8f09b9d475ed2c23a2376e2e0151" title="mesh" alt="" coords="1107,78,1161,105"/>
 </map>

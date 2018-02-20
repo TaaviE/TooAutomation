@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 1189;
+var viewWidth = 1286;
 var viewHeight = 129;
 var sectionId = 'dynsection-14';
 </script>
@@ -54,230 +54,261 @@ var sectionId = 'dynsection-14';
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>Sha256Class::ror32</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-125 1185,-125 1185,4 -4,4"/>
-<!-- Node85 -->
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-125 1282,-125 1282,4 -4,4"/>
+<!-- Node99 -->
 <g id="node1" class="node">
-<title>Node85</title>
-<polygon fill="#bfbfbf" stroke="#000000" points="0,-44.5 0,-63.5 103,-63.5 103,-44.5 0,-44.5"/>
-<text text-anchor="middle" x="51.5" y="-51.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Sha256Class::ror32</text>
+<title>Node99</title>
+<polygon fill="#bfbfbf" stroke="#000000" points="0,-57.5 0,-76.5 103,-76.5 103,-57.5 0,-57.5"/>
+<text text-anchor="middle" x="51.5" y="-64.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Sha256Class::ror32</text>
 </g>
-<!-- Node86 -->
+<!-- Node100 -->
 <g id="node2" class="node">
-<title>Node86</title>
+<title>Node100</title>
 <g id="a_node2"><a xlink:href="classSha256Class.html#a399d2a23951e2130f54af8ac7712068f" target="_top" xlink:title="Sha256Class::hashBlock">
-<polygon fill="#ffffff" stroke="#000000" points="139,-44.5 139,-63.5 266,-63.5 266,-44.5 139,-44.5"/>
-<text text-anchor="middle" x="202.5" y="-51.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Sha256Class::hashBlock</text>
+<polygon fill="#ffffff" stroke="#000000" points="139,-57.5 139,-76.5 266,-76.5 266,-57.5 139,-57.5"/>
+<text text-anchor="middle" x="202.5" y="-64.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Sha256Class::hashBlock</text>
 </a>
 </g>
 </g>
-<!-- Node85&#45;&gt;Node86 -->
+<!-- Node99&#45;&gt;Node100 -->
 <g id="edge1" class="edge">
-<title>Node85&#45;&gt;Node86</title>
-<path fill="none" stroke="#191970" d="M113.224,-54C121.6923,-54 130.3998,-54 138.9009,-54"/>
-<polygon fill="#191970" stroke="#191970" points="113.0433,-50.5001 103.0433,-54 113.0433,-57.5001 113.0433,-50.5001"/>
+<title>Node99&#45;&gt;Node100</title>
+<path fill="none" stroke="#191970" d="M113.224,-67C121.6923,-67 130.3998,-67 138.9009,-67"/>
+<polygon fill="#191970" stroke="#191970" points="113.0433,-63.5001 103.0433,-67 113.0433,-70.5001 113.0433,-63.5001"/>
 </g>
-<!-- Node87 -->
+<!-- Node101 -->
 <g id="node3" class="node">
-<title>Node87</title>
+<title>Node101</title>
 <g id="a_node3"><a xlink:href="classSha256Class.html#ab0b46743e3d59b1c68f52ed89dfaff50" target="_top" xlink:title="Sha256Class::addUncounted">
-<polygon fill="#ffffff" stroke="#000000" points="302,-44.5 302,-63.5 446,-63.5 446,-44.5 302,-44.5"/>
-<text text-anchor="middle" x="374" y="-51.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Sha256Class::addUncounted</text>
+<polygon fill="#ffffff" stroke="#000000" points="302,-57.5 302,-76.5 446,-76.5 446,-57.5 302,-57.5"/>
+<text text-anchor="middle" x="374" y="-64.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Sha256Class::addUncounted</text>
 </a>
 </g>
 </g>
-<!-- Node86&#45;&gt;Node87 -->
+<!-- Node100&#45;&gt;Node101 -->
 <g id="edge2" class="edge">
-<title>Node86&#45;&gt;Node87</title>
-<path fill="none" stroke="#191970" d="M276.4728,-54C284.8434,-54 293.3666,-54 301.7152,-54"/>
-<polygon fill="#191970" stroke="#191970" points="276.3603,-50.5001 266.3603,-54 276.3602,-57.5001 276.3603,-50.5001"/>
+<title>Node100&#45;&gt;Node101</title>
+<path fill="none" stroke="#191970" d="M276.4728,-67C284.8434,-67 293.3666,-67 301.7152,-67"/>
+<polygon fill="#191970" stroke="#191970" points="276.3603,-63.5001 266.3603,-67 276.3602,-70.5001 276.3603,-63.5001"/>
 </g>
-<!-- Node88 -->
+<!-- Node102 -->
 <g id="node4" class="node">
-<title>Node88</title>
+<title>Node102</title>
 <g id="a_node4"><a xlink:href="classSha256Class.html#a0f0fc4bd4d8c53d232df0d41d7ea25e0" target="_top" xlink:title="Sha256Class::write">
-<polygon fill="#ffffff" stroke="#000000" points="616.5,-63.5 616.5,-82.5 718.5,-82.5 718.5,-63.5 616.5,-63.5"/>
-<text text-anchor="middle" x="667.5" y="-70.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Sha256Class::write</text>
+<polygon fill="#ffffff" stroke="#000000" points="616.5,-38.5 616.5,-57.5 718.5,-57.5 718.5,-38.5 616.5,-38.5"/>
+<text text-anchor="middle" x="667.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Sha256Class::write</text>
 </a>
 </g>
 </g>
-<!-- Node87&#45;&gt;Node88 -->
+<!-- Node101&#45;&gt;Node102 -->
 <g id="edge3" class="edge">
-<title>Node87&#45;&gt;Node88</title>
-<path fill="none" stroke="#191970" d="M456.2671,-59.3256C507.6598,-62.6526 572.2228,-66.8321 616.3572,-69.6892"/>
-<polygon fill="#191970" stroke="#191970" points="456.3793,-55.8257 446.1741,-58.6723 455.9271,-62.811 456.3793,-55.8257"/>
+<title>Node101&#45;&gt;Node102</title>
+<path fill="none" stroke="#191970" d="M456.2671,-61.6744C507.6598,-58.3474 572.2228,-54.1679 616.3572,-51.3108"/>
+<polygon fill="#191970" stroke="#191970" points="455.9271,-58.189 446.1741,-62.3277 456.3793,-65.1743 455.9271,-58.189"/>
 </g>
-<!-- Node96 -->
-<g id="node12" class="node">
-<title>Node96</title>
-<g id="a_node12"><a xlink:href="classSha256Class.html#a82049dae520ccf0bd8478f2aef639149" target="_top" xlink:title="Sha256Class::pad">
-<polygon fill="#ffffff" stroke="#000000" points="482,-25.5 482,-44.5 579,-44.5 579,-25.5 482,-25.5"/>
-<text text-anchor="middle" x="530.5" y="-32.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Sha256Class::pad</text>
+<!-- Node112 -->
+<g id="node14" class="node">
+<title>Node112</title>
+<g id="a_node14"><a xlink:href="classSha256Class.html#a82049dae520ccf0bd8478f2aef639149" target="_top" xlink:title="Sha256Class::pad">
+<polygon fill="#ffffff" stroke="#000000" points="482,-76.5 482,-95.5 579,-95.5 579,-76.5 482,-76.5"/>
+<text text-anchor="middle" x="530.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Sha256Class::pad</text>
 </a>
 </g>
 </g>
-<!-- Node87&#45;&gt;Node96 -->
-<g id="edge15" class="edge">
-<title>Node87&#45;&gt;Node96</title>
-<path fill="none" stroke="#191970" d="M456.4503,-43.9901C465.0962,-42.9404 473.6735,-41.8991 481.7583,-40.9175"/>
-<polygon fill="#191970" stroke="#191970" points="455.7999,-40.5432 446.2947,-45.223 456.6436,-47.4922 455.7999,-40.5432"/>
-</g>
-<!-- Node89 -->
-<g id="node5" class="node">
-<title>Node89</title>
-<g id="a_node5"><a xlink:href="classSha256Class.html#a73d3dcea6eb667fd146d12aa5d106939" target="_top" xlink:title="Sha256Class::initHmac">
-<polygon fill="#ffffff" stroke="#000000" points="761.5,-25.5 761.5,-44.5 881.5,-44.5 881.5,-25.5 761.5,-25.5"/>
-<text text-anchor="middle" x="821.5" y="-32.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Sha256Class::initHmac</text>
-</a>
-</g>
-</g>
-<!-- Node88&#45;&gt;Node89 -->
-<g id="edge4" class="edge">
-<title>Node88&#45;&gt;Node89</title>
-<path fill="none" stroke="#191970" d="M716.2937,-60.96C737.8082,-55.6512 762.7318,-49.5012 782.9187,-44.5201"/>
-<polygon fill="#191970" stroke="#191970" points="715.231,-57.6172 706.3607,-63.411 716.908,-64.4133 715.231,-57.6172"/>
-</g>
-<!-- Node93 -->
-<g id="node9" class="node">
-<title>Node93</title>
-<g id="a_node9"><a xlink:href="classSha256Class.html#a7556f29cadf7eaca21a537df41318af3" target="_top" xlink:title="Sha256Class::resultHmac">
-<polygon fill="#ffffff" stroke="#000000" points="756,-63.5 756,-82.5 887,-82.5 887,-63.5 756,-63.5"/>
-<text text-anchor="middle" x="821.5" y="-70.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Sha256Class::resultHmac</text>
-</a>
-</g>
-</g>
-<!-- Node88&#45;&gt;Node93 -->
-<g id="edge8" class="edge">
-<title>Node88&#45;&gt;Node93</title>
-<path fill="none" stroke="#191970" d="M729.0102,-73C737.8617,-73 746.9981,-73 755.925,-73"/>
-<polygon fill="#191970" stroke="#191970" points="728.7798,-69.5001 718.7798,-73 728.7797,-76.5001 728.7798,-69.5001"/>
-</g>
-<!-- Node95 -->
-<g id="node11" class="node">
-<title>Node95</title>
-<g id="a_node11"><a xlink:href="group__TOOSIGNING__HASHING.html#gafb2935303b05255e80a7a6fa4be7cf57" target="_top" xlink:title="TooSigning_hash_data">
-<polygon fill="#ffffff" stroke="#000000" points="763.5,-101.5 763.5,-120.5 879.5,-120.5 879.5,-101.5 763.5,-101.5"/>
-<text text-anchor="middle" x="821.5" y="-108.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">TooSigning_hash_data</text>
-</a>
-</g>
-</g>
-<!-- Node88&#45;&gt;Node95 -->
-<g id="edge12" class="edge">
-<title>Node88&#45;&gt;Node95</title>
-<path fill="none" stroke="#191970" d="M716.2937,-85.04C737.8082,-90.3488 762.7318,-96.4988 782.9187,-101.4799"/>
-<polygon fill="#191970" stroke="#191970" points="716.908,-81.5867 706.3607,-82.589 715.231,-88.3828 716.908,-81.5867"/>
-</g>
-<!-- Node90 -->
-<g id="node6" class="node">
-<title>Node90</title>
-<g id="a_node6"><a xlink:href="TooSigning_8h.html#a1e2cd2b37702263e1fe166395350bf08" target="_top" xlink:title="TooSigning_init_hmac">
-<polygon fill="#ffffff" stroke="#000000" points="923,-.5 923,-19.5 1036,-19.5 1036,-.5 923,-.5"/>
-<text text-anchor="middle" x="979.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">TooSigning_init_hmac</text>
-</a>
-</g>
-</g>
-<!-- Node89&#45;&gt;Node90 -->
-<g id="edge5" class="edge">
-<title>Node89&#45;&gt;Node90</title>
-<path fill="none" stroke="#191970" d="M891.6179,-23.9054C902.0719,-22.2513 912.736,-20.5639 922.8655,-18.9612"/>
-<polygon fill="#191970" stroke="#191970" points="891.0139,-20.4573 881.6838,-25.4773 892.1079,-27.3713 891.0139,-20.4573"/>
-</g>
-<!-- Node92 -->
-<g id="node8" class="node">
-<title>Node92</title>
-<g id="a_node8"><a xlink:href="TooSigning_8cpp.html#a03df9fd005c518d1114f912ae7da9f06" target="_top" xlink:title="TooSigning_unsigned\l_network_available">
-<polygon fill="#ffffff" stroke="#000000" points="924.5,-39 924.5,-69 1034.5,-69 1034.5,-39 924.5,-39"/>
-<text text-anchor="start" x="932.5" y="-57" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">TooSigning_unsigned</text>
-<text text-anchor="middle" x="979.5" y="-46" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_network_available</text>
-</a>
-</g>
-</g>
-<!-- Node89&#45;&gt;Node92 -->
-<g id="edge7" class="edge">
-<title>Node89&#45;&gt;Node92</title>
-<path fill="none" stroke="#191970" d="M891.6701,-43.4382C902.6414,-44.7575 913.8427,-46.1045 924.4134,-47.3757"/>
-<polygon fill="#191970" stroke="#191970" points="892.0301,-39.9563 881.6838,-42.2373 891.1943,-46.9063 892.0301,-39.9563"/>
-</g>
-<!-- Node91 -->
-<g id="node7" class="node">
-<title>Node91</title>
-<g id="a_node7"><a xlink:href="TooNetworking_8h.html#ab5dfe46515ee5ca8f9893675df673d96" target="_top" xlink:title="TooNetworking_send\l_signed">
-<polygon fill="#ffffff" stroke="#000000" points="1072,-83 1072,-113 1181,-113 1181,-83 1072,-83"/>
-<text text-anchor="start" x="1080" y="-101" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">TooNetworking_send</text>
-<text text-anchor="middle" x="1126.5" y="-90" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_signed</text>
-</a>
-</g>
-</g>
-<!-- Node90&#45;&gt;Node91 -->
-<g id="edge6" class="edge">
-<title>Node90&#45;&gt;Node91</title>
-<path fill="none" stroke="#191970" d="M1023.3101,-23.1251C1027.6815,-24.9089 1031.9836,-26.8685 1036,-29 1064.2725,-44.0043 1093.0035,-67.6499 1110.2909,-82.9917"/>
-<polygon fill="#191970" stroke="#191970" points="1024.3055,-19.7598 1013.7138,-19.5022 1021.8331,-26.3087 1024.3055,-19.7598"/>
-</g>
-<!-- Node93&#45;&gt;Node92 -->
-<g id="edge11" class="edge">
-<title>Node93&#45;&gt;Node92</title>
-<path fill="none" stroke="#191970" d="M897.0697,-63.9125C906.2707,-62.8061 915.534,-61.6921 924.3589,-60.6309"/>
-<polygon fill="#191970" stroke="#191970" points="896.6442,-60.4384 887.1336,-65.1074 897.48,-67.3883 896.6442,-60.4384"/>
-</g>
-<!-- Node94 -->
-<g id="node10" class="node">
-<title>Node94</title>
-<g id="a_node10"><a xlink:href="TooSigning_8h.html#ab8a2415b95a77c91ffbc6ebbde622f64" target="_top" xlink:title="TooSigning_get_hmac">
-<polygon fill="#ffffff" stroke="#000000" points="923,-88.5 923,-107.5 1036,-107.5 1036,-88.5 923,-88.5"/>
-<text text-anchor="middle" x="979.5" y="-95.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">TooSigning_get_hmac</text>
-</a>
-</g>
-</g>
-<!-- Node93&#45;&gt;Node94 -->
-<g id="edge9" class="edge">
-<title>Node93&#45;&gt;Node94</title>
-<path fill="none" stroke="#191970" d="M891.6179,-84.0946C902.0719,-85.7487 912.736,-87.4361 922.8655,-89.0388"/>
-<polygon fill="#191970" stroke="#191970" points="892.1079,-80.6287 881.6838,-82.5227 891.0139,-87.5427 892.1079,-80.6287"/>
-</g>
-<!-- Node94&#45;&gt;Node91 -->
-<g id="edge10" class="edge">
-<title>Node94&#45;&gt;Node91</title>
-<path fill="none" stroke="#191970" d="M1046.5402,-98C1054.9787,-98 1063.5317,-98 1071.7496,-98"/>
-<polygon fill="#191970" stroke="#191970" points="1046.3341,-94.5001 1036.334,-98 1046.334,-101.5001 1046.3341,-94.5001"/>
-</g>
-<!-- Node95&#45;&gt;Node91 -->
-<g id="edge13" class="edge">
-<title>Node95&#45;&gt;Node91</title>
-<path fill="none" stroke="#191970" d="M890.0831,-117.4879C932.2734,-120.3466 987.39,-122.0477 1036,-117 1047.657,-115.7895 1060.0248,-113.7244 1071.7501,-111.3906"/>
-<polygon fill="#191970" stroke="#191970" points="890.146,-113.9835 879.9215,-116.7603 889.646,-120.9656 890.146,-113.9835"/>
-</g>
-<!-- Node95&#45;&gt;Node92 -->
-<g id="edge14" class="edge">
-<title>Node95&#45;&gt;Node92</title>
-<path fill="none" stroke="#191970" d="M866.8792,-98.5247C873.6612,-96.4617 880.5412,-94.2561 887,-92 906.5043,-85.187 927.8631,-76.4969 945.1377,-69.147"/>
-<polygon fill="#191970" stroke="#191970" points="865.6644,-95.2342 857.0732,-101.4344 867.6557,-101.945 865.6644,-95.2342"/>
-</g>
-<!-- Node97 -->
-<g id="node13" class="node">
-<title>Node97</title>
-<g id="a_node13"><a xlink:href="classSha256Class.html#a0ca245a22f8b056a3d1902da3c64b705" target="_top" xlink:title="Sha256Class::result">
-<polygon fill="#ffffff" stroke="#000000" points="615,-25.5 615,-44.5 720,-44.5 720,-25.5 615,-25.5"/>
-<text text-anchor="middle" x="667.5" y="-32.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Sha256Class::result</text>
-</a>
-</g>
-</g>
-<!-- Node96&#45;&gt;Node97 -->
-<g id="edge16" class="edge">
-<title>Node96&#45;&gt;Node97</title>
-<path fill="none" stroke="#191970" d="M589.3612,-35C597.8127,-35 606.4639,-35 614.7863,-35"/>
-<polygon fill="#191970" stroke="#191970" points="589.1869,-31.5001 579.1868,-35 589.1868,-38.5001 589.1869,-31.5001"/>
-</g>
-<!-- Node97&#45;&gt;Node89 -->
+<!-- Node101&#45;&gt;Node112 -->
 <g id="edge17" class="edge">
-<title>Node97&#45;&gt;Node89</title>
-<path fill="none" stroke="#191970" d="M730.2416,-35C740.5627,-35 751.2379,-35 761.4902,-35"/>
-<polygon fill="#191970" stroke="#191970" points="730.0674,-31.5001 720.0673,-35 730.0673,-38.5001 730.0674,-31.5001"/>
+<title>Node101&#45;&gt;Node112</title>
+<path fill="none" stroke="#191970" d="M456.4503,-77.0099C465.0962,-78.0596 473.6735,-79.1009 481.7583,-80.0825"/>
+<polygon fill="#191970" stroke="#191970" points="456.6436,-73.5078 446.2947,-75.777 455.7999,-80.4568 456.6436,-73.5078"/>
 </g>
-<!-- Node97&#45;&gt;Node93 -->
+<!-- Node103 -->
+<g id="node5" class="node">
+<title>Node103</title>
+<g id="a_node5"><a xlink:href="classSha256Class.html#a73d3dcea6eb667fd146d12aa5d106939" target="_top" xlink:title="Sha256Class::initHmac">
+<polygon fill="#ffffff" stroke="#000000" points="761.5,-38.5 761.5,-57.5 881.5,-57.5 881.5,-38.5 761.5,-38.5"/>
+<text text-anchor="middle" x="821.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Sha256Class::initHmac</text>
+</a>
+</g>
+</g>
+<!-- Node102&#45;&gt;Node103 -->
+<g id="edge4" class="edge">
+<title>Node102&#45;&gt;Node103</title>
+<path fill="none" stroke="#191970" d="M728.8829,-48C739.5846,-48 750.7064,-48 761.3738,-48"/>
+<polygon fill="#191970" stroke="#191970" points="728.7798,-44.5001 718.7798,-48 728.7797,-51.5001 728.7798,-44.5001"/>
+</g>
+<!-- Node109 -->
+<g id="node11" class="node">
+<title>Node109</title>
+<g id="a_node11"><a xlink:href="classSha256Class.html#a7556f29cadf7eaca21a537df41318af3" target="_top" xlink:title="Sha256Class::resultHmac">
+<polygon fill="#ffffff" stroke="#000000" points="756,-76.5 756,-95.5 887,-95.5 887,-76.5 756,-76.5"/>
+<text text-anchor="middle" x="821.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Sha256Class::resultHmac</text>
+</a>
+</g>
+</g>
+<!-- Node102&#45;&gt;Node109 -->
+<g id="edge10" class="edge">
+<title>Node102&#45;&gt;Node109</title>
+<path fill="none" stroke="#191970" d="M716.2937,-60.04C737.8082,-65.3488 762.7318,-71.4988 782.9187,-76.4799"/>
+<polygon fill="#191970" stroke="#191970" points="716.908,-56.5867 706.3607,-57.589 715.231,-63.3828 716.908,-56.5867"/>
+</g>
+<!-- Node111 -->
+<g id="node13" class="node">
+<title>Node111</title>
+<g id="a_node13"><a xlink:href="group__TOOSIGNING__HASHING.html#gafb2935303b05255e80a7a6fa4be7cf57" target="_top" xlink:title="TooSigning_hash_data">
+<polygon fill="#ffffff" stroke="#000000" points="763.5,-.5 763.5,-19.5 879.5,-19.5 879.5,-.5 763.5,-.5"/>
+<text text-anchor="middle" x="821.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">TooSigning_hash_data</text>
+</a>
+</g>
+</g>
+<!-- Node102&#45;&gt;Node111 -->
+<g id="edge14" class="edge">
+<title>Node102&#45;&gt;Node111</title>
+<path fill="none" stroke="#191970" d="M716.2937,-35.96C737.8082,-30.6512 762.7318,-24.5012 782.9187,-19.5201"/>
+<polygon fill="#191970" stroke="#191970" points="715.231,-32.6172 706.3607,-38.411 716.908,-39.4133 715.231,-32.6172"/>
+</g>
+<!-- Node104 -->
+<g id="node6" class="node">
+<title>Node104</title>
+<g id="a_node6"><a xlink:href="TooSigning_8h.html#a1e2cd2b37702263e1fe166395350bf08" target="_top" xlink:title="TooSigning_init_hmac">
+<polygon fill="#ffffff" stroke="#000000" points="923,-13.5 923,-32.5 1036,-32.5 1036,-13.5 923,-13.5"/>
+<text text-anchor="middle" x="979.5" y="-20.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">TooSigning_init_hmac</text>
+</a>
+</g>
+</g>
+<!-- Node103&#45;&gt;Node104 -->
+<g id="edge5" class="edge">
+<title>Node103&#45;&gt;Node104</title>
+<path fill="none" stroke="#191970" d="M891.6179,-36.9054C902.0719,-35.2513 912.736,-33.5639 922.8655,-31.9612"/>
+<polygon fill="#191970" stroke="#191970" points="891.0139,-33.4573 881.6838,-38.4773 892.1079,-40.3713 891.0139,-33.4573"/>
+</g>
+<!-- Node106 -->
+<g id="node8" class="node">
+<title>Node106</title>
+<g id="a_node8"><a xlink:href="TooSigning_8cpp.html#a03df9fd005c518d1114f912ae7da9f06" target="_top" xlink:title="TooSigning_unsigned\l_network_available">
+<polygon fill="#ffffff" stroke="#000000" points="924.5,-52 924.5,-82 1034.5,-82 1034.5,-52 924.5,-52"/>
+<text text-anchor="start" x="932.5" y="-70" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">TooSigning_unsigned</text>
+<text text-anchor="middle" x="979.5" y="-59" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_network_available</text>
+</a>
+</g>
+</g>
+<!-- Node103&#45;&gt;Node106 -->
+<g id="edge7" class="edge">
+<title>Node103&#45;&gt;Node106</title>
+<path fill="none" stroke="#191970" d="M891.6701,-56.4382C902.6414,-57.7575 913.8427,-59.1045 924.4134,-60.3757"/>
+<polygon fill="#191970" stroke="#191970" points="892.0301,-52.9563 881.6838,-55.2373 891.1943,-59.9063 892.0301,-52.9563"/>
+</g>
+<!-- Node105 -->
+<g id="node7" class="node">
+<title>Node105</title>
+<g id="a_node7"><a xlink:href="TooNetworking_8h.html#ab5dfe46515ee5ca8f9893675df673d96" target="_top" xlink:title="TooNetworking_send\l_signed">
+<polygon fill="#ffffff" stroke="#000000" points="1085,-5 1085,-35 1194,-35 1194,-5 1085,-5"/>
+<text text-anchor="start" x="1093" y="-23" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">TooNetworking_send</text>
+<text text-anchor="middle" x="1139.5" y="-12" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_signed</text>
+</a>
+</g>
+</g>
+<!-- Node104&#45;&gt;Node105 -->
+<g id="edge6" class="edge">
+<title>Node104&#45;&gt;Node105</title>
+<path fill="none" stroke="#191970" d="M1046.5144,-21.7435C1059.33,-21.5032 1072.6024,-21.2543 1084.9684,-21.0225"/>
+<polygon fill="#191970" stroke="#191970" points="1046.2931,-18.2469 1036.3605,-21.9339 1046.4244,-25.2457 1046.2931,-18.2469"/>
+</g>
+<!-- Node107 -->
+<g id="node9" class="node">
+<title>Node107</title>
+<g id="a_node9"><a xlink:href="TooNetworking_8h.html#a7382ba1aed5405c3adc02011ea6c45dd" target="_top" xlink:title="TooNetworking_connection\l_maintenance">
+<polygon fill="#ffffff" stroke="#000000" points="1072,-54 1072,-84 1207,-84 1207,-54 1072,-54"/>
+<text text-anchor="start" x="1080" y="-72" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">TooNetworking_connection</text>
+<text text-anchor="middle" x="1139.5" y="-61" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_maintenance</text>
+</a>
+</g>
+</g>
+<!-- Node106&#45;&gt;Node107 -->
+<g id="edge8" class="edge">
+<title>Node106&#45;&gt;Node107</title>
+<path fill="none" stroke="#191970" d="M1044.587,-67.8136C1053.5862,-67.9261 1062.8465,-68.0418 1071.8902,-68.1549"/>
+<polygon fill="#191970" stroke="#191970" points="1044.6059,-64.3136 1034.5629,-67.6883 1044.5184,-71.3131 1044.6059,-64.3136"/>
+</g>
+<!-- Node108 -->
+<g id="node10" class="node">
+<title>Node108</title>
+<g id="a_node10"><a xlink:href="NODE__SKETCH__TooAutomation__Node_8ino_8cpp.html#a0b33edabd7f1c4e4a0bf32c67269be2f" target="_top" xlink:title="loop">
+<polygon fill="#ffffff" stroke="#000000" points="1243,-59.5 1243,-78.5 1278,-78.5 1278,-59.5 1243,-59.5"/>
+<text text-anchor="middle" x="1260.5" y="-66.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">loop</text>
+</a>
+</g>
+</g>
+<!-- Node107&#45;&gt;Node108 -->
+<g id="edge9" class="edge">
+<title>Node107&#45;&gt;Node108</title>
+<path fill="none" stroke="#191970" d="M1217.1566,-69C1226.6588,-69 1235.5454,-69 1242.7679,-69"/>
+<polygon fill="#191970" stroke="#191970" points="1217.0755,-65.5001 1207.0754,-69 1217.0754,-72.5001 1217.0755,-65.5001"/>
+</g>
+<!-- Node109&#45;&gt;Node106 -->
+<g id="edge13" class="edge">
+<title>Node109&#45;&gt;Node106</title>
+<path fill="none" stroke="#191970" d="M897.0697,-76.9125C906.2707,-75.8061 915.534,-74.6921 924.3589,-73.6309"/>
+<polygon fill="#191970" stroke="#191970" points="896.6442,-73.4384 887.1336,-78.1074 897.48,-80.3883 896.6442,-73.4384"/>
+</g>
+<!-- Node110 -->
+<g id="node12" class="node">
+<title>Node110</title>
+<g id="a_node12"><a xlink:href="TooSigning_8h.html#ab8a2415b95a77c91ffbc6ebbde622f64" target="_top" xlink:title="TooSigning_get_hmac">
+<polygon fill="#ffffff" stroke="#000000" points="923,-101.5 923,-120.5 1036,-120.5 1036,-101.5 923,-101.5"/>
+<text text-anchor="middle" x="979.5" y="-108.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">TooSigning_get_hmac</text>
+</a>
+</g>
+</g>
+<!-- Node109&#45;&gt;Node110 -->
+<g id="edge11" class="edge">
+<title>Node109&#45;&gt;Node110</title>
+<path fill="none" stroke="#191970" d="M891.6179,-97.0946C902.0719,-98.7487 912.736,-100.4361 922.8655,-102.0388"/>
+<polygon fill="#191970" stroke="#191970" points="892.1079,-93.6287 881.6838,-95.5227 891.0139,-100.5427 892.1079,-93.6287"/>
+</g>
+<!-- Node110&#45;&gt;Node105 -->
+<g id="edge12" class="edge">
+<title>Node110&#45;&gt;Node105</title>
+<path fill="none" stroke="#191970" d="M1025.597,-97.2909C1029.2567,-95.4317 1032.7783,-93.3425 1036,-91 1057.2815,-75.526 1050.7293,-59.4888 1072,-44 1076.625,-40.6322 1081.7673,-37.6998 1087.0916,-35.1551"/>
+<polygon fill="#191970" stroke="#191970" points="1024.0028,-94.1698 1016.3074,-101.452 1026.8644,-100.5582 1024.0028,-94.1698"/>
+</g>
+<!-- Node111&#45;&gt;Node105 -->
+<g id="edge15" class="edge">
+<title>Node111&#45;&gt;Node105</title>
+<path fill="none" stroke="#191970" d="M889.9991,-4.4417C932.1586,-1.9245 987.2723,-.2558 1036,-4 1051.9533,-5.2258 1069.1687,-7.4995 1084.8934,-9.9558"/>
+<polygon fill="#191970" stroke="#191970" points="889.6067,-.9594 879.8457,-5.0791 890.0454,-7.9456 889.6067,-.9594"/>
+</g>
+<!-- Node111&#45;&gt;Node106 -->
+<g id="edge16" class="edge">
+<title>Node111&#45;&gt;Node106</title>
+<path fill="none" stroke="#191970" d="M866.8792,-22.4753C873.6612,-24.5383 880.5412,-26.7439 887,-29 906.5043,-35.813 927.8631,-44.5031 945.1377,-51.853"/>
+<polygon fill="#191970" stroke="#191970" points="867.6557,-19.055 857.0732,-19.5656 865.6644,-25.7658 867.6557,-19.055"/>
+</g>
+<!-- Node113 -->
+<g id="node15" class="node">
+<title>Node113</title>
+<g id="a_node15"><a xlink:href="classSha256Class.html#a0ca245a22f8b056a3d1902da3c64b705" target="_top" xlink:title="Sha256Class::result">
+<polygon fill="#ffffff" stroke="#000000" points="615,-76.5 615,-95.5 720,-95.5 720,-76.5 615,-76.5"/>
+<text text-anchor="middle" x="667.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Sha256Class::result</text>
+</a>
+</g>
+</g>
+<!-- Node112&#45;&gt;Node113 -->
 <g id="edge18" class="edge">
-<title>Node97&#45;&gt;Node93</title>
-<path fill="none" stroke="#191970" d="M716.2937,-47.04C737.8082,-52.3488 762.7318,-58.4988 782.9187,-63.4799"/>
-<polygon fill="#191970" stroke="#191970" points="716.908,-43.5867 706.3607,-44.589 715.231,-50.3828 716.908,-43.5867"/>
+<title>Node112&#45;&gt;Node113</title>
+<path fill="none" stroke="#191970" d="M589.3612,-86C597.8127,-86 606.4639,-86 614.7863,-86"/>
+<polygon fill="#191970" stroke="#191970" points="589.1869,-82.5001 579.1868,-86 589.1868,-89.5001 589.1869,-82.5001"/>
+</g>
+<!-- Node113&#45;&gt;Node103 -->
+<g id="edge19" class="edge">
+<title>Node113&#45;&gt;Node103</title>
+<path fill="none" stroke="#191970" d="M716.2937,-73.96C737.8082,-68.6512 762.7318,-62.5012 782.9187,-57.5201"/>
+<polygon fill="#191970" stroke="#191970" points="715.231,-70.6172 706.3607,-76.411 716.908,-77.4133 715.231,-70.6172"/>
+</g>
+<!-- Node113&#45;&gt;Node109 -->
+<g id="edge20" class="edge">
+<title>Node113&#45;&gt;Node109</title>
+<path fill="none" stroke="#191970" d="M730.2163,-86C738.6565,-86 747.334,-86 755.8237,-86"/>
+<polygon fill="#191970" stroke="#191970" points="730.0674,-82.5001 720.0673,-86 730.0673,-89.5001 730.0674,-82.5001"/>
 </g>
 </g>
 </svg>

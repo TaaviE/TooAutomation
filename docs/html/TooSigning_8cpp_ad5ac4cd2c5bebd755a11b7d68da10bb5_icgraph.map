@@ -1,4 +1,5 @@
 <map id="TooSigning_signed_network_begin" name="TooSigning_signed_network_begin">
-<area shape="rect" id="node2" href="$TooNetworking_8h.html#aec97902cf0d3ec10fd86927f3d1df0c6" title="TooNetworking_connection\l_begin" alt="" coords="239,5,419,47"/>
-<area shape="rect" id="node3" href="$TooNetworking_8h.html#a2676204dee95da1ef337de95eb0e9bcb" title="TooNetworking_begin" alt="" coords="467,13,615,39"/>
+<area shape="rect" id="node2" href="$TooNetworking_8h.html#aec97902cf0d3ec10fd86927f3d1df0c6" title="TooNetworking_connection\l_begin" alt="" coords="239,23,419,65"/>
+<area shape="rect" id="node3" href="$NODE__SKETCH__TooAutomation__Node_8ino_8cpp.html#a7dfd9b79bc5a37d7df40207afbc5431f" title="setup" alt="" coords="513,5,568,32"/>
+<area shape="rect" id="node4" href="$TooNetworking_8h.html#a2676204dee95da1ef337de95eb0e9bcb" title="TooNetworking_begin" alt="" coords="467,56,615,83"/>
 </map>
