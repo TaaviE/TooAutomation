@@ -1,22 +1,20 @@
 <map id="TooNetworking_send_signed_" name="TooNetworking_send_signed_">
-<area shape="rect" id="node2" href="$TooNetworking_8cpp.html#ac352268e177fa2ddf91c8afa5cd04bbf" title="TooNetworking_connection\l_available" alt="" coords="448,5,628,47"/>
+<area shape="rect" id="node2" href="$TooNetworking_8cpp.html#a48504aef69d9ac92e34269a64f7b518b" title="TooNetworking_connection\l_check" alt="" coords="448,5,628,47"/>
 <area shape="rect" id="node4" href="$TooNetworking_8cpp.html#af4808c2c0857cde9a6721ad54f5ab42d" title="TooNetworking_other\l_node_is_online" alt="" coords="226,171,373,212"/>
 <area shape="rect" id="node5" href="$group__TOOSIGNING__DEBUGGING.html#ga974dd51d29b9bd928de51c481289aad7" title="TooSigning_random_data\l_print" alt="" coords="215,236,384,277"/>
 <area shape="rect" id="node6" href="$TooSigning_8cpp.html#a3994a32f8b2275d51b6832644f703bc7" title="TooSigning_read_hmac\l_from_progmem" alt="" coords="220,301,379,343"/>
-<area shape="rect" id="node7" href="$TooSigning_8cpp.html#a1e2cd2b37702263e1fe166395350bf08" title="TooSigning_init_hmac" alt="" coords="224,367,375,394"/>
-<area shape="rect" id="node16" href="$group__TOOSIGNING__HASHING.html#gafb2935303b05255e80a7a6fa4be7cf57" title="TooSigning_hash_data" alt="" coords="461,469,615,495"/>
-<area shape="rect" id="node17" href="$group__TOOSIGNING__HASHING.html#gae743dd1289d92f915352e40b047b4cc8" title="TooSigning_hash_store" alt="" coords="220,519,379,546"/>
-<area shape="rect" id="node18" href="$TooSigning_8cpp.html#ab8a2415b95a77c91ffbc6ebbde622f64" title="TooSigning_get_hmac" alt="" coords="224,418,375,445"/>
-<area shape="rect" id="node20" href="$TooNetworking_8cpp.html#a46674b3fdc9ee370b0839869aa145b75" title="TooNetworking_send" alt="" coords="465,122,611,149"/>
-<area shape="rect" id="node21" href="$TooNetworking_8cpp.html#aefc5dad88b637efb11a3a7b2f76a19b9" title="TooNetworking_connection_fix" alt="" coords="199,69,400,95"/>
-<area shape="rect" id="node3" href="$TooNetworking_8cpp.html#abdda8f09b9d475ed2c23a2376e2e0151" title="mesh" alt="" coords="719,71,773,98"/>
-<area shape="rect" id="node8" href="$classSha256Class.html#a73d3dcea6eb667fd146d12aa5d106939" title="Sha256Class::initHmac" alt="" coords="458,367,618,394"/>
-<area shape="rect" id="node9" href="$classSha256Class.html#ac1025d69c51fcd1b882ee41114e58339" title="Sha256Class::init" alt="" coords="683,367,809,394"/>
-<area shape="rect" id="node10" href="$classSha256Class.html#a0f0fc4bd4d8c53d232df0d41d7ea25e0" title="Sha256Class::write" alt="" coords="678,469,814,495"/>
-<area shape="rect" id="node14" href="$classSha256Class.html#a0ca245a22f8b056a3d1902da3c64b705" title="Sha256Class::result" alt="" coords="676,418,816,445"/>
-<area shape="rect" id="node11" href="$classSha256Class.html#ab0b46743e3d59b1c68f52ed89dfaff50" title="Sha256Class::addUncounted" alt="" coords="1041,443,1233,470"/>
-<area shape="rect" id="node12" href="$classSha256Class.html#a399d2a23951e2130f54af8ac7712068f" title="Sha256Class::hashBlock" alt="" coords="1281,443,1451,470"/>
-<area shape="rect" id="node13" href="$classSha256Class.html#ae275718ce9813bb33b2d8d8fbf018bd6" title="Sha256Class::ror32" alt="" coords="1499,443,1636,470"/>
-<area shape="rect" id="node15" href="$classSha256Class.html#a82049dae520ccf0bd8478f2aef639149" title="Sha256Class::pad" alt="" coords="864,418,993,445"/>
-<area shape="rect" id="node19" href="$classSha256Class.html#a7556f29cadf7eaca21a537df41318af3" title="Sha256Class::resultHmac" alt="" coords="451,418,625,445"/>
+<area shape="rect" id="node7" href="$classSha256Class.html#a73d3dcea6eb667fd146d12aa5d106939" title="Sha256Class::initHmac" alt="" coords="219,469,379,495"/>
+<area shape="rect" id="node15" href="$group__TOOSIGNING__HASHING.html#gafb2935303b05255e80a7a6fa4be7cf57" title="TooSigning_hash_data" alt="" coords="222,367,377,394"/>
+<area shape="rect" id="node16" href="$group__TOOSIGNING__HASHING.html#gae743dd1289d92f915352e40b047b4cc8" title="TooSigning_hash_store" alt="" coords="220,519,379,546"/>
+<area shape="rect" id="node17" href="$classSha256Class.html#a7556f29cadf7eaca21a537df41318af3" title="Sha256Class::resultHmac" alt="" coords="212,418,387,445"/>
+<area shape="rect" id="node18" href="$TooNetworking_8cpp.html#a46674b3fdc9ee370b0839869aa145b75" title="TooNetworking_send" alt="" coords="465,122,611,149"/>
+<area shape="rect" id="node19" href="$TooNetworking_8cpp.html#aefc5dad88b637efb11a3a7b2f76a19b9" title="TooNetworking_connection_fix" alt="" coords="199,69,400,95"/>
+<area shape="rect" id="node3" href="$TooNetworking_8cpp.html#abdda8f09b9d475ed2c23a2376e2e0151" title="mesh" alt="" coords="713,71,768,98"/>
+<area shape="rect" id="node8" href="$classSha256Class.html#ac1025d69c51fcd1b882ee41114e58339" title="Sha256Class::init" alt="" coords="475,418,601,445"/>
+<area shape="rect" id="node9" href="$classSha256Class.html#a0f0fc4bd4d8c53d232df0d41d7ea25e0" title="Sha256Class::write" alt="" coords="470,367,606,394"/>
+<area shape="rect" id="node13" href="$classSha256Class.html#a0ca245a22f8b056a3d1902da3c64b705" title="Sha256Class::result" alt="" coords="468,469,608,495"/>
+<area shape="rect" id="node10" href="$classSha256Class.html#ab0b46743e3d59b1c68f52ed89dfaff50" title="Sha256Class::addUncounted" alt="" coords="853,430,1045,457"/>
+<area shape="rect" id="node11" href="$classSha256Class.html#a399d2a23951e2130f54af8ac7712068f" title="Sha256Class::hashBlock" alt="" coords="1093,430,1263,457"/>
+<area shape="rect" id="node12" href="$classSha256Class.html#ae275718ce9813bb33b2d8d8fbf018bd6" title="Sha256Class::ror32" alt="" coords="1311,430,1448,457"/>
+<area shape="rect" id="node14" href="$classSha256Class.html#a82049dae520ccf0bd8478f2aef639149" title="Sha256Class::pad" alt="" coords="676,455,805,482"/>
 </map>

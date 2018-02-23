@@ -79,10 +79,10 @@ var sectionId = 'dynsection-0';
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="TooNetworking_8cpp.html#ac352268e177fa2ddf91c8afa5cd04bbf" target="_top" xlink:title="TooNetworking_connection\l_available">
+<g id="a_node3"><a xlink:href="TooNetworking_8cpp.html#a48504aef69d9ac92e34269a64f7b518b" target="_top" xlink:title="TooNetworking_connection\l_check">
 <polygon fill="#ffffff" stroke="#000000" points="357,-17 357,-47 492,-47 492,-17 357,-17"/>
 <text text-anchor="start" x="365" y="-35" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">TooNetworking_connection</text>
-<text text-anchor="middle" x="424.5" y="-24" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_available</text>
+<text text-anchor="middle" x="424.5" y="-24" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_check</text>
 </a>
 </g>
 </g>

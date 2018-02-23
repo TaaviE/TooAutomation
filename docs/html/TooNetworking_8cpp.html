@@ -85,14 +85,14 @@ Functions</h2></td></tr>
 <tr class="separator:a46674b3fdc9ee370b0839869aa145b75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4808c2c0857cde9a6721ad54f5ab42d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8cpp.html#af4808c2c0857cde9a6721ad54f5ab42d">TooNetworking_other_node_is_online</a> (uint8_t nodeID)</td></tr>
 <tr class="separator:af4808c2c0857cde9a6721ad54f5ab42d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7771141375a0a88ce46bb99ab56ee51"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8cpp.html#aa7771141375a0a88ce46bb99ab56ee51">TooNetworking_this_node_is_online</a> ()</td></tr>
-<tr class="separator:aa7771141375a0a88ce46bb99ab56ee51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8a4e879d4d71fed2a8940cf93b75ae4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8cpp.html#aa8a4e879d4d71fed2a8940cf93b75ae4">TooNetworking_bufferlist_initialize</a> ()</td></tr>
 <tr class="separator:aa8a4e879d4d71fed2a8940cf93b75ae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac352268e177fa2ddf91c8afa5cd04bbf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8cpp.html#ac352268e177fa2ddf91c8afa5cd04bbf">TooNetworking_connection_available</a> ()</td></tr>
-<tr class="separator:ac352268e177fa2ddf91c8afa5cd04bbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48504aef69d9ac92e34269a64f7b518b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8cpp.html#a48504aef69d9ac92e34269a64f7b518b">TooNetworking_connection_check</a> ()</td></tr>
+<tr class="separator:a48504aef69d9ac92e34269a64f7b518b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c91b7ab2f6500c287ecc7ab4a018ef6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8cpp.html#a3c91b7ab2f6500c287ecc7ab4a018ef6">TooNetworking_bufferlist_remove</a> (<a class="el" href="structBufferItem.html">BufferItem</a> *previous, <a class="el" href="structBufferItem.html">BufferItem</a> *current)</td></tr>
 <tr class="separator:a3c91b7ab2f6500c287ecc7ab4a018ef6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fb2509b5c89b84b0cc847535544ed6e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8cpp.html#a7fb2509b5c89b84b0cc847535544ed6e">TooNetworking_bufferlist_send</a> (uint8_t destination, void *payload, uint8_t length)</td></tr>
+<tr class="separator:a7fb2509b5c89b84b0cc847535544ed6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ad03a7efb42cf40ca3e20fb5df3a5db"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8cpp.html#a0ad03a7efb42cf40ca3e20fb5df3a5db">TooNetworking_bufferlist_send_</a> (<a class="el" href="structBufferItem.html">BufferItem</a> *current, <a class="el" href="structBufferItem.html">BufferItem</a> *previous)</td></tr>
 <tr class="separator:a0ad03a7efb42cf40ca3e20fb5df3a5db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8040740e6ffca2f68beb7f8e57d63fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8cpp.html#aa8040740e6ffca2f68beb7f8e57d63fc">TooNetworking_bufferlist_add</a> (uint8_t payload_destination, void *payload, uint8_t size, uint8_t type=<a class="el" href="group__TOONETWORKING__RESERVED__TYPES.html#gga8a71ab4395ca4331fc50559eb1127e76a5fe4109a50f53cfac737c1cc5a7c7a89">MSG_REGULAR</a>)</td></tr>
@@ -107,8 +107,6 @@ Functions</h2></td></tr>
 <tr class="separator:ae40e5f0c9496fa804d00c5fe275ade4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9cd17becc197be8de7befa25116c3a67"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8cpp.html#a9cd17becc197be8de7befa25116c3a67">TooNetworking_read</a> (RF24NetworkHeader &amp;header, void *message, uint16_t maxlen)</td></tr>
 <tr class="separator:a9cd17becc197be8de7befa25116c3a67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48504aef69d9ac92e34269a64f7b518b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8cpp.html#a48504aef69d9ac92e34269a64f7b518b">TooNetworking_connection_check</a> ()</td></tr>
-<tr class="separator:a48504aef69d9ac92e34269a64f7b518b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefc5dad88b637efb11a3a7b2f76a19b9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8cpp.html#aefc5dad88b637efb11a3a7b2f76a19b9">TooNetworking_connection_fix</a> ()</td></tr>
 <tr class="separator:aefc5dad88b637efb11a3a7b2f76a19b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga2b5485b317146ce7c14bbad26172d796"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TOONETWORKING__SIMPLE__BUFFER.html#ga2b5485b317146ce7c14bbad26172d796">TooNetworking_bufferlist_print</a> ()</td></tr>
@@ -132,8 +130,8 @@ Variables</h2></td></tr>
 <tr class="separator:a4277db94d928ddb590684b5bf9174f73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11d4f129f71dc36defd23ed9785c3c64"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structBufferItem.html">BufferItem</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8cpp.html#a11d4f129f71dc36defd23ed9785c3c64">buffer_first</a> = 0</td></tr>
 <tr class="separator:a11d4f129f71dc36defd23ed9785c3c64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad695861895afdc79032ebba7436c5bdb"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8cpp.html#ad695861895afdc79032ebba7436c5bdb">displayTimer</a> = 0</td></tr>
-<tr class="separator:ad695861895afdc79032ebba7436c5bdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8bc1b1ccbb1ddfed129f0f3c29fcd34"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TooNetworking_8cpp.html#ae8bc1b1ccbb1ddfed129f0f3c29fcd34">retrySendingTimer</a> = 0</td></tr>
+<tr class="separator:ae8bc1b1ccbb1ddfed129f0f3c29fcd34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file implements the necessary functionality that allow nodes in the network to communicate </p>
@@ -166,7 +164,7 @@ Variables</h2></td></tr>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="TooNetworking_8cpp_abdda8f09b9d475ed2c23a2376e2e0151_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="TooNetworking_8cpp_abdda8f09b9d475ed2c23a2376e2e0151_icgraph.svg" width="100%" height="594"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -190,7 +188,8 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="TooNetworking_8cpp_aa7924d94ea32c8d33a81ff41f8678320_icgraph.svg" width="272" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="TooNetworking_8cpp_aa7924d94ea32c8d33a81ff41f8678320_icgraph.svg" width="272" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>
@@ -223,7 +222,8 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="TooNetworking_8cpp_a173f695381b08642c89a68cdcd76a5d4_icgraph.svg" width="486" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="TooNetworking_8cpp_a173f695381b08642c89a68cdcd76a5d4_icgraph.svg" width="486" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>
@@ -254,7 +254,8 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="TooNetworking_8cpp_a2676204dee95da1ef337de95eb0e9bcb_cgraph.svg" width="100%" height="437"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="TooNetworking_8cpp_a2676204dee95da1ef337de95eb0e9bcb_cgraph.svg" width="100%" height="437"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 
 </div>
@@ -300,7 +301,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="TooNetworking_8cpp_aa8040740e6ffca2f68beb7f8e57d63fc_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="TooNetworking_8cpp_aa8040740e6ffca2f68beb7f8e57d63fc_cgraph.svg" width="420" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
@@ -363,7 +364,47 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="TooNetworking_8cpp_a3c91b7ab2f6500c287ecc7ab4a018ef6_icgraph.svg" width="100%" height="407"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="TooNetworking_8cpp_a3c91b7ab2f6500c287ecc7ab4a018ef6_icgraph.svg" width="100%" height="361"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a7fb2509b5c89b84b0cc847535544ed6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fb2509b5c89b84b0cc847535544ed6e">&#9670;&nbsp;</a></span>TooNetworking_bufferlist_send()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TooNetworking_bufferlist_send </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>destination</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>payload</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="TooNetworking_8cpp_a7fb2509b5c89b84b0cc847535544ed6e_icgraph.svg" width="308" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -403,7 +444,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="TooNetworking_8cpp_a0ad03a7efb42cf40ca3e20fb5df3a5db_icgraph.svg" width="100%" height="408"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="TooNetworking_8cpp_a0ad03a7efb42cf40ca3e20fb5df3a5db_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -427,6 +468,12 @@ Here is the caller graph for this function:</div>
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="TooNetworking_8cpp_ab58e06e0eb6f2f8ecbebeaf3c173fb22_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="TooNetworking_8cpp_ab58e06e0eb6f2f8ecbebeaf3c173fb22_icgraph.svg" width="500" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -483,37 +530,6 @@ Here is the call graph for this function:</div>
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="TooNetworking_8cpp_a085ff748b00f6be4ebafcae2bb0dded1_icgraph.svg" width="272" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-
-</div>
-</div>
-<a id="ac352268e177fa2ddf91c8afa5cd04bbf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac352268e177fa2ddf91c8afa5cd04bbf">&#9670;&nbsp;</a></span>TooNetworking_connection_available()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool TooNetworking_connection_available </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Checks if there's connection</p>
-<dl class="section return"><dt>Returns</dt><dd>True if successful, false otherwise </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="TooNetworking_8cpp_ac352268e177fa2ddf91c8afa5cd04bbf_cgraph.svg" width="294" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="TooNetworking_8cpp_ac352268e177fa2ddf91c8afa5cd04bbf_icgraph.svg" width="100%" height="504"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -579,6 +595,12 @@ Here is the call graph for this function:</div>
 <div class="center"><iframe scrolling="no" frameborder="0" src="TooNetworking_8cpp_a48504aef69d9ac92e34269a64f7b518b_cgraph.svg" width="294" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="TooNetworking_8cpp_a48504aef69d9ac92e34269a64f7b518b_icgraph.svg" width="100%" height="468"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 
 </div>
 </div>
@@ -608,7 +630,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="TooNetworking_8cpp_aefc5dad88b637efb11a3a7b2f76a19b9_icgraph.svg" width="100%" height="494"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="TooNetworking_8cpp_aefc5dad88b637efb11a3a7b2f76a19b9_icgraph.svg" width="100%" height="476"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -661,7 +683,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="TooNetworking_8cpp_af4808c2c0857cde9a6721ad54f5ab42d_icgraph.svg" width="100%" height="425"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="TooNetworking_8cpp_af4808c2c0857cde9a6721ad54f5ab42d_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -818,7 +840,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="TooNetworking_8cpp_a46674b3fdc9ee370b0839869aa145b75_icgraph.svg" width="100%" height="425"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="TooNetworking_8cpp_a46674b3fdc9ee370b0839869aa145b75_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -978,7 +1000,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="TooNetworking_8cpp_a9f893c3218491ee86282fdcd9f376500_icgraph.svg" width="100%" height="452"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="TooNetworking_8cpp_a9f893c3218491ee86282fdcd9f376500_icgraph.svg" width="100%" height="430"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -1025,23 +1047,6 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="aa7771141375a0a88ce46bb99ab56ee51"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7771141375a0a88ce46bb99ab56ee51">&#9670;&nbsp;</a></span>TooNetworking_this_node_is_online()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool TooNetworking_this_node_is_online </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <h2 class="groupheader">Variable Documentation</h2>
 <a id="a11d4f129f71dc36defd23ed9785c3c64"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a11d4f129f71dc36defd23ed9785c3c64">&#9670;&nbsp;</a></span>buffer_first</h2>
@@ -1072,14 +1077,14 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ad695861895afdc79032ebba7436c5bdb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad695861895afdc79032ebba7436c5bdb">&#9670;&nbsp;</a></span>displayTimer</h2>
+<a id="ae8bc1b1ccbb1ddfed129f0f3c29fcd34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8bc1b1ccbb1ddfed129f0f3c29fcd34">&#9670;&nbsp;</a></span>retrySendingTimer</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t displayTimer = 0</td>
+          <td class="memname">uint32_t retrySendingTimer = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
