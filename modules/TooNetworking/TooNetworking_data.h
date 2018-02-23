@@ -110,7 +110,7 @@ typedef struct BufferItem {
  */
 typedef struct Payload_Metadata_Received {
     uint8_t payload_size; /**< Received payload size */
-    uint8_t payload_type; /**< Received payload type, to deal with messages signed, encrypted or both */
+    uint8_t payload_type; /**< Received payload type */
 };
 
 #endif __TooNetworking_data_H__

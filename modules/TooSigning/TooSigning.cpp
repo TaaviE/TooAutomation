@@ -388,7 +388,7 @@ bool TooSigning_sent_noncelist_add(uint8_t toNodeID, uint32_t nonce) {
     current->nonce = nonce;
     current->next = 0;
     Serial.println(F("Data stored"));
-    delay(1000);
+    //delay(1000);
     return true;
 }
 
@@ -539,15 +539,6 @@ void TooSigning_read_hmac_from_progmem(uint8_t nodeID, void *hmac_pointer) {
     memmove(hmac_pointer, hmac, sizeof(hmac));
     Serial.println();
 }
-
-
-void TooSigning_init_hmac(uint8_t* hmac, uint8_t length){
-    Sha256.initHmac(hmac, length);
-}
-
-uint8_t * TooSigning_get_hmac(){
-    return Sha256.resultHmac();
-}
 /*
   Intercepting signing payloads
 */
@@ -609,8 +600,8 @@ bool TooSigning_unsigned_network_available(void) {
                     TooSigning_hash_data(&(tempnonce->nonce), sizeof(uint32_t));
                 } else {
                     Serial.println(F("Nonce not found!"));
-                    delay(15000);
-                    return false; //TODO WARNING: Just keeping the message in the buffer
+                    network.read(header, &payload, sizeof(Payload_MetadataSigned_Received));
+                    return false; //WARNING: Wiping packet, if congested too much will be dropped!
                 }
 
                 uint8_t calculated_hash[32];
@@ -626,8 +617,8 @@ bool TooSigning_unsigned_network_available(void) {
                 if (TooSigning_hash_compare(calculated_hash, payload.payload_hash)) {
                     Serial.println(F("EQUAL HASH?!"));
                 } else {
-                    Serial.println(F("Inequal hash!"));
-                    delay(50000);
+                    Serial.println(F("Inequal hash! Wiping packet!"));
+                    network.read(header, &payload, sizeof(Payload_MetadataSigned_Received));
                     return false;
                 }
 
@@ -656,7 +647,7 @@ bool TooSigning_unsigned_network_available(void) {
                 Serial.println(F("Nonce stored"));
                 Serial.println(F("Completed nonce sending"));
                 TooSigning_sent_noncelist_print();
-                delay(5000);
+                //delay(5000);
                 return false;
             }
             case MSG_NONCE: { //"N" like "you sent me a nonce"
@@ -699,18 +690,18 @@ void TooSigning_signed_network_update() {
     if (millis() - network_maintenance_timer > 500) {
         Serial.println(F("Maintenance"));
         if (nonce_received_start != 0) {
-//             Serial.println(F("1: Checking for received nonce timeouts"));
-//             TooSigning_received_noncelist_remove_timeout();
+            Serial.println(F("1: Checking for received nonce timeouts"));
+            TooSigning_received_noncelist_remove_timeout();
         }
 
         if (nonce_sent_start != 0) {
-//             Serial.println(F("2: Checking for sent nonce timeouts"));
-//             TooSigning_sent_noncelist_remove_timeout();
+            Serial.println(F("2: Checking for sent nonce timeouts"));
+            TooSigning_sent_noncelist_remove_timeout();
         }
 
         if (nonce_requested_start != 0) {
-//             Serial.println(F("3: Checking for requested timeouts"));
-//             TooSigning_requested_noncelist_remove_timeout();
+            Serial.println(F("3: Checking for requested timeouts"));
+            TooSigning_requested_noncelist_remove_timeout();
         }
 
         network_maintenance_timer = millis();
