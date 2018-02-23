@@ -4,9 +4,11 @@ set(CMAKE_TOOLCHAIN_FILE ${CMAKE_SOURCE_DIR}/cmake/ArduinoToolchain.cmake)
 set(PROJECT_NAME TooAutomation)
 project(${PROJECT_NAME})
 
-#add_library(./TooAutomation.h)
+add_library(TooAutomation.h)
 add_library(TooSigning.h ./modules/TooSigning/TooSigning.cpp)
 add_library(TooNetworking.h ./modules/TooNetworking/TooNetworking.cpp)
+add_library(TooOutput.h ./modules/TooOutput/TooOutput.cpp)
+include_directories(modules)
 
 set(NODE_SKETCH ./examples/TooAutomation_Node/TooAutomation_Node.ino)
 set(MASTER_SKETCH ./examples/TooAutomation_Master/TooAutomation_Master.ino)
